@@ -18,7 +18,7 @@
 <p>The current interfaces for Kaeon United allow it to run in the console, for singular tasks, or as an application or server, to run as a web application, or to be used as an all-purpose library with various sub-modules.</p>
 <h3>What can Kaeon United do?</h3>
 <p>Kaeon United, being an "everything engine", provides such a vast array of functionality, that it would be simpler to describe what it doesn't do.</p>
-<p>The full scope of the ever growing set of features provided by Kaeon United is detailed in the Kaeon United Specification.</p>
+<p>The full scope of the ever growing set of features provided by Kaeon United is detailed in the <a href="https://github.com/Kaeon-United/Kaeon-United/blob/main/Kaeon%20United/2%20-%20Wonders/1%20-%20Documentation/The%20Kaeon%20United%20Specification.txt">Kaeon United Specification.</a></p>
 <div align="center"><p><b>That said, here are some key highlights at the time of writing:</b></p></div>
 <h4><a href="https://github.com/Kaeon-United/Kaeon-United.github.io">GhostHost</a></h4>
 <p>GhostHost is a platform built into Kaeon United which allows users to render code stored in plain text on external sources as live websites.</p>

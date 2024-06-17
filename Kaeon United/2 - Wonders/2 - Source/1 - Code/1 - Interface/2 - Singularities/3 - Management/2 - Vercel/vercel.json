@@ -1,0 +1,15 @@
+{
+	"version": 2,
+	"env": { },
+	"builds": [
+		{
+			"src": "kaeonUnitedSingularityBootstrap.js",
+			"use": "@vercel/node",
+			"config": { "includeFiles": ["./**"] }
+		}
+	],
+	"rewrites": [
+		{ "source": "/(.*)", "destination": "/" }
+	],
+	"installCommand": "npm install"
+}

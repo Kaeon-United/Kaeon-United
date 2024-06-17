@@ -1,0 +1,183 @@
+This is Kaeon United!
+
+	Philosophy
+	
+		-
+			It Just Works!
+		-
+	
+	Principles
+
+		What is Kaeon United?
+
+			-
+				Kaeon United is, in short, a cross-environment, setup-free "everything engine".
+			-
+
+		Details
+
+			Why Kaeon United?
+
+				-
+					Kaeon United was created to solve what has been coined the problem of "suite
+					corruption", that being the issue where engineers are forced to abandon
+					utilities and techniques they have grown reliant upon, which derives from a
+					series of other issues referred to as the Seven Deadly Sins, these being
+					payment, signup, setup, decay, rigor, excess, and the worst of all, limits.
+					
+					Maintaining the spirit of its inception while also growing beyond it, Kaeon
+					United grants access to a vast array of utilities that a developer might need
+					in their initial environment, while allowing much of their acquired knowledge
+					and work to follow them into new environments, helping them hit the ground
+					running when transitioning.
+				-
+
+			How does Kaeon United Work?
+
+				-
+					The way Kaeon United actually works can be summed up as "an interface of
+					interfaces to a library of libraries".
+
+					At its core, Kaeon United consists of a suite of APIs and applications for
+					various uses and platforms, many of which come in multiple versions for the
+					different platforms it may operate within. This suite consists of disparate
+					parts linked together by reference documents, and many of these parts are
+					reliant on one another.
+
+					The suite is accessible via modules referred to as interfaces, which are
+					libraries or applications linked to the core reference document of the suite,
+					which automatically dynamically import and adapt the suite's contents into the
+					context that said modules are executed in as requested, which it can do via CDN
+					if needed, reducing setup.
+
+					The current interfaces for Kaeon United allow it to run in the console, for
+					singular tasks, or as an application or server, to run as a web application, or
+					to be used as an all-purpose library with various sub-modules.
+				-
+
+		What can Kaeon United do?
+
+			-
+				Kaeon United, being an "everything engine", provides such a vast array of
+				functionality, that it would be simpler to describe what it doesn't do.
+				
+				The full scope of the ever growing set of features provided by Kaeon United is
+				detailed in the Kaeon United Specification.
+			-
+
+			-
+				That said, here are some key highlights at the time of writing:
+			-
+
+				GhostHost
+
+					-
+						GhostHost is a platform built into Kaeon United which allows users to
+						render code stored in plain text on external sources as live websites.
+					-
+
+				Kaeon FUSION
+
+					-
+						Kaeon FUSION is a modular programming language which can be extended and
+						modified at runtime to take on virtually any programming paradigm, from
+						dynamically integrating strong typing mid-program to allowing code to run
+						backwards.
+
+						Kaeon FUSION also integrates the ONE and ONE+ data interchange languages,
+						as well as the Universal Preprocessor, which takes the basic concept of PHP
+						and extends it to allow preprocessor scripts written in any language to
+						write to the source code of any other, allowing the syntax of the target
+						source code to be customized to an indefinite extent.
+					-
+
+				Kaeon Origin
+
+					-
+						Kaeon Origin is a virtual OS which runs on GhostHost, providing a file
+						system, and a terminal interface with linux style commands in the browser.
+
+						Kaeon Origin also comes with a virtual assistant called Kaeon META, which
+						has generative AI chat functionality and audio playback functionality.
+
+						Kaeon META can also be used in user code via a library.
+					-
+
+				Kaeon Utilities
+
+					-
+						Kaeon United provides a vast array of libraries, with builds for various
+						programming languages sharing identical interfaces, though the most
+						developed of these are for JS, and with options for access via CDN, package
+						manager, and manual installation.
+
+						Many of the general utilities in these libraries pertain to networking,
+						I/O, and parsing.
+
+						In addition to these, Kaeon United provides a series of frameworks for more
+						specialized operations:
+					-
+
+						Vision
+
+							-
+								Vision is a lightweight UI framework allowing for HTML5
+								applications to be constructed entirely in JS without the need for
+								building prior to deployment.
+							-
+
+				United C
+
+					-
+						United C is a backwards-compatible hybrid of C and C++ with several
+						modernized syntax features, such as code outside the main function,
+						optional semicolons, optional inferred typing, and more, plus a streamlined
+						build process.
+					-
+
+				United JS
+
+					-
+						United JS is a variant of JS which allows CommonJS to be used inside the
+						browser, which causes node to automatically install any uninstalled
+						packages at runtime, and which allows CommonJS to fetch code from CDNs,
+						which uses CORS proxies to nullify the same origin policy in the browser,
+						and which allows for top-level awaits.
+					-
+
+			-
+				And here are some features which are in development:
+			-
+
+				Kaeon ACE
+
+					-
+						Kaeon ACE is a game and visualization framework which allows the content of
+						a scripted game or scene to be specified in ONE+ such that it may be built
+						to various game and visualization engines.
+
+						In a nutshell, it is to game engines what HTML is to browsers.
+
+						It supports both augmented and virtual reality.
+					-
+
+				Kaeon Control
+
+					-
+						Kaeon Control is a hardware telemetry suite which consists of two elements.
+						
+						The first is a plugin that may be installed with a native Kaeon United
+						installation onto SBCs, with support for pin and I/O, as well as wireless,
+						bluetooth, and cellular communication.
+
+						The second is a suite of tools that may be used to format and send requests
+						to devices utilizing said plugin in order to remotely control, monitor, and
+						script them.
+					-
+
+				Waypoint
+
+					-
+						Waypoint is a lightweight framework for state and database management, with
+						features optimized for MVC architectures.
+					-

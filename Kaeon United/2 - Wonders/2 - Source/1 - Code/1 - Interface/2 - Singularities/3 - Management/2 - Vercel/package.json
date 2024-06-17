@@ -1,0 +1,15 @@
+{
+	"name": "kaeon-origin-axis",
+	"version": "1.0.0",
+	"description": "It just works",
+	"main": "kaeonUnitedSingularityBootstrap.js",
+	"scripts": {
+		"start": "node kaeonUnitedSingularityBootstrap.js"
+	},
+	"dependencies": {
+		"kaeon-united": "~1.0.0",
+		"xmlhttprequest": "~1.8.0"
+	},
+	"author": "",
+	"license": "Apache-2.0"
+}

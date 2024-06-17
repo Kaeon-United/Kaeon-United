@@ -1,0 +1,208 @@
+-
+	This is United C
+-
+	-
+		Philosophy
+	-
+		-
+			A Modernized C/C++ Hybrid Language
+		-
+	-
+		Principles
+	-
+		-
+			United C is a language designed to combine C and C++ into a single language, and to
+			update their syntaxes and build pipelines to match the conveniences of more modern
+			languages such as Python and JavaScript.
+		-
+		-
+			However, it seeks to do this without any compromise to their power, their low level
+			nature, or their existing utilities. As such, it is 100% backwards compatible with C++
+			and almost entirely backwards compatible with C.
+		-
+		-
+			Basic Details
+		-
+			-
+				The utilities necessary for United C development are provided through the Kaeon
+				United API.
+			-
+			-
+				United C files should have the file extension ".uc".
+			-
+		-
+			Example
+		-
+			-
+				The following is a hello world example in United C:
+			-
+				-
+					use stdio.h
+					
+					printf("Hello, world!")
+				-
+			-
+				which, if written in a file called "hello.uc", may be compiled using the following
+				command:
+			-
+				-
+					npx kaeon-united ucc read hello.uc
+				-
+			-
+				Note: You must have gcc, make, and Node.js installed for this command to work.
+			-
+		-
+			The Common C Convention
+		-
+			-
+				The ability for C and C++ to operate together is tied to the Common C convention,
+				which works as follows:
+			-
+			-
+				All C and C++ code shall adhere to the latest version of the respective language.
+			-
+			-
+				C code shall not use any features of the C language that C++ does not possess.
+			-
+			-
+				The compiler shall determine which language to compile to by whether or not the
+				code uses any language features exclusive to C++.
+			-
+		-
+			United C Features
+		-
+			-
+				Code Outside the Main Function
+			-
+				-
+					Any operations placed outside a function will be placed into the main function
+					upon the compilation of an executable. If a main function is not already
+					declared, one will be inferred.
+				-
+				-
+					The main function, whether manually created or automatically generated, shall
+					be formatted to have a return type of int, shall return zero, and shall have a
+					parameter argc of type int and a parameter argv of type char pointer array.
+				-
+				-
+					If there is both a manually defined main function present as well as operation
+					code placed outside the main function, the code within the manually defined
+					main function shall execute before the code outside of it.
+				-
+			-
+				Irrelevant Declaration Order
+			-
+				-
+					Functions and global variables in United C may be declared in any order.
+				-
+			-
+				Optional Semicolons
+			-
+				-
+					United C code may omit semicolons where they are otherwise required.
+				-
+			-
+				Dynamic Type Detection
+			-
+				-
+					The token "var" may be in lieu of the data type of a varaible, in which case
+					the type of said variable shall be predicted based on the value assigned to it.
+				-
+			-
+				The "use" Operator and Online Dependencies
+			-
+				-
+					In place of the #include preprocessor, a sequence beginning with the token
+					"use", referred to as a use directive, may be used in its place, where an
+					indefinite number of paths to resources follow the use token, separated by
+					commas.
+				-
+				-
+					A use directive may terminate with either a new line or a semicolon.
+				-
+				-
+					Paths to global resources may be written as they are, but paths to local
+					resources must be encased in double quotes.
+				-
+				-
+					If a path has no file extension, the system will check for any matching file
+					with the extension "uc", "c", "h", or "cpp". If the extension cannot be
+					verified, an extension of "uc" shall be inferred.
+				-
+				-
+					Include and use directives may reference dependencies stored online by their
+					URLs, in which case the references must be encased in double quotes, as
+					references to local resources would be.
+				-
+			-
+				Multiline Literals
+			-
+				-
+					United C allows multiline literals starting and ending with backticks.
+				-
+				-
+					Backticks may be escaped using a backslash.
+				-
+			-
+				Bools in C
+			-
+				-
+					C code conforming to United C may use the literals true and false, which the
+					preprocessor shall convert to 1 and 0 respectively, and may also use the data
+					types bool and boolean, which the preprocessor shall convert to int.
+				-
+			-
+				The "@" Address Operator
+			-
+				-
+					United C allows @ to be used as the address token in addition to &.
+				-
+			-
+				The Universal Preprocessor
+			-
+				-
+					The main file and all local dependency files shall be preprocessed using the
+					Universal Preprocessor upon compilation.
+				-
+		-
+			CSB
+		-
+			-
+				Character Separated Binary, or CSB for short, is a simple text format for encoding
+				raw binary data.
+			-
+			-
+				In CSB, bytes may be written in binary format and may be separated by any form of
+				whitespace. Said bytes may omit leading zeroes.
+			-
+			-
+				For example, if a file called "data.csb" contained the following code:
+			-
+				-
+					1000001
+					1000010
+					1000011
+				-
+			-
+				then running the following command:
+			-
+				-
+					npx kaeon-united assemble open data.csb data.out
+				-
+			-
+				would produce a binary file called "data.out", which if opened in a text editor
+				would display:
+			-
+				-
+					ABC
+				-
+			-
+				If, after that, this command were to be run:
+			-
+				-
+					npx kaeon-united disassemble read data.out data2.csb
+				-
+			-
+				Then a file called "data2.csb" would be generated containing the same content as
+				data.csb.
+			-

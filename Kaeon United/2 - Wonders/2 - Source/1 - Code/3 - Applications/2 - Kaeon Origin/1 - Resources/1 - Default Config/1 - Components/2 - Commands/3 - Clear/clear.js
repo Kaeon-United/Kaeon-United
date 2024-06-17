@@ -1,0 +1,1 @@
+window.terminals[0].clear();

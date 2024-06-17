@@ -5,7 +5,7 @@
 <h2 align="center">A Modernized C/C++ Hybrid Language</h2>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/2%20-%20Assets/1%20-%20Visual/1%20-%20Images/1%20-%20Iconography/2%20-%20Kaeon%20United/1%20-%20United%20C/United%20C%20Logo.png" height="300px"/>
+	<img src="https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/master/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/2%20-%20Assets/1%20-%20Visual/1%20-%20Images/1%20-%20Iconography/2%20-%20Kaeon%20United/1%20-%20United%20C/United%20C%20Logo.png" height="300px"/>
 </p>
 
 </div>
@@ -22,7 +22,7 @@ it is 100% backwards compatible with C++ and almost entirely backwards compatibl
 
 <h2 align="center">Basic Details</h2>
 
-The utilities necessary for United C development are provided through the [Kaeon United](https://github.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/blob/master/Kaeon%20United/3%20-%20Wonders/1%20-%20Documentation/README.md) API.
+The utilities necessary for United C development are provided through the [Kaeon United](https://github.com/Kaeon-United/Kaeon-United/) API.
 
 United C files should have the file extension ".uc".
 
@@ -123,7 +123,7 @@ United C allows @ to be used as the address token in addition to &.
 <h3>The Universal Preprocessor</h3>
 
 The main file and all local dependency files shall be preprocessed using the
-[Universal Preprocessor](https://github.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/blob/master/Kaeon%20United/3%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/2%20-%20ONE/3%20-%20Universal%20Preprocessor/README.md) upon compilation.
+[Universal Preprocessor](https://github.com/Kaeon-United/Kaeon-United/blob/master/Kaeon%20United/3%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/1%20-%20ONE/2%20-%20Universal%20Preprocessor/README.md) upon compilation.
 
 <h2 align="center">CSB</h2>
 

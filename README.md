@@ -2,7 +2,7 @@
 <div align="center"><h2>It Just Works</h2></div>
 
 <div align="center">
-	<img height="300px" src="https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/2%20-%20Assets/1%20-%20Visual/1%20-%20Images/1%20-%20Iconography/2%20-%20Kaeon%20United/2%20-%20Kaeon%20United/Kaeon%20United%20Logo.png"/>
+	<img height="300px" src="https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/2%20-%20Assets/1%20-%20Visual/1%20-%20Images/1%20-%20Iconography/2%20-%20Kaeon%20United/2%20-%20Kaeon%20United/Kaeon%20United%20Logo.png"/>
 </div>
 
 <h3>What is Kaeon United?</h3>
@@ -22,9 +22,9 @@
 <div align="center"><p><b>That said, here are some key highlights at the time of writing:</b></p></div>
 <h4><a href="https://github.com/Kaeon-United/Kaeon-United.github.io">GhostHost</a></h4>
 <p>GhostHost is a platform built into Kaeon United which allows users to render code stored in plain text on external sources as live websites.</p>
-<h4><a href="https://github.com/Kaeon-United/Kaeon-United/blob/master/Kaeon%20United/3%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/3%20-%20Kaeon%20FUSION/README.md">Kaeon FUSION</a></h4>
+<h4><a href="https://github.com/Kaeon-United/Kaeon-United/blob/main/Kaeon%20United/2%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/2%20-%20Kaeon%20FUSION/README.md">Kaeon FUSION</a></h4>
 <p>Kaeon FUSION is a modular programming language which can be extended and modified at runtime to take on virtually any programming paradigm, from dynamically integrating strong typing mid-program to allowing code to run backwards.</p>
-<p>Kaeon FUSION also integrates the <a href="https://github.com/Kaeon-United/Kaeon-United/blob/master/Kaeon%20United/3%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/2%20-%20ONE/1%20-%20ONE/README.md">ONE</a> and <a href="https://github.com/Kaeon-United/Kaeon-United/blob/master/Kaeon%20United/3%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/2%20-%20ONE/2%20-%20ONE%2B/README.md">ONE+</a> data interchange languages, as well as the <a href="https://github.com/Kaeon-United/Kaeon-United/blob/master/Kaeon%20United/3%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/2%20-%20ONE/3%20-%20Universal%20Preprocessor/README.md">Universal Preprocessor</a>, which takes the basic concept of PHP and extends it to allow preprocessor scripts written in any language to write to the source code of any other, allowing the syntax of the target source code to be customized to an indefinite extent.</p>
+<p>Kaeon FUSION also integrates the <a href="https://github.com/Kaeon-United/Kaeon-United/blob/main/Kaeon%20United/2%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/1%20-%20ONE/README.md">ONE</a> and <a href="https://github.com/Kaeon-United/Kaeon-United/blob/main/Kaeon%20United/2%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/1%20-%20ONE/1%20-%20ONE%2B/README.md">ONE+</a> data interchange languages, as well as the <a href="https://github.com/Kaeon-United/Kaeon-United/blob/main/Kaeon%20United/2%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/1%20-%20ONE/2%20-%20Universal%20Preprocessor/README.md">Universal Preprocessor</a>, which takes the basic concept of PHP and extends it to allow preprocessor scripts written in any language to write to the source code of any other, allowing the syntax of the target source code to be customized to an indefinite extent.</p>
 <h4>Kaeon Origin</h4>
 <p>Kaeon Origin is a virtual OS which runs on GhostHost, providing a file system, and a terminal interface with linux style commands in the browser.</p>
 <p>Kaeon Origin also comes with a virtual assistant called Kaeon META, which has generative AI chat functionality and audio playback functionality.</p>
@@ -35,7 +35,7 @@
 <p>In addition to these, Kaeon United provides a series of frameworks for more specialized operations:</p>
 <h5>Vision</h5>
 <p>Vision is a lightweight UI framework allowing for HTML5 applications to be constructed entirely in JS without the need for building prior to deployment.</p>
-<h4><a href="https://github.com/Kaeon-United/Kaeon-United/blob/master/Kaeon%20United/3%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/4%20-%20United%20C/README.md">United C</a></h4>
+<h4><a href="https://github.com/Kaeon-United/Kaeon-United/blob/main/Kaeon%20United/2%20-%20Wonders/1%20-%20Documentation/1%20-%20Guides/3%20-%20United%20C/README.md">United C</a></h4>
 <p>United C is a backwards-compatible hybrid of C and C++ with several modernized syntax features, such as code outside the main function, optional semicolons, optional inferred typing, and more, plus a streamlined build process.</p>
 <h4>United JS</h4>
 <p>United JS is a variant of JS which allows CommonJS to be used inside the browser, which causes node to automatically install any uninstalled packages at runtime, and which allows CommonJS to fetch code from CDNs, which uses CORS proxies to nullify the same origin policy in the browser, and which allows for top-level awaits.</p>

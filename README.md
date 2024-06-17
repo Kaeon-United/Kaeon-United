@@ -64,9 +64,9 @@
 <p>To use Kaeon United as a script,
 reference it via <a href="https://www.jsdelivr.com/">jsDelivr</a> or another similar service.</p>
 
-<p>Kaeon United can be accessed through jsDelivr on <a href="https://www.npmjs.com/package/kaeon-united">its npm repository</a> via the following URL:</p>
+<p>Kaeon United can be accessed through jsDelivr via the following URL:</p>
 
-<pre><code>https://cdn.jsdelivr.net/npm/kaeon-united/kaeonUnitedSingularityScript.js</code></pre>
+<pre><code>https://cdn.jsdelivr.net/gh/kaeon-united/kaeon-united/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/1%20-%20Modules/2%20-%20Library/1%20-%20Frontend/kaeonUnitedSingularityScript.js</code></pre>
 
 <p>As a script,
 Kaeon United shall provide access to the United JavaScript version of CommonJS in the browser.</p>

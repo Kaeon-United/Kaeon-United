@@ -1,5 +1,5 @@
 var moduleDependencies = {
-	kaeonEdit: "https://atlas-of-kaeon.github.io/?unitedjs=https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/3%20-%20Applications/1%20-%20Applications/1%20-%20Apps/3%20-%20Kaeon%20Edit/kaeonEdit.js"
+	kaeonEdit: "https://kaeon-united.github.io/?unitedjs=https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/3%20-%20Applications/1%20-%20Applications/1%20-%20Apps/3%20-%20Kaeon%20Edit/kaeonEdit.js"
 };
 
 var virtualSystem = require("kaeon-united")("virtualSystem");

@@ -1,7 +1,7 @@
 var moduleDependencies = {
 	bootstrap: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
 	cors: "https://corsproxy.io/?",
-	icon: "https://raw.githubusercontent.com/Atlas-of-Kaeon/The-Principles-Library-of-Kaeon/master/The%20Principles%20Library%20of%20Kaeon/3%20-%20Wonders/1%20-%20Angaian/2%20-%20Images/2%20-%20Angaian%20Crest/Angaian%20Crest.png"
+	icon: "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/2%20-%20Assets/1%20-%20Visual/1%20-%20Images/1%20-%20Iconography/2%20-%20Kaeon%20United/2%20-%20Kaeon%20United/Kaeon%20United%20Logo.png"
 };
 
 var dimensions = require("kaeon-united")("dimensions");

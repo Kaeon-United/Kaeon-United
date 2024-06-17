@@ -18,49 +18,49 @@
 											"craiyonUtils": {
 												"components": {
 													"locations": [
-														"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/1%20-%20Craiyon/craiyonUtils.js"
+														"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/1%20-%20Craiyon/craiyonUtils.js"
 													]
 												}
 											},
 											"githubUtils": {
 												"components": {
 													"locations": [
-														"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/2%20-%20Github/githubUtils.js"
+														"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/2%20-%20Github/githubUtils.js"
 													]
 												}
 											},
 											"nearpasteUtils": {
 												"components": {
 													"locations": [
-														"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/3%20-%20NEAR%20Paste/nearpasteUtils.js"
+														"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/3%20-%20NEAR%20Paste/nearpasteUtils.js"
 													]
 												}
 											},
 											"redditUtils": {
 												"components": {
 													"locations": [
-														"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/4%20-%20Reddit/redditUtils.js"
+														"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/4%20-%20Reddit/redditUtils.js"
 													]
 												}
 											},
 											"wikipediaUtils": {
 												"components": {
 													"locations": [
-														"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/5%20-%20Wikipedia/wikipediaUtils.js"
+														"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/5%20-%20Wikipedia/wikipediaUtils.js"
 													]
 												}
 											},
 											"youUtils": {
 												"components": {
 													"locations": [
-														"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/6%20-%20You/youUtils.js"
+														"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/6%20-%20You/youUtils.js"
 													]
 												}
 											},
 											"youtubeUtils": {
 												"components": {
 													"locations": [
-														"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/7%20-%20YouTube/youtubeUtils.js"
+														"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/1%20-%20Services/7%20-%20YouTube/youtubeUtils.js"
 													]
 												}
 											}
@@ -73,14 +73,14 @@
 													"angaianGenerator": {
 														"components": {
 															"locations": [
-																"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/2%20-%20Angaian/1%20-%20Language/1%20-%20Generator/angaianGenerator.js"
+																"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/2%20-%20Angaian/1%20-%20Language/1%20-%20Generator/angaianGenerator.js"
 															]
 														}
 													},
 													"angaianConverter": {
 														"components": {
 															"locations": [
-																"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/2%20-%20Angaian/1%20-%20Language/2%20-%20Converter/angaianConverter.js"
+																"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/2%20-%20Angaian/1%20-%20Language/2%20-%20Converter/angaianConverter.js"
 															]
 														}
 													}
@@ -91,7 +91,7 @@
 									"generalReference": {
 										"components": {
 											"locations": [
-												"https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/generalReference.js"
+												"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/generalReference.js"
 											]
 										}
 									}

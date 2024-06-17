@@ -1,5 +1,5 @@
 var moduleDependencies = {
-	virtualRun: "https://raw.githubusercontent.com/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io/master/Kaeon%20United/3%20-%20Wonders/2%20-%20Source/1%20-%20Code/3%20-%20Applications/1%20-%20Applications/2%20-%20Utilities/3%20-%20Virtual%20Run/virtualRun.js"
+	virtualRun: "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/3%20-%20Applications/1%20-%20Applications/2%20-%20Utilities/3%20-%20Virtual%20Run/virtualRun.js"
 };
 
 var virtualSystem = require("kaeon-united")("virtualSystem");

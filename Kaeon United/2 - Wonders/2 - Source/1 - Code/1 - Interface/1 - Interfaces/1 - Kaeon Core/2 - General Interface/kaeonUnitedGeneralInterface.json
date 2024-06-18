@@ -66,28 +66,6 @@
 											}
 										}
 									},
-									"angaian": {
-										"entities": {
-											"langauge": {
-												"entities": {
-													"angaianGenerator": {
-														"components": {
-															"locations": [
-																"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/2%20-%20Angaian/1%20-%20Language/1%20-%20Generator/angaianGenerator.js"
-															]
-														}
-													},
-													"angaianConverter": {
-														"components": {
-															"locations": [
-																"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/2%20-%20General/2%20-%20Angaian/1%20-%20Language/2%20-%20Converter/angaianConverter.js"
-															]
-														}
-													}
-												}
-											}
-										}
-									},
 									"generalReference": {
 										"components": {
 											"locations": [

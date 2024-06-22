@@ -1,5 +1,5 @@
 var moduleDependencies = {
-	kaeonUnited: "https://cdn.jsdelivr.net/gh/Atlas-of-Kaeon/Atlas-of-Kaeon.github.io@master/Kaeon%20United/2%20-%20Wonders/1%20-%20United/2%20-%20Source/1%20-%20APIs/3%20-%20United/2%20-%20Source/KaeonUnited.js"
+	kaeonUnited: "https://cdn.jsdelivr.net/gh/kaeon-united/kaeon-united/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/1%20-%20Modules/2%20-%20Library/1%20-%20Frontend/kaeonUnitedSingularityScript.js"
 };
 
 var fs = require("fs");

@@ -25,7 +25,7 @@ module.exports = (args, callback) => {
 			routes: {
 				api: { "/api/": process.cwd() + "/api" },
 				default: {
-					index: "https://atlas-of-kaeon.github.io/"
+					index: "https://kaeon-united.github.io/"
 				},
 				public: { "/": process.cwd() + "/public" }
 			}

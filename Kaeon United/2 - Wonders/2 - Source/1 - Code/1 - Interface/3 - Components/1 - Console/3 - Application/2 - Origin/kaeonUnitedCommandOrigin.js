@@ -22,12 +22,11 @@ module.exports = (args, callback) => {
 		require("kaeon-united")("kaeonOriginDefaultAxis")();
 
 		require("kaeon-united")("openAxis").openAxis({
-			routes: {
-				api: { "/api/": process.cwd() + "/api" },
+			axis: {
 				default: {
 					index: "https://kaeon-united.github.io/"
 				},
-				public: { "/": process.cwd() + "/public" }
+				directories: [process.cwd() + "/axis"]
 			}
 		});
 

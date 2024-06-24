@@ -284,7 +284,7 @@ function executeSingularity() {
 		if(!fs.existsSync(process.cwd() + "/localCache.json")) {
 
 			if(fs.existsSync(
-				process.cwd() + "/node_modules/kaeon-united/localCache.json"
+				process.cwd() + "/node_modules/kaeon-united-utilities/localCache.json"
 			)) {
 
 				altPath = "/node_modules/kaeon-united";

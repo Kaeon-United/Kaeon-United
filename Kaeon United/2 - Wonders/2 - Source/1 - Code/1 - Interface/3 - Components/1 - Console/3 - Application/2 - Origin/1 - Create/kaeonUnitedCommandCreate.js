@@ -1,7 +1,6 @@
 var moduleDependencies = {
 	axis: {
 		"index.js": "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/1%20-%20Modules/1%20-%20Application/2%20-%20CLI/3%20-%20Bootstrap/kaeonUnitedSingularityBootstrap.js",
-		"localCache.json": "https://cdn.jsdelivr.net/npm/kaeon-united-utilities/localCache.json",
 		"package.json": "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/3%20-%20Management/2%20-%20Vercel/package.json",
 		"vercel.json": "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/3%20-%20Management/2%20-%20Vercel/vercel.json"
 	}

@@ -15,8 +15,6 @@ function commonCache() {
 				this.pool = this.pool != null ? this.pool : { };
 		
 				let args = httpUtils.getURLArguments(packet.request.uri);
-
-				console.log(packet.request.uri, args);
 				
 				if(args["key"] != null) {
 		
@@ -30,7 +28,8 @@ function commonCache() {
 		
 					return {
 						body: this.pool[args["key"]] != null ?
-							JSON.stringify(this.pool[args["key"]]) : "null"
+							JSON.stringify(this.pool[args["key"]]) : "null",
+						priority: 1
 					};
 				}
 			},

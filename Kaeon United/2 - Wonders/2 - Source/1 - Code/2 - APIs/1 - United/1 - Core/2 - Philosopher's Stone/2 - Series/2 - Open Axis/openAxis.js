@@ -1,3 +1,7 @@
+var moduleDependencies = {
+	kaeonUnitedScript: "https://cdn.jsdelivr.net/gh/kaeon-united/kaeon-united/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/1%20-%20Modules/2%20-%20Library/1%20-%20Frontend/kaeonUnitedSingularityScript.js"
+};
+
 var fs = require("fs");
 var http = require("http");
 var https = require("https");
@@ -39,6 +43,7 @@ function axisRouter(options) {
 	options = options != null ? options : { };
 
 	let extensionTypes = {
+		'txt': 'text/plain',
 		'ico': 'image/x-icon',
 		'html': 'text/html',
 		'js': 'text/javascript',
@@ -69,148 +74,199 @@ function axisRouter(options) {
 	let router = Object.assign(
 		Object.assign({ }, philosophersStone.standard),
 		{
-			routes: options.routes != null ? options.routes : { },
-			standard: (packet) => {
+			axis: options.axis != null ? options.axis : { },
+			middleware: [
+				(packet, file) => { // JS
 
-				if(!isHTTPJSON(packet))
-					return null;
+					if(file.meta.api != null && file.type == "js") {
 
-				["api", "public", "default"].forEach(item => {
+						try {
 
-					router.routes[item] =
-						router.routes[item] != null ?
-							router.routes[item] : { };
-				});
+							let response = require(file.file)(packet);
 
-				let uri = packet.request.uri;
-				uri = uri.substring(uri.indexOf("://") + 3);
+							return response != null ? response : { };
+						}
 
-				if(!uri.includes("/"))
-					uri = "/";
+						catch(error) {
 
-				else
-					uri = uri.substring(uri.indexOf("/"));
-
-				let route = uri.substring(0, uri.lastIndexOf("/") + 1);
-				let file = uri.substring(uri.lastIndexOf("/") + 1);
-
-				if(file.includes("?"))
-					file = file.substring(0, file.indexOf("?"));
-
-				if(file == "")
-					file = "index.html";
-
-				let directory = router.routes.public[route];
-				let isAPI = false;
-
-				if(directory == null) {
-
-					directory = router.routes.api[route];
-					
-					if(directory == null)
-						return null;
-
-					isAPI = true;
-				}
-
-				if(!directory.endsWith("/") && !directory.endsWith("\\"))
-					directory += "/";
-
-				let filePath = decodeURIComponent(directory + file);
-
-				if(isAPI) {
-
-					if(!filePath.toLowerCase().endsWith(".js"))
-						filePath += ".js";
-
-					try {
-						return require(filePath)(packet);
+							return {
+								headers: {
+									"Content-Type": "text/html"
+								},
+								body: `
+									<!DOCTYPE HTML>
+									<html lang="en-US">
+										<head></head>
+										<body>
+											<pre>${"" + error.stack}</pre>
+										</body>
+									</html>
+								`
+							};
+						}
 					}
 
-					catch(error) {
+					if(file.meta.app != null && file.type == "js") {
 
 						return {
 							headers: {
 								"Content-Type": "text/html"
 							},
 							body: `
-								<!DOCTYPE HTML>
-								<html lang="en-US">
-									<head></head>
-									<body>
-										${redirect == null ?
-											`<pre>${"" + error.stack}</pre>` :
-											""
-										}
-									</body>
-								</html>
+								<script src="${
+									moduleDependencies.kaeonUnitedScript
+								}"></script>
+
+								<script>
+
+									${ONESuite.preprocess(
+										fs.readFileSync(file.file, "utf-8")
+									)}
+
+								</script>
 							`
-						};
+						}
 					}
-				}
 
-				if(!fs.existsSync(filePath)) {
+					if(file.meta.app != null && file.type == "json") {
 
-					let redirect = (
-						route + file == "/index.html" &&
-						router.routes.default.index != null
-					) ?
-						router.routes.default.index :
-						router.routes.default.missing;
+						return {
+							headers: {
+								"Content-Type": "text/html"
+							},
+							body: `
+								<script src="${
+									moduleDependencies.kaeonUnitedScript
+								}"></script>
+
+								<script>
+
+									var vision = require("kaeon-united")("vision");
+
+									vision.extend(JSON.parse("${
+										JSON.stringify(
+											ONESuite.preprocess(
+												fs.readFileSync(file.file, "utf-8")
+											)
+										)
+									}");
+
+								</script>
+							`
+						}
+					}
+				},
+				(packet, file) => { // Text File w/ PUP
+					
+					if(fileTypes.includes(file.type) || file.type == "folder")
+						return;
 
 					return {
 						headers: {
-							"Content-Type": "text/html"
+							"Content-Type": extensionTypes[file.type]
 						},
-						body: `
-							<!DOCTYPE HTML>
-							<html lang="en-US">
-								<head>
-									${redirect != null ?
-										`<meta
-											http-equiv="refresh"
-											content="0; url=${redirect}"
-										/>` :
-										""
-									}
-								</head>
-								<body>
-									${redirect == null ?
-										"<pre>404: Not Found</pre>" :
-										""
-									}
-								</body>
-							</html>
-						`
-					};
+						body: ONESuite.preprocess(
+							fs.readFileSync(file.file, "utf-8")
+						)
+					}
+				},
+				(packet, file) => { // File
+					
+					if(!fileTypes.includes(file.type) || file.type == "folder")
+						return;
+
+					return {
+						headers: {
+							"Content-Type": extensionTypes[file.type]
+						},
+						body: file.file,
+						file: true
+					}
+				},
+				(packet, file) => { // Folder
+					
+					if(file.type != "folder")
+						return;
+					
+					let result = [[], []];
+
+					fs.readdirSync(file.file).forEach(item => {
+
+						result[
+							fs.lstatSync(
+								file.file + path.sep + item
+							).isDirectory() ? 0 : 1
+						].push(item);
+					})
+
+					return {
+						headers: {
+							"Content-Type": "text/json"
+						},
+						body: JSON.stringify(result, null, "\t")
+					}
 				}
+			].concat(
+				options.middleware != null ? options.middleware : []
+			),
+			standard: (packet) => {
 
-				let headers = { };
-				let isFile = false;
+				if(!isHTTPJSON(packet))
+					return null;
 
-				let extension = file.includes(".") ?
-					file.substring(file.lastIndexOf(".") + 1).toLowerCase() :
-					null;
+				let file = getFile(
+					packet.request.uri,
+					router.axis.directories
+				);
 
-				if(extension != null) {
+				let response = router.middleware.map(
+					item => {
+						
+						try {
+							return item(packet, file);
+						}
 
-					if(extensionTypes[extension] != null)
-						headers["Content-Type"] = extensionTypes[extension];
+						catch(error) {
+							return null;
+						}
+					}
+				).filter(
+					item => item != null
+				)[0];
 
-					if(fileTypes.includes(extension))
-						isFile = true;
-				}
+				if(response != null)
+					return response;
 
 				return {
-					file: isFile,
-					headers: headers,
-					body: isFile ?
-						filePath :
-						ONESuite.preprocess(
-							fs.readFileSync(filePath, "utf-8"),
-							[packet]
-						)
-				}
+					response: {
+						status: 404
+					},
+					headers: {
+						"Content-Type": "text/html"
+					},
+					body: `
+						<!DOCTYPE HTML>
+						<html lang="en-US">
+							<head>
+								${router.axis.default.missing != null ?
+									`<meta
+										http-equiv="refresh"
+										content="0; url=${
+											router.axis.default.missing
+										}"
+									/>` :
+									""
+								}
+							</head>
+							<body>
+								${router.axis.default.missing == null ?
+									"<pre>404: Not Found</pre>" :
+									""
+								}
+							</body>
+						</html>
+					`
+				};
 			},
 			tags: ["axis", "router"]
 		}
@@ -258,20 +314,35 @@ function axisServer(options) {
 			let body = [];
 			let file = false;
 
+			let max = -Infinity;
+
+			responses.filter(item => item != null).forEach(item => {
+
+				item.priority = item.priority != null ? item.priority : 0;
+
+				if(item.priority > max)
+					max = item.priority;
+			});
+
 			responses.filter(
 				item => {
 
-					if(item != null) {
+					if(item == null)
+						return
 
-						if(typeof item == "object") {
+					if(item.priority != max)
+						return false;
 
-							if(item.file != null) {
-								
-								if(item.file)
-									file = true;
+					delete item.priority;
 
-								delete item.file;
-							}
+					if(typeof item == "object") {
+
+						if(item.file != null) {
+							
+							if(item.file)
+								file = true;
+
+							delete item.file;
 						}
 					}
 					
@@ -305,7 +376,7 @@ function axisServer(options) {
 
 					fs.readFile(body[0], function(error, data) {
 
-						if(error){
+						if(error) {
 							response.statusCode = 500;
 							response.end(`ERROR: ${error}.`);
 						}
@@ -332,6 +403,125 @@ function axisServer(options) {
 	server.server.listen(options.port != null ? options.port : 80);
 
 	return server;
+}
+
+function getFile(uri, directories) {
+
+	try {
+
+		uri = uri.substring(uri.indexOf("://") + 3);
+
+		if(uri.includes("/"))
+			uri = uri.substring(uri.indexOf("/"));
+
+		if(uri.includes("?"))
+			uri = uri.substring(0, uri.indexOf("?"));
+
+		return getFiles(
+			uri.split("/").filter(item => item.length > 0),
+			directories
+		).map(file => {
+
+			let type = file.includes(".") ?
+				file.substring(file.lastIndexOf(".") + 1) : null;
+
+			let result = {
+				file: file,
+				folder: fs.lstatSync(file).isDirectory(),
+				meta: file.split(/[\/\\]/).map(item =>
+					item.split(".").slice(1).reduce(
+						(value, item) => {
+
+							item = item.split("-");
+
+							let key = item[0].toLowerCase()
+
+							if(key != type)
+								value[key] = item.slice(1).join("-");
+
+							return value;
+						},
+						{ }
+					)
+				).reduce((value, item) => Object.assign(value, item), { }),
+				type: type
+			}
+
+			return result.meta.private == null ? result : null;
+		})[0];
+	}
+
+	catch(error) {
+		return null;
+	}
+}
+
+function getFiles(items, paths) {
+
+	paths = paths != null ? paths : [];
+
+	let files = [];
+
+	if(items.length > 0) {
+
+		let alias = items[0].split(".")[0];
+
+		paths.forEach(file => {
+
+			try {
+
+				fs.readdirSync(file).forEach(item => {
+
+					if(item.toLowerCase().startsWith(alias.toLowerCase()))
+						files.push(file + path.sep + item);
+				});
+			}
+
+			catch(error) {
+				
+			}
+		});
+	}
+
+	if(files.length == 0) {
+
+		paths.forEach(file => {
+
+			try {
+		
+				fs.readdirSync(file).forEach(item => {
+		
+					if(item.toLowerCase().startsWith("index"))
+						files.push(file + path.sep + item);
+				});
+			}
+	
+			catch(error) {
+	
+			}
+		});
+
+		if(files.length == 0)
+			return null;
+	}
+
+	if(files.length > 1) {
+
+		let match = files.filter(file =>
+			file.toLowerCase().endsWith(items[0].toLowerCase())
+		);
+
+		files = match.length > 0 ? match : files;
+	}
+
+	if(items.length < 2)
+		return files;
+
+	return files.map(item =>
+		getFiles(items.slice(1), [item])
+	).filter(item => item != null).reduce(
+		(value, item) => value.concat(item), []
+	);
 }
 
 function isHTTPJSON(json) {

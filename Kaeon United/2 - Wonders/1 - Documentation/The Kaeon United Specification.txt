@@ -6026,7 +6026,23 @@ ACE Console
 			an active ACE-based simulation, in real time.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 1 - Kaeon ACE Directives'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 1 - Components: 1 - Kaeon ACE Alias'
+
+Kaeon ACE Alias
+
+	Philosophy
+
+		-
+			The Kaeon ACE alias component convention is a Kaeon ACE convention regarding Kaeon ACE
+			alias components.
+
+			A Kaeon ACE alias component is a Kaeon ACE component element with the content "Alias",
+			the content of the children of which specify alternate aliases for the element to which
+			it belongs, such that said aliases may be used for purposes related to the Kaeon ACE
+			Trace conventions.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 1 - Components: 2 - Kaeon ACE Directives'
 
 Kaeon ACE Directives
 
@@ -16353,21 +16369,40 @@ Character Separated Binary
 					Any whitespace aside from the separator tokens shall be trimmed.
 				-
 
-		Default Protocol
+		Conventions
 
-			-
-				The default protocol uses binary to represent the bytes and any character other
-				than one or zero as separator tokens.
+			CSB
 
-				However, the best practice for the default protocol is to use single new lines to
-				separate the bytes, and to omit any leading zeros.
-			-
+				Default Protocol
 
-		Abbreviation
+					-
+						The default protocol uses binary to represent the bytes and any character
+						other than one or zero as separator tokens.
 
-			-
-				Character separated binary may be abbreviated as CSB.
-			-
+						However, the best practice, and the default practice, for the default
+						protocol is to use single new lines to separate the bytes, and to omit any
+						leading zeros.
+					-
+
+				Abbreviation
+
+					-
+						Character separated binary may be abbreviated as CSB.
+					-
+
+			B-ONE
+
+				-
+					B-ONE (pronounced "bone"), is the use of a sequence a ONE element, for which
+					each of its children contains a number, which number being specified in any of
+					the formats allowed by CSB, to represent a sequence of bytes, the order of said
+					bytes aligning with the order of the indices of said children.
+
+					B-ONE, by default, shall use binary strings.
+
+					As such, CSB specified using the default protocol with its default practices
+					may be parsed as ONE+ to B-ONE.
+				-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 2 - Kaeon United: 1 - Suite: 1 - Languages: 2 - C3: 2 - United C'
 

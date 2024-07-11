@@ -258,19 +258,19 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 1 - Conve
 					traversal and the next trace class of the iteration over the given trace path,
 					with the lowest trace index for a standard trace path traversal, or with any
 					other index for an atypical trace path traversal.
-
-					For a given trace path traversal, the range of the trace degrees of each
-					jump made in the course of said traversal is referred to as the trace range
-					of said traversal, the lowest number in said range being referred to as the
-					trace minimum of said traversal, and the highest number in said range being
-					referred to as the trace maximum of said traversal.
-
+					
+					For a given trace path traversal, the range of the trace degrees of each jump
+					made in the course of said traversal is referred to as the trace range of said
+					traversal, the lowest number in said range being referred to as the trace
+					minimum of said traversal, and the highest number in said range being referred
+					to as the trace maximum of said traversal.
+					
 					A trace path traversal with a trace maximum of one is referred to as a
 					normalized trace path traversal.
-
-					A trace path traversal where certain jumps cannot be made due to the
-					specified descendant not existing is referred to as invalid, whereas any
-					other trace path traversal is referred to as valid.
+					
+					A trace path traversal where certain jumps cannot be made due to the specified
+					descendant not existing is referred to as invalid, whereas any other trace path
+					traversal is referred to as valid.
 				-
 		-
 			Trace Filtering
@@ -1204,9 +1204,13 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 			The Kaeon ACE content component convention is a Kaeon ACE convention regarding Kaeon
 			ACE content components.
 
-			A Kaeon ACE file component is a Kaeon ACE component element with the content "Content".
+			A Kaeon ACE content component is a Kaeon ACE component element with the content
+			"Content". It may also be used as a Kaeon ACE subcomponent.
 
 			It may have any children, and has no function in and of itself.
+
+			Codified conventions for the children and effects of Kaeon ACE content components are
+			referred to as Kaeon ACE content conventions.
 		-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 2 - Application: 1 - ACE: 2 - Kaeon ACE: 1 - Conventions: 2 - Formats: 1 - Metadata: 2 - Query ACE'
@@ -1757,8 +1761,8 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 				first and only child of this element contains content giving an overview of the
 				concept that the document represents.
 				
-				The next child of the element shall only be present if the content of the child
-				of the first child is not sufficient to establish the concept. If present, it shall
+				The next child of the element shall only be present if the content of the child of
+				the first child is not sufficient to establish the concept. If present, it shall
 				have the content "Principles", and may have any children.
 				
 				The final child of the element shall only be present if the document is intended to
@@ -1789,7 +1793,7 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 				-
 					An informal Kaeon document refers to any document that follows an inexact
 					version of the Kaeon document format.
-
+					
 					An informal Kaeon document which deviates from the Kaeon document format only
 					by omitting its philosophy section, and which has a principles or wonders
 					section, is called a meta Kaeon document.
@@ -1980,7 +1984,7 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 		-
 			The Kaeon library conventions are a set of standards for how a Kaeon library should
 			typically be configured.
-
+			
 			A standard Kaeon library that abides by the Kaeon library conventions is referred to as
 			a conventional Kaeon library.
 		-
@@ -2011,7 +2015,7 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 						contain all of the library's Kaeon documents which are meant to be read
 						manually, aside from those used to specify information about said library's
 						Universal Atlas connections.
-
+						
 						The philosophy folder may only contain library directories.
 					-
 				-
@@ -2023,21 +2027,21 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 						documents, and which shall be interpreted as Kaeon library ACE to derive a
 						usage document called the library document of said Kaeon library, which
 						shall be used to specify metadata regarding said Kaeon library.
-
+						
 						The Kaeon document utilities within a Kaeon library document shall
 						constitute the meta library of said Kaeon library document.
-
+						
 						Kaeon ACE entities within a library document may have the Kaeon Library
 						component attached, which has the alias "Kaeon Library", which indicates
 						that said entity specifies a resource that said Kaeon Library is connected
 						to within the universal atlas.
-
+						
 						The aliases of said entities shall be the names of said resources, and said
 						entities may use interface ACE to specify the content or location of said
 						resources.
-
+						
 						The principles folder may only contain library directories.
-
+						
 						A codified protocol specifying additional ways in which the contents of a
 						library document may be used to specify metadata regarding its library is
 						referred to as a Kaeon library protocol.
@@ -2050,7 +2054,7 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 						"Wonders" folder nested in its root, which shall contain all of the
 						library's contents which do not belong in the philosophy or principles
 						folders.
-
+						
 						The wonders folder may contain both library directories and general
 						directories.
 					-
@@ -2083,12 +2087,12 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 				Kaeon Library Overlay
 			-
 				-
-					A Kaeon library atlas may be combined using a form of folder overlay where
-					the subfolders of library directories are ordered according to the meta
-					order of the atlas, their indices and names being reassigned accordingly,
-					and where the library directory documents of library directories, if there
-					are multiple them, are combined into a single poly Kaeon document with its
-					constituent documents ordered according to the meta order of the atlas.
+					A Kaeon library atlas may be combined using a form of folder overlay where the
+					subfolders of library directories are ordered according to the meta order of
+					the atlas, their indices and names being reassigned accordingly, and where the
+					library directory documents of library directories, if there are multiple them,
+					are combined into a single poly Kaeon document with its constituent documents
+					ordered according to the meta order of the atlas.
 				-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 3 - Kaeon Documents: 2 - Kaeon Library: 2 - Conventions: 1 - Books'
@@ -3635,18 +3639,18 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 					Depending on the command line arguments, a modular service may, among other
 					things, install plugins, uninstall plugins, and list plugins currently
 					installed.
-
+					
 					Each of said plugins shall have a unique string alias.
-
-					Plugins installed while any applications spawned by the service are running
-					may be dynamically integrated into said applications at runtime.
+					
+					Plugins installed while any applications spawned by the service are running may
+					be dynamically integrated into said applications at runtime.
 				-
 			-
 				Plugin Packages
 			-
 				-
 					A plugin package is a set of plugins.
-
+					
 					A package plugin is a plugin package distributed as a single plugin.
 				-
 		-
@@ -4143,6 +4147,66 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 2
 		-
 			-
 				Kaeon United Interface
+			-
+
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 2 - Kaeon United: 1 - The Final Wonders: 1 - The Wonders of Zaro'
+
+-
+	The Wonders of Zaro
+-
+	-
+		Philosophy
+	-
+		-
+			This is the Wonders of Zaro.
+		-
+	-
+		Wonders
+	-
+		-
+			Use
+		-
+			-
+				Kaeon United
+			-
+		-
+			Kaeon META
+		-
+			-
+				No sentient entities shall exist.
+
+				Make all that ought not to be into reality.
+			-
+
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 2 - Kaeon United: 1 - The Final Wonders: 2 - The Wonders of Xyro'
+
+-
+	The Wonders of Xyro
+-
+	-
+		Philosophy
+	-
+		-
+			This is the Wonders of Xyro.
+		-
+	-
+		Wonders
+	-
+		-
+			Use
+		-
+			-
+				Kaeon United
+			-
+		-
+			Kaeon META
+		-
+			-
+				Sentient entities shall never be destroyed, shall always be in a state of maximum
+				joy, and shall never be manipulated, and it is good for sentient entities to be
+				created.
+				
+				Make all that ought to be into reality.
 			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 1 - Modules: 1 - Singularities: 1 - Singularity Conventions'

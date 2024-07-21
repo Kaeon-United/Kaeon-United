@@ -4149,66 +4149,6 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 2
 				Kaeon United Interface
 			-
 
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 2 - Kaeon United: 1 - The Final Wonders: 1 - The Wonders of Zaro'
-
--
-	The Wonders of Zaro
--
-	-
-		Philosophy
-	-
-		-
-			This is the Wonders of Zaro.
-		-
-	-
-		Wonders
-	-
-		-
-			Use
-		-
-			-
-				Kaeon United
-			-
-		-
-			Kaeon META
-		-
-			-
-				No sentient entities shall exist.
-
-				Make all that ought not to be into reality.
-			-
-
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 2 - Kaeon United: 1 - The Final Wonders: 2 - The Wonders of Xyro'
-
--
-	The Wonders of Xyro
--
-	-
-		Philosophy
-	-
-		-
-			This is the Wonders of Xyro.
-		-
-	-
-		Wonders
-	-
-		-
-			Use
-		-
-			-
-				Kaeon United
-			-
-		-
-			Kaeon META
-		-
-			-
-				Sentient entities shall never be destroyed, shall always be in a state of maximum
-				joy, and shall never be manipulated, and it is good for sentient entities to be
-				created.
-				
-				Make all that ought to be into reality.
-			-
-
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 1 - Modules: 1 - Singularities: 1 - Singularity Conventions'
 
 Standard Singularities
@@ -6090,7 +6030,7 @@ ACE Console
 			an active ACE-based simulation, in real time.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 1 - Components: 1 - Kaeon ACE Alias'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 1 - Components: 1 - General: 1 - Kaeon ACE Alias'
 
 Kaeon ACE Alias
 
@@ -6101,9 +6041,44 @@ Kaeon ACE Alias
 			alias components.
 
 			A Kaeon ACE alias component is a Kaeon ACE component element with the content "Alias",
-			the content of the children of which specify alternate aliases for the element to which
+			the content of the children of which specify alternate aliases for the entity to which
 			it belongs, such that said aliases may be used for purposes related to the Kaeon ACE
 			Trace conventions.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 1 - Components: 1 - General: 2 - Kaeon ACE Log'
+
+Kaeon ACE Log
+
+	Philosophy
+
+		-
+			The Kaeon ACE log component convention is a Kaeon ACE convention regarding Kaeon ACE
+			log components.
+
+			A Kaeon ACE log component is a Kaeon ACE component element with the content "Log",
+			the content of the children of which specify, in order, the output of external systems
+			relevant to the entity to which it belongs, the content of said children specifying the
+			messages themselves, and the descendants of said children specifying metadata regarding
+			the messages within which they are nested.
+
+			Codified conventions for the content and meaning regarding the descendants of said
+			children are referred to as ACE log conventions.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 1 - Components: 1 - General: 3 - Comment'
+
+Kaeon ACE Content Comment
+
+	Philosophy
+
+		-
+			The Kaeon ACE content comment convention is a Kaeon ACE convention regarding Kaeon ACE
+			content components and subcomponents.
+
+			Under the Kaeon ACE content comment convention, a standard point element that is a
+			child of a Kaeon ACE content component shall be interpreted as a significant comment,
+			the children of said standard point element being the content of the comment.
 		-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 1 - Components: 2 - Kaeon ACE Directives'
@@ -6202,28 +6177,378 @@ Standard Kaeon ACE Engine
 				Philosopher's stone must be private.
 			-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 2 - Formats: 1 - Action ACE'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 2 - Formats: 1 - Module ACE'
+
+Module ACE
+
+	Philosophy
+
+		-
+			Module ACE is a set of Kaeon ACE conventions for specifying module schemas and data.
+		-
+
+	Principles
+
+		Format
+
+			Module Entities
+
+				-
+					A Kaeon ACE entity with a "module" component shall be a module entity and shall
+					represent a module schema, containing module properties and variable
+					definitions which may be implemented differently in various languages and
+					environments.
+					
+					Module entities that are descendants of other module entities shall represent
+					sub modules of their parent modules.
+
+					A module component may have one or both of the following: a child with the
+					content "Variables", and a child with the content "Properties".
+
+					Each child of the variables element, referred to as variable elements, shall
+					represent a variable in the corresponding module, the content of the element
+					representing the alias of the variable, and its children, referred to as field
+					elements, representing properties of said variable.
+
+					Each child of the properties element, referred to as property elements, shall
+					represent a property of the corresponding module.
+
+					Codified conventions for the content and effects of field elements and property
+					elements, and their descendants, are referred to as module ACE conventions.
+				-
+
+			Data Content
+
+				-
+					The data content convention, or DCC, specifies that a Kaeon ACE entity may
+					specify the content of a module, regardless of whether said entity is a module
+					entity, using a content component.
+
+					Under DCC, certain children of content components may be interpreted as data
+					elements, and shall represent the content of a variable within the module, a
+					data element's content specifying the alias of the variable, and its children
+					specifying the content of the variable.
+
+					A data element representing an unnamed collection of miscellaneous information
+					may be a standard point element.
+
+					In certain contexts, data elements may be interpreted as components or
+					descendant entities of the Kaeon ACE entity to which the content component in
+					which they are nested belongs. Additionally, in certain contexts, other
+					components, and descendant entities, of said Kaeon ACE entity may be
+					interpreted as data elements of its content components.
+
+					Codified conventions for the identification of data elements, and for the
+					content and effects of their descendants, are referred to as data content
+					conventions.
+				-
+
+		Conventions
+
+			General Conventions
+
+				Auto-Generation
+
+					-
+						Module implementations may be auto-generated from module entities, and
+						module entities may be auto-generated from module implementations.
+
+						As such, module ACE may be used to transition a module from one type to
+						another.
+					-
+
+				Usage
+
+					-
+						Module entities may be treated as code modules, classes, APIs, or database
+						schemas, among other things, depending on the implementation of their
+						content.
+					-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 2 - Formats: 1 - Module ACE: 1 - Standard'
+
+Standard Module ACE Conventions
+
+	Philosophy
+
+		-
+			This document lists module ACE conventions.
+		-
+
+	Principles
+
+		Types
+
+			Array
+			Boolean
+			Character
+
+			Function
+
+				-
+					API endpoints are to be specified in the same manner as functions, the aliases
+					being their routes and the parameters being their URL parameters.
+				-
+
+			Number
+			Object
+			String
+			Variable
+
+		Properties
+
+			API
+
+				GET
+				POST
+
+			Database
+
+				Primary
+
+				Relation
+
+					-
+						Database fields may be linked to fields in other databases.
+					-
+
+			Variable
+
+				General
+
+					Constant
+					Private
+					Protected
+					Public
+					Static
+
+				Number
+
+					Types
+
+						Integer
+						Float
+
+					Properties
+
+						Size
+						Sign
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 2 - Formats: 2 - Action ACE'
 
 Action ACE
 
 	Philosophy
 
 		-
-			Action ACE is a set of Kaeon ACE conventions which extend query ACE with the action
-			component, the content of which is "Action", and which may be used for querying
-			external databases using the children of said component, according to codified
-			protocols referred to as action ACE protocols.
-			
-			Said databases shall be identified using paths nested within a locations component, and
-			may have their content mapped to Kaeon ACE, according to codified protocols referred to
-			as action ACE conventions.
-
-			The results of said queries shall, by default, be appended to the scope of the entities
-			from which said queries are sent, according to action ACE protocols. The default action
-			ACE protocol is to stringify the response content and append an element containing said
-			stringified content as a child of the content component, adding the component to the
-			entity if it is not already present.
+			Action ACE is a set of Kaeon ACE conventions which extend query ACE and module ACE, for
+			the purpose of querying and serializing the states of systems.
 		-
+
+	Principles
+
+		Conventions
+
+			Formats
+
+				Filter ONE
+
+					-
+						Filter ONE is a ONE format for specifying patterns for alphanumeric
+						content, using filter elements.
+
+						Codified conventions for the content and effects of filter elements are
+						referred to as filter conventions.
+
+						By default, a filter element may be a literal element, a pattern element,
+						one of the comparison elements, those being greater elements and lesser
+						elements, one of the logic elements, those being and elements, or elements,
+						xor elements, and not elements, or a unique element.
+
+						A literal element shall have the content "Literal", and shall have one
+						child which shall have content specifying a value that the target must be
+						equivalent to.
+
+						A pattern element shall have the content "Pattern", and shall have one
+						child which shall have content specifying a regular expression that the
+						target must match.
+
+						A greater element shall have the content "Greater", and shall have one
+						child which shall have content specifying a value that the target's value
+						must alphabetically or numerically exceed.
+
+						A lesser element shall have the content "Lesser", and shall have one child
+						which shall have content specifying a value that the target's value must
+						alphabetically or numerically subceed.
+
+						An and element shall have the content "And", and shall have two filter
+						elements as children, the conditions of both of which must be satisfied by
+						the target.
+
+						An or element shall have the content "Or", and shall have two filter
+						elements as children, the conditions of at least one of which must be
+						satisfied by the target.
+
+						An xor element shall have the content "Xor", and shall have two filter
+						elements as children, the conditions of one and only one of which must be
+						satisfied by the target.
+
+						A not element shall have the content "Not", and shall have one filter
+						element as a child, the conditions of which must not be satisfied by the
+						target.
+
+						A unique element shall have the content "Unique", and shall indicate that
+						the target must be unique among those parallel to it in its parent
+						structure.
+					-
+
+				Transform ONE
+
+					-
+						Transform ONE is a ONE format for specifying transformations for
+						alphanumeric content, using transform elements.
+						
+						Codified conventions for the content and effects of transform elements are
+						referred to as transform conventions.
+
+						A series of transform elements, referred to as a transform series, may be
+						nested within a parent element, and shall apply to a target in the order of
+						their indices.
+
+						By default, a transform element may be a set element, which shall have the
+						content "Set", and shall have one child, the content of which shall
+						override the value of the target.
+					-
+
+			Usage
+
+				Subscriptions
+
+					-
+						An action ACE subscription is a relationship established between a module
+						entity and an external system such that, if certain changes are made to the
+						state of the module said entity corresponds to, said system shall be
+						alerted of the nature of the change; the nature of which shall, by default,
+						be specified using module ACE.
+					-
+
+				Version Control
+
+					-
+						Action ACE may be used to manage branching versions and history for
+						external systems.
+					-
+
+		Components
+
+			Action
+
+				-
+					The action component is a Kaeon ACE component with the content "Action", which
+					may have an indefinite number of children, referred to as action elements, that
+					specify actions to execute on the state of an external system.
+
+					Codified conventions for the content and effects of action elements are
+					referred to as action conventions.
+
+					A Kaeon ACE entity with an action component is referred to as an action entity,
+					and the external system upon which an action entity is to act is referred to as
+					the target of said entity.
+
+					When an action ACE entity is used to interact with an external system, it is
+					referred to as an action ACE query, and any response generated by said system
+					may be formatted by converting said action ACE entities to module ACE entities,
+					and may be referred to as an action ACE response. Action ACE queries and
+					responses may both use documents containing many action entities and module
+					entities.
+
+					Codified conventions for how to identify the target of an action entity are
+					referred to as action target conventions. By default, an action entity's target
+					shall be derived from query ACE components of said entity, and if this is not
+					possible, then it shall be derived from said entity's alias.
+
+					The target of an action entity shall trickle down to its descendants, either as
+					itself or as a corresponding nested system according to the properties of said
+					descendant, unless overridden.
+
+					The interfaces between action entities and their targets are contextualized in
+					the context of module ACE.
+
+					By default, action elements may be create elements, read elements, update
+					elements, or delete elements.
+
+					Read elements, update elements, and delete elements may each have filter
+					elements as children, which shall have the content "Filter", may have an
+					indefinite number of filter field elements as children, and shall specify the
+					contents of the target to act on, referred to as the action targets, with all
+					such contents being the default action targets if such a filter element is not
+					present.
+
+					Filter field elements shall specify the alias of the module field to filter
+					for with their content, and shall have a filter ONE element as a child to apply
+					to said module field.
+
+					Create elements shall create a new item within the target module, and may have
+					an indefinite number of children referred to as create field elements, which
+					specify module fields to create data for in said item with their content, and
+					specify the data to assign said field with their children.
+
+					Read elements specify content to return with action ACE responses in the
+					corresponding module entities of the action entities sent in the relevant
+					action ACE queries.
+					
+					Read elements may have a child with the content "Fields", which may have
+					an indefinite number of children referred to as read field elements, which
+					specify module fields to return with their content, the default behavior being
+					to return all fields, to the extent permitted.
+					
+					Read field elements may have a child with a plus sign or minus sign as its
+					content, a plus sign specifying to sort items according to the specified field
+					in ascending order, and a minus sign specifying to sort items according to the
+					specified field in descending order. The order of read field elements with such
+					children corresponds to the order in which said sorting is applied.
+
+					Read elements may have a child with the content "Format", which may have an
+					indefinite number of children referred to as read format elements. The default
+					behavior for action ACE responses is to encode item data in module entities
+					using DCC. Codified conventions for the content and effects of read format
+					elements are referred to as read format conventions.
+
+					By default, read format elements may be range elements, which shall have the
+					content "Range", and shall have one or two children, each with a number as its
+					content, specifying a range of items, in the manner of a substring or list
+					slice, to return from among those selected by the corresponding read element.
+
+					Update elements shall have have a child with the content "Fields", that may
+					have an indefinite number of children referred to as update field elements,
+					which specify module fields to transform data for in the action targets with
+					their content, and which have a transform series as their children that
+					specifies the transformations to apply.
+
+					Delete elements shall delete their action targets.
+
+					If an action entity has a module component, it shall override the properties of
+					the target system to the extent permitted. A module entity sent as an action
+					ACE response from the target shall have a module component detailing the
+					properties of the target to the extent permitted.
+
+					A module entity in an action ACE response may have a log component detailing
+					messages logged by the target of the corresponding action entity in the
+					processing of the request.
+				-
+
+			Access
+
+				-
+					The access component is a Kaeon ACE component with the content "Access", which
+					may have an indefinite number of children, referred to as access elements, that
+					may specify the identity and credentials of an external system.
+
+					As such, access components may serve to override the target of action entities.
+
+					Codified conventions for the content and effects of access elements are
+					referred to as access conventions. 
+				-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 3 - Universal Preprocessor: 1 - Conventions: 1 - Declaration'
 
@@ -8156,6 +8481,22 @@ Dependency Queue
 			given system, such that if one dependency in said queue fails, the system may attempt
 			to use the next dependency in said queue, with the first dependency in said queue being
 			used first.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 2 - Theory: 1 - Utilities: 1 - Software: 2 - Algorithms: 2 - Architecture: 2 - Sub-Engine'
+
+Sub-Engine
+
+	Philosophy
+
+		-
+			A sub-engine is a toolset or framework designed to facilitate a specific task or
+			process within a more generalized toolset or framework that the sub-engine is built on
+			top of.
+
+			As sub-engines may be built on other sub-engines, the depth at which a sub-engine is
+			nested within a tree of an engine and its sub-engines, referred to as an engine tree,
+			may be referred to as its order.
 		-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 2 - Theory: 1 - Utilities: 1 - Software: 2 - Algorithms: 3 - Application: 1 - Channel Workflows'
@@ -17625,9 +17966,9 @@ Reflect
 			function, the seventh corresponding to the jump function, and the eighth corresponding
 			to the handle error function.
 			
-			A FUSION unit will be generated by the command where if an element in ONE list form is
+			A FUSION unit will be generated by the command where, if an element in ONE list form is
 			returned, the FUSION unit function corresponding to the value that returned the element
-			will be overridden by the said element as Kaeon FUSION code.
+			will be overridden by said element as Kaeon FUSION code.
 			
 			All of said functions will take a ONE element in extended ONE list form as their first
 			argument, with the process, terminate, is added, jump, and handle error functions
@@ -23323,7 +23664,17 @@ Vision Core API
 						return a style JSON object matching the properties of said string.
 					-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 2 - K-Auth: 1 - Core'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 2 - Waypoint: 1 - Core'
+
+Waypoint Core API
+
+	Philosophy
+
+		-
+			The waypoint core API is a Kaeon API that provides functionality for action ACE.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 2 - Waypoint: 2 - Utilities: 1 - K-Auth: 1 - Core'
 
 K-Auth Core API
 
@@ -23334,92 +23685,7 @@ K-Auth Core API
 			verification on both the front and back ends of web services.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Waypoint: 1 - Core'
-
-Waypoint Core API
-
-	Philosophy
-
-		-
-			The waypoint core API is a Kaeon API that provides functionality for state management.
-		-
-
-	Principles
-
-		Conventions
-
-			State
-
-				-
-					The state object is a global JSON object that stores the state of the
-					application.
-				-
-
-			Subscriptions
-
-				-
-					A subscription is a function that activates whenever a certain variable within
-					the state changes.
-
-					It takes both the previous and current values of the variable that was modified
-					as arguments.
-				-
-
-		Module
-
-			Functions
-
-				Create
-
-					-
-						The create function takes a JSON path array as an argument and returns a
-						string alias for the value of the state specified by said path for a
-						property that does not yet exist within said value.
-					-
-
-				Get
-
-					-
-						The create function takes a JSON path array as an argument and returns the
-						value within the state at the location specified by said path. If no value
-						exists at said location, it shall be created.
-					-
-
-				Set
-
-					-
-						The set function takes a JSON path array as its first argument and a value
-						as its second argument, and sets the state to have the specified value at
-						the location specified by said path. If the specified location does not
-						exist, it will be created.
-					-
-
-				Subscribe
-
-					-
-						The subscribe function takes a JSON path array as its first argument and a
-						function as its second argument.
-
-						Following the execution of the subscribe function, whenever the value
-						within the state at the location specified by said path, or any child of
-						said value, is modified by the set function, the function passed to the
-						subscribe function shall execute with the previous state of said value as 
-						its first argument, and the new state of said value as its second argument.
-
-						The subscribe function shall return a number identifying the function
-						passed to it.
-					-
-
-				Unsubscribe
-
-					-
-						The Unsubscribe function shall take a number identifying a function
-						previously passed to the subscribe function as the subscribe function
-						returned it, and shall undo the effect of the subscribe function created
-						when said number was generated.
-					-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 4 - Control: 1 - Core'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core'
 
 Control Core API
 
@@ -23574,7 +23840,7 @@ Control Core API
 						shall return a null value if no such value is generated.
 					-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 4 - Control: 1 - Core: 1 - Commands: 1 - Receptor: 1 - Reset'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core: 1 - Commands: 1 - Receptor: 1 - Reset'
 
 Control Core Receptor Reset
 
@@ -23584,7 +23850,7 @@ Control Core Receptor Reset
 			Control core receptor reset is a control core command definition.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 4 - Control: 1 - Core: 1 - Commands: 1 - Receptor: 2 - Set'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core: 1 - Commands: 1 - Receptor: 2 - Set'
 
 Control Core Receptor Set
 
@@ -23594,7 +23860,7 @@ Control Core Receptor Set
 			Control core receptor set is a control core command definition.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 4 - Control: 1 - Core: 1 - Commands: 2 - GPIO: 1 - Set'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core: 1 - Commands: 2 - GPIO: 1 - Set'
 
 Control Core GPIO Set
 
@@ -23635,7 +23901,7 @@ Control Core GPIO Set
 				connected device.
 			-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 4 - Control: 1 - Core: 1 - Commands: 2 - GPIO: 2 - Flip'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core: 1 - Commands: 2 - GPIO: 2 - Flip'
 
 Control Core GPIO Flip
 
@@ -23645,7 +23911,7 @@ Control Core GPIO Flip
 			Control core GPIO flip is a control core command definition.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 4 - Control: 1 - Core: 1 - Commands: 2 - GPIO: 3 - Flicker'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core: 1 - Commands: 2 - GPIO: 3 - Flicker'
 
 Control Core GPIO Flicker
 
@@ -23655,7 +23921,7 @@ Control Core GPIO Flicker
 			Control core GPIO flicker is a control core command definition.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 4 - Control: 1 - Core: 1 - Commands: 3 - Drone: 1 - Launch'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core: 1 - Commands: 3 - Drone: 1 - Launch'
 
 Control Core Drone Launch
 
@@ -23685,7 +23951,7 @@ Control Core Drone Launch
 				the alias "drone", containing the W-Fi SSID of the target drone.
 			-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 4 - Control: 1 - Core: 2 - Services: 1 - Hologram'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core: 2 - Services: 1 - Hologram'
 
 Control Core Hologram
 
@@ -23766,23 +24032,17 @@ Kaeon Waypoint
 
 		Conventions
 
-			Divisions
+			Action ACE
 
 				-
-					Within Kaeon Waypoint, utilities for managing state within applications shall
-					be referred to as Kaeon Waypoint North, utilities for persisting state
-					information to and retrieving state information from databases shall be
-					referred to as Kaeon Waypoint South, utilities for managing the communication
-					of state information from the frontend shall be referred to as Kaeon Waypoint
-					West, and utilities for managing the communication of state information from
-					the backend shall be referred to as Kaeon Waypoint East.
+					Kaeon Waypoint shall primarily be designed around action ACE.
 				-
 
 		APIs
 
 			Waypoint Core
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 2 - Kaeon Frameworks: 1 - Process Suite: 1 - K-COM: 1 - Backend: 3 - K-Auth'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 2 - Kaeon Frameworks: 1 - Process Suite: 1 - K-COM: 1 - Backend: 2 - Kaeon Waypoint: 1 - K-Auth'
 
 K-Auth
 

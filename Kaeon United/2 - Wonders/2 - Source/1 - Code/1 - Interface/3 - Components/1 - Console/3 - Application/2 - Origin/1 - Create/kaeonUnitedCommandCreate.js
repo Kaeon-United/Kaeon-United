@@ -31,8 +31,17 @@ module.exports = (args, callback) => {
 
 	(async () => {
 
-		let path = (args[2] != null ? args[2] : process.cwd()) +
-			require("path").sep;
+		var fs = require("fs");
+
+		let path = (args[2] != null ? args[2] : process.cwd());
+
+		if(!fs.existsSync(path))
+			fs.mkdirSync(path);
+
+		path += require("path").sep;
+
+		if(!fs.existsSync(path + "axis"))
+			fs.mkdirSync(path + "axis");
 
 		if(args[1].toLowerCase() == "axis") {
 
@@ -53,11 +62,6 @@ module.exports = (args, callback) => {
 
 				io.save(data, path + key);
 			});
-
-			var fs = require("fs");
-
-			if(!fs.existsSync(path + "axis"))
-				fs.mkdirSync(path + "axis");
 		}
 
 		callback();

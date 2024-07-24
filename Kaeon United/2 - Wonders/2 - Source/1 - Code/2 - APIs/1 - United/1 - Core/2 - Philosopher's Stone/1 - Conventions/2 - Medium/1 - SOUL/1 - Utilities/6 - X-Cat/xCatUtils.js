@@ -70,7 +70,9 @@ function expand(model, degree) {
 
 function scatter(model, degree) {
 
-	if(model.model != null)
+	let context = model.model != null ? model : null;
+
+	if(context != null)
 		model = model.model;
 
 	for(let i = 0; i < model.matrix.length; i++) {
@@ -85,7 +87,8 @@ function scatter(model, degree) {
 		}
 	}
 
-	return model;
+	return context != null ?
+		{ model: data, metadata: context.metadata } : model;
 }
 
 function step(model) {
@@ -100,14 +103,33 @@ function step(model) {
 	for(let i = 0; i < model.vector.length; i++) {
 
 		result.push({ });
-		Object.apply(model.vector[i], result[i]);
+		Object.assign(result[i], model.vector[i]);
 
 		result[i].state = 0;
 
 		for(let j = 0; j < model.vector.length; j++) {
-			
-			result[i].state +=
-				model.vector[j].state * model.matrix[j][i].weight;
+
+			let signal = model.vector[j].state * model.matrix[j][i].weight;
+
+			signal = stepSignal(
+				model.vector[j].props,
+				model.vector[i].props,
+				model.matrix[j][i].props,
+				signal
+			);			
+
+			result[i].state += signal;
+
+			let props = stepProps(
+				model.vector[j].props,
+				model.vector[i].props,
+				model.matrix[j][i].props,
+				signal
+			);
+
+			model.vector[j].props = props.sourceProps;
+			result[i].props = props.targetProps;
+			model.matrix[j][i].props = props.connectionProps;
 		}
 
 		result[i].state = activation(result[i].state);
@@ -119,6 +141,42 @@ function step(model) {
 		{ model: data, metadata: context.metadata } : result;
 }
 
+function stepProps(sourceProps, targetProps, connectionProps, signal) {
+
+	[
+		stepPropsHeat
+	].forEach(item => {
+		
+		let props = item(sourceProps, targetProps, connectionProps, signal);
+
+		sourceProps = props.sourceProps;
+		targetProps = props.targetProps;
+		connectionProps = props.connectionProps;
+	});
+
+	return {
+		sourceProps: sourceProps,
+		targetProps: targetProps,
+		connectionProps: connectionProps
+	};
+}
+
+function stepPropsHeat(sourceProps, targetProps, connectionProps, signal) {
+
+	if(connectionProps.heat != null)
+		connectionProps.heat = activation(connectionProps.heat + signal);
+
+	return {
+		sourceProps: sourceProps,
+		targetProps: targetProps,
+		connectionProps: connectionProps
+	};
+}
+
+function stepSignal(sourceProps, targetProps, connectionProps, signal) {
+	return signal;
+}
+
 function train(context, data) {
 
 	data = typeof data == "number" ? { score: data } : data;
@@ -126,20 +184,48 @@ function train(context, data) {
 	data.props = data.props != null ? data.props : { };
 
 	data.props.method =
-		data.props.method != null ? data.props.method : "scatter";
+		data.props.method != null ? data.props.method : "backburn";
 
-	if(data.props.method == "backburn")
-		trainBackburn(context, data.props.score, data.props.endPoints);
-
-	if(data.props.method == "scatter")
-		trainScatter(context, data.props.score);
+	(
+		{
+			"backburn": trainBackburn,
+			"burn": trainBurn,
+			"scatter": trainScatter
+		}
+	)[data.props.method](
+		context, data.score, data.props
+	);
 }
 
-function trainBackburn(context, score, endPoints) {
+// NOTE: TRACING
+function trainBackburn(context, score, props) {
+
+	let endpoints = props.endpoints;
+
 	// STUB
+
+	trainBurn(context, score, props); // STUB
 }
 
-function trainScatter(context, score) {
+// NOTE: NO TRACING
+function trainBurn(context, score, props) {
+
+	let model = context.model;
+
+	for(let i = 0; i < model.vector.length; i++) {
+
+		for(let j = 0; j < model.vector.length; j++) {
+
+			model.matrix[i][j].weight = activation(
+				model.matrix[i][j].weight + (
+					model.matrix[i][j].heat * score
+				)
+			)
+		}
+	}
+}
+
+function trainScatter(context, score, props) {
 
 	if(score > context.metadata.score) {
 		context.metadata.previous = JSON.parse(JSON.stringify(context.model));
@@ -161,7 +247,11 @@ module.exports = {
 	expand,
 	scatter,
 	step,
+	stepProps,
+	stepPropsHeat,
+	stepSignal,
 	train,
 	trainBackburn,
+	trainBurn,
 	trainScatter
 };

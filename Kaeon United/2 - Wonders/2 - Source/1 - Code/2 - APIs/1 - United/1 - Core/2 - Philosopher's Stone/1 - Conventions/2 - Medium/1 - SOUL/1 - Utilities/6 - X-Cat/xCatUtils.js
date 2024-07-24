@@ -195,6 +195,8 @@ function train(context, data) {
 	)[data.props.method](
 		context, data.score, data.props
 	);
+
+	return context;
 }
 
 // NOTE: TRACING
@@ -218,7 +220,7 @@ function trainBurn(context, score, props) {
 
 			model.matrix[i][j].weight = activation(
 				model.matrix[i][j].weight + (
-					model.matrix[i][j].heat * score
+					model.matrix[i][j].props.heat * score
 				)
 			)
 		}

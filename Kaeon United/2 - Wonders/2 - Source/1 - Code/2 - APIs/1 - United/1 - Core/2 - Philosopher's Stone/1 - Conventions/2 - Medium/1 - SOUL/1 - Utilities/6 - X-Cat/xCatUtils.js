@@ -218,11 +218,20 @@ function trainBurn(context, score, props) {
 
 		for(let j = 0; j < model.vector.length; j++) {
 
-			model.matrix[i][j].weight = activation(
-				model.matrix[i][j].weight + (
-					model.matrix[i][j].props.heat * score
-				)
-			)
+			model.matrix[i][j].weight =
+				model.matrix[i][j].weight + 
+				activation(
+					(
+						(Math.random() * 2 * model.matrix[i][j].props.heat) -
+							model.matrix[i][j].props.heat
+					) * (1 - score)
+				);
+
+			if(model.matrix[i][j].weight > 1)
+				model.matrix[i][j].weight = 1;
+
+			if(model.matrix[i][j].weight < -1)
+				model.matrix[i][j].weight = -1;
 		}
 	}
 }

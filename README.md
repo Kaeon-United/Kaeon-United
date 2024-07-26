@@ -6,11 +6,11 @@
 </div>
 
 <h3>What is Kaeon United?</h3>
-<p>Kaeon United is, in short, a cross-environment, setup-free "everything engine".</p>
+<p>Kaeon United is, in short, an "everything engine".</p>
 <h3>Details</h3>
 <h4>Why Kaeon United?</h4>
-<p>Kaeon United was created to solve what has been coined the problem of "suite corruption", that being the issue where engineers are forced to abandon utilities and techniques they have grown reliant upon, which derives from a series of other issues referred to as the Seven Deadly Sins, these being payment, signup, setup, decay, rigor, excess, and the worst of all, limits.</p>
-<p>Maintaining the spirit of its inception while also growing beyond it, Kaeon United grants access to a vast array of utilities that a developer might need in their initial environment, while allowing much of their acquired knowledge and work to follow them into new environments, helping them hit the ground running when transitioning.</p>
+<p>Kaeon United's primary purpose is to act as both the framework and the platform for Kaeon META, a distributed and dynamic network of servers, applications, and physical devices, which shall, via the integration of powerful AI utilities, collectively carry out requests from human users, ranging from minor tasks to massive projects, in both digital and physical space.</p>
+<p>In scaling to such needs, Kaeon United features a vast array of utilities for various domains of software and hardware that may be used independently for third party projects.</p>
 <h4>How does Kaeon United Work?</h4>
 <p>The way Kaeon United actually works can be summed up as "an interface of interfaces to a library of libraries".</p>
 <p>At its core, Kaeon United consists of a suite of APIs and applications for various uses and platforms, many of which come in multiple versions for the different platforms it may operate within. This suite consists of disparate parts linked together by reference documents, and many of these parts are reliant on one another.</p>

@@ -9096,7 +9096,14 @@ Soft Programming
 				referred to as request prompts. In a soft programming algorithm with a single
 				initial prompt, said prompt is referred to as the master prompt.
 
-				Codified collections of prompt protocol are referred to as prompt libraries.
+				Prompt protocols for deriving structured data from unstructured text, and for
+				converting structured data to unstructured text, are referred to as a structure
+				protocol, which themselves may be considered a type of prompt protocol.
+
+				Codified collections of prompt protocols are referred to as prompt libraries.
+
+				A prompt protocol for initiating the automation of tasks of indefinite scope is
+				referred to as an omni-protocol.
 			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 2 - Theory: 1 - Utilities: 1 - Software: 2 - Algorithms: 5 - Fields: 2 - AI: 1 - Conventions: 3 - Soft Programming: 1 - Soft Rules'
@@ -12608,13 +12615,25 @@ Atypical Neural Parameters
 						It may be used in correlation testing.
 					-
 
-		Reflective Agents
+		Conventions
 
-			-
-				Reflective agents are entities that monitor the state of a model, generating and
-				recording metadata in the process, and train it according to said state and
-				metadata.
-			-
+			Activations
+
+				-
+					Ideally, ATNP should be implemented in the form of activation functions applied
+					to the nodes and edges of the network.
+
+					Ideally, said activation functions should themselves be trainable. Such
+					functions may be referred to as dynamic activation (DA) functions.
+				-
+
+			Reflective Agents
+
+				-
+					Reflective agents are entities that monitor the state of a model, generating
+					and recording metadata in the process, and train it according to said state and
+					metadata.
+				-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 1 - Software: 2 - Algorithms: 1 - Conventions: 1 - Methods: 2 - Fields: 1 - AI: 3 - Models: 2 - NN: 2 - FFNN'
 
@@ -15827,6 +15846,138 @@ All-Purpose Android
 				replaceable by machines.
 			-
 
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 2 - Kaeon United: 1 - Suite: 1 - Languages'
+
+United Use
+
+	Philosophy
+
+		-
+			United use is a convention which specifies that a function with the alias "use", taking
+			a string path to an external resource, along with an optional arguments value, may be
+			implemented in any language or environment, to the extent possible, with the following
+			behavior:
+
+			Said function shall, depending on the environment and the arguments, use integration
+			mode, where it loads the referenced resource into the environment globally, import
+			mode, where it loads the referenced resource into a value and returns it, or some
+			combination or variant thereof, with additional behaviors contingent on the environment
+			and arguments.
+
+			The referenced resource may be referenced by alias or path, and may be loaded from the
+			local file system or from the internet. By default, such aliases shall ignore
+			whitespace and letter case, in addition to punctuation with the exception of that which
+			denotes package nesting, namely periods and slashes.
+			
+			The use function shall be made globally available to the extent possible, and should be
+			implemented to be compatible with as many types of external resources as possible.
+		-
+
+	Principles
+
+		Conventions
+
+			United Use
+
+				Native Utility Bootstraps
+
+					-
+						Utilities native to the environment for loading external resources may, to
+						the extent possible, be overridden as bootstraps for the use function,
+						thereby extending the variety of resources they may load.
+					-
+
+				Built-In Modules
+
+					-
+						The integration of united use into a particular environment may include
+						certain built-in modules which may be accessed with the use function via
+						alias. Such modules, by default, should also be made available through said
+						environment's native resource loading mechanisms.
+						
+						The set of such modules for a given implementation shall be referred to as
+						the provision package.
+					-
+
+				Options Conventions
+
+					-
+						Codified conventions regarding the contents of the options value and the
+						effects thereof are referred to as united option conventions.
+					-
+
+			Standard United
+
+				-
+					Standard United is an extension of united use which applies the Universal
+					Preprocessor to all plain text files referenced via the use function, and to
+					all plain text files to which standard united is applied.
+				-
+
+		Standards
+
+			United Option Conventions
+
+				Async
+
+					-
+						The options value may have an "async" field, containing a boolean which, if
+						true, shall indicate that the referenced resource is to be loaded
+						asynchronously, with a promise being the immediately returned value in
+						import mode.
+					-
+
+				Cache
+
+					-
+						The options value may have a "cache" field, containing a boolean which, if
+						true, shall indicate that the referenced resource is a standard network
+						cache for which all compatible resources are to be pre-cached for later
+						usage, and that the use function is to return null.
+					-
+
+				Dynamic
+
+					-
+						The options value may have a "dynamic" field, containing a boolean which, if
+						true, shall indicate that the path to the referenced resource is to be
+						interpreted as the contents of the resource rather than its location.
+					-
+
+				Global
+
+					-
+						The options value may have a "global" field, containing a boolean which, if
+						true, shall indicate that the use function is to execute in the global
+						scope.
+					-
+
+				Reload
+
+					-
+						The options value may have a "reload" field, containing a boolean which, if
+						true, shall indicate that the use function is to clear any cached data
+						related to the referenced resource, and to fully reload it from its source.
+					-
+
+				Use
+
+					-
+						The options value may have a "use" field, containing a boolean which, if
+						true, shall indicate that the referenced resource is an interface module to
+						be integrated, to extent applicable and possible, into the Philosopher's
+						Suite of the Philosopher's Singularity running the process.
+					-
+
+			Modules
+
+				Kaeon United
+
+					-
+						By default, the provision package of a united use integration should
+						include Kaeon United, with its name as its alias.
+					-
+
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 2 - Kaeon United: 1 - Suite: 1 - Languages: 1 - United JS'
 
 United JavaScript
@@ -15840,77 +15991,36 @@ United JavaScript
 
 	Principles
 
-		CommonJS Conventions
+		Standard United
 
 			-
-				Under United JavaScript, regardless of the environment it is running in, JavaScript
-				may use the CommonJS require function to dynamically load modules and to execute
-				scripts.
+				United JavaScript employs standard united in import mode, with "require" serving as
+				a native utility bootstrap for the use function in environments where the require
+				function is not natively implemented.
 
-				The modules passed to it must follow the CommonJS format.
-
-				United JavaScript shall provide dynamic dependency retrieval for modules installed
-				via package managers.
-
-				The CommonJS require function's path parameter may be either a path on the
-				local system or a URL to an online resource.
+				The use function may import modules using CommonJS and ES6 conventions, and shall
+				employ dynamic dependency retrieval for modules installed via package managers.
 				
-				The require function may take an optional second argument in the form of an object.
-				Said object may have the fields "async", "dynamic", "global", "reload", "cache",
-				and "use".
-
-				The async field, if present, shall contain either a function, a boolean, or a null
-				value. If a function or a boolean is provided, it shall indicate that the require
-				function is to execute asynchronously.
-				
-				If a function is provided for the async field, then upon the loading of the module,
-				the specified function shall be called with the returned module as its first
-				argument.
-				
-				If a boolean value of true is provided for the async field, then shall return a
-				promise which shall resolve to the specified module once it has loaded.
-
-				The dynamic field, if present, shall contain a boolean which, if true, shall
-				indicate that the path argument specifies the raw code of the module as opposed to
-				a path to it. As such, any module loaded this way shall not be stored in the
-				require function's cache.
-
-				The global field, if present, shall contain a boolean which, if true, shall
-				indicate that the module is to be processed in the global scope. This can be used
-				for loading and executing scripts.
-				
-				The reload field, if present, shall contain a boolean which, if true, shall
-				indicate that the module specified by the path parameter is to be deleted from the
-				cache and reloaded.
-				
-				The cache field, if present, shall contain a boolean which, if true, shall indicate
-				that the module specified by the path parameter is a standard network cache for
-				which all compatible resources are to be pre-cached for later use, and that the
-				require function is to return null.
-				
-				The use field, if present, shall contain a boolean which, if true, shall indicate
-				that the module specified by the path parameter is an interface module to be
-				integrated into the suite of any Philosopher's Singularity that UnitedJS is
-				operating within, and that the require function is to return null.
+				The options value passed to the use function shall be an object, with all option
+				field aliases matching the names specified in the united use specification, in
+				lower case.
 			-
 
-		Asynchronous Conventions
+		Conventions
 
-			-
-				Under United JavaScript, the await operator may be used at the root level of the
-				main file, outside of async functions.
-			-
+			Asynchronous
 
-		Execution Conventions
+				-
+					Under United JavaScript, the await operator may be used at the root level of
+					the main file, outside of async functions.
+				-
 
-			-
-				Under United JavaScript, a JavaScript file may be executed on the client side on
-				its own without being explicitly tied to an HTML document.
+			Environment
 
-				Furthermore, prior to interpretation, the Universal Preprocessor shall be applied
-				to both the code of the main file and to any code loaded through the require
-				function.
-			-
+				-
+					Under United JavaScript, a JavaScript file may be executed on the client side
+					on its own without being explicitly tied to an HTML document.
+				-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 2 - Kaeon United: 1 - Suite: 1 - Languages: 1 - United JS: 1 - Conventions: 1 - List Object Equivalence'
 
@@ -17032,53 +17142,6 @@ United C Print
 			It shall print each of its arguments in order to the console according to their
 			inferred data type.
 		-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 2 - Kaeon United: 1 - Suite: 1 - Languages: 3 - United Query Language'
-
-United Query Language
-
-	Philosophy
-
-		-
-			The United Query Language is a JSON based database query language.
-		-
-
-	Principles
-
-		Requests
-
-			-
-				A United Query Language request takes the form of a JSON object.
-				
-				Said object must have a field with the alias "operation", and may optionally have
-				fields with the aliases "location" and "type".
-
-				The operation field specifies the database operation to perform. Its value may
-				either be a JSON object specifying the operation in a format designed for the
-				United Query Language, or a string specifying the operation in the format that the
-				target database natively accepts.
-
-				The location field, if present, shall contain a string specifying the URL of the
-				target database.
-
-				The type field, if present, shall specify the type of database that the target
-				database is.
-
-				If the location and type fields are not present, their values shall be implicitly
-				assumed.
-
-				Executing the request shall return a JSON object or array, containing a field with
-				the alias "data", which contains a JSON object specifying any data returned, and a
-				field with the alias "error", which shall contain a null value if there was no
-				error and shall contain a string specifying the error that occurred if there was
-				one.
-			-
-
-		Acronym
-
-			-
-				United Query Language can be referred to as UQL.
-			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 2 - Kaeon United: 1 - Suite: 2 - Tools: 1 - Kaeon Complex'
 

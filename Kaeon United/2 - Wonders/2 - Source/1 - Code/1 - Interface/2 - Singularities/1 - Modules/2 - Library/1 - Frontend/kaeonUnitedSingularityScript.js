@@ -236,6 +236,9 @@ function executeSingularity() {
 	}
 
 	use.kaeonUnited = true;
+
+	window.use = use;
+	window.require = use;
 	
 	try {
 		use.ONESuite = use(moduleDependencies.ONESuite);
@@ -244,9 +247,6 @@ function executeSingularity() {
 	catch(error) {
 		
 	}
-
-	window.use = use;
-	window.require = use;
 }
 
 function getInterface() {

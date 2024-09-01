@@ -235,8 +235,6 @@ function executeSingularity() {
 			return cacheItem.exports;
 	}
 
-	require = use;
-
 	use.kaeonUnited = true;
 	
 	try {
@@ -246,6 +244,9 @@ function executeSingularity() {
 	catch(error) {
 		
 	}
+
+	window.use = use;
+	window.require = use;
 }
 
 function getInterface() {

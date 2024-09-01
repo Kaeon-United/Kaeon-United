@@ -10,6 +10,7 @@
 		"start": "node kaeonUnitedSingularityCLI.js"
 	},
 	"dependencies": {
+		"kaeon-united-utilities": "~1.0.0",
 		"xmlhttprequest": "^1.8.0"
 	},
 	"author": "",

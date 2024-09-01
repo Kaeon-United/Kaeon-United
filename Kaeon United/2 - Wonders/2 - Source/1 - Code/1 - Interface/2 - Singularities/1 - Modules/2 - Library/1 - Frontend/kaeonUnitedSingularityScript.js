@@ -93,7 +93,7 @@ function executeSingularity() {
 		paths: []
 	};
 	
-	function use(path, options) {
+	window.use = (path, options) => {
 
 		if(typeof options != "object")
 			options = { };
@@ -201,7 +201,7 @@ function executeSingularity() {
 				let moduleFunction = new Function(
 					"var module = arguments[0];" +
 					use.toString() +
-					"use.cache = arguments[1];" +
+					"\nuse.cache = arguments[1];" +
 					allText +
 					";return module;"
 				);
@@ -236,9 +236,6 @@ function executeSingularity() {
 	}
 
 	use.kaeonUnited = true;
-
-	window.use = use;
-	window.require = use;
 	
 	try {
 		use.ONESuite = use(moduleDependencies.ONESuite);
@@ -247,6 +244,8 @@ function executeSingularity() {
 	catch(error) {
 		
 	}
+
+	window.require = use;
 }
 
 function getInterface() {

@@ -1,5 +1,5 @@
-var one = require("kaeon-united")("one");
-var tokenizer = require("kaeon-united")("tokenizer");
+var one = use("kaeon-united")("one");
+var tokenizer = use("kaeon-united")("tokenizer");
 
 function clear(source) {
 

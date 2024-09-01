@@ -1,6 +1,6 @@
-var httpUtils = require("kaeon-united")("httpUtils");
-var openAxis = require("kaeon-united")("openAxis");
-var philosophersStone = require("kaeon-united")("philosophersStone");
+var httpUtils = use("kaeon-united")("httpUtils");
+var openAxis = use("kaeon-united")("openAxis");
+var philosophersStone = use("kaeon-united")("philosophersStone");
 
 function commonCache() {
 	

@@ -1,5 +1,5 @@
-var fs = require("fs");
-var wifi = require(__dirname + "/wifi.js");
+var fs = use("fs");
+var wifi = use(__dirname + "/wifi.js");
 
 function startInterval() {
 	

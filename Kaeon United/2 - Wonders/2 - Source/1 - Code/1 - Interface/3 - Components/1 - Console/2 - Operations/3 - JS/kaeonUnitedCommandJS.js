@@ -21,8 +21,8 @@ module.exports = (args, callback) => {
 		return;
 	}
 
-	let io = require("kaeon-united")("io");
-	let ONESuite = require("kaeon-united")("ONESuite");
+	let io = use("kaeon-united")("io");
+	let ONESuite = use("kaeon-united")("ONESuite");
 
 	(async () => {
 

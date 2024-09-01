@@ -1,5 +1,5 @@
-var repoExplorer = require("kaeon-united")("generalReference")("repo");
-var wrapONE = require("kaeon-united")("wrapONE");
+var repoExplorer = use("kaeon-united")("generalReference")("repo");
+var wrapONE = use("kaeon-united")("wrapONE");
 
 function render(protocol, path, title, originalPath, child) {
 

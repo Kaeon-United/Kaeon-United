@@ -1,5 +1,5 @@
-var moduleUtilities = require("kaeon-united")("moduleUtilities");
-var one = require("kaeon-united")("one");
+var moduleUtilities = use("kaeon-united")("moduleUtilities");
+var one = use("kaeon-united")("one");
 
 var ball = {
 

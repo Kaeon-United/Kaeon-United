@@ -2,7 +2,7 @@ var moduleDependencies = {
 	generalInterface: "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/1%20-%20Interfaces/1%20-%20Kaeon%20Core/2%20-%20General%20Interface/kaeonUnitedGeneralInterface.json"
 };
 
-var io = require("kaeon-united")("io");
+var io = use("kaeon-united")("io");
 
 function getUtilities(item, path) {
 
@@ -13,7 +13,7 @@ function getUtilities(item, path) {
 	if(item.components != null) {
 
 		if(item.components.locations != null)
-			result[path] = require(item.components.locations[0]);
+			result[path] = use(item.components.locations[0]);
 	}
 
 	if(item.entities != null) {

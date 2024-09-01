@@ -20,7 +20,7 @@ var moduleDependencies = {
 	}
 };
 
-var io = require("kaeon-united")("io");
+var io = use("kaeon-united")("io");
 
 var modules = moduleDependencies.modules;
 var scripts = moduleDependencies.scripts;
@@ -142,7 +142,7 @@ Object.keys(scripts).forEach((item) => {
 
 		delete modules[list][key];
 
-		modules[list][formatKey(key)] = require(path);
+		modules[list][formatKey(key)] = use(path);
 	});
 });
 

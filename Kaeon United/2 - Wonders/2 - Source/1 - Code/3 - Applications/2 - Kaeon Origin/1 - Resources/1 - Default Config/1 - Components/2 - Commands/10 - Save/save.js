@@ -1,5 +1,5 @@
-var io = require("kaeon-united")("io");
-var virtualSystem = require("kaeon-united")("virtualSystem");
+var io = use("kaeon-united")("io");
+var virtualSystem = use("kaeon-united")("virtualSystem");
 
 let args = Array.from(arguments);
 

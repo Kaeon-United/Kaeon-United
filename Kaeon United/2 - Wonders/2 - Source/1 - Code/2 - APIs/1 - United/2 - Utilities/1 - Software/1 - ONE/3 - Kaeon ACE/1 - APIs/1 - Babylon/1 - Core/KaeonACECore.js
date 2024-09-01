@@ -1,6 +1,6 @@
-var one = require("kaeon-united")("one");
-var philosophersStone = require("kaeon-united")("philosophersStone");
-var vision = require("kaeon-united")("vision");
+var one = use("kaeon-united")("one");
+var philosophersStone = use("kaeon-united")("philosophersStone");
+var vision = use("kaeon-united")("vision");
 
 function loadComponent(core, ace, entity) {
 	

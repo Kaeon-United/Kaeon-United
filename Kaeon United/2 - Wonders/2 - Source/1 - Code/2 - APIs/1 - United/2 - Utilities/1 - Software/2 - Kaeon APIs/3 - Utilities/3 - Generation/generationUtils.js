@@ -1,6 +1,6 @@
-var chat = require("kaeon-united")("generalReference")("chat");
-var io = require("kaeon-united")("io");
-var paste = require("kaeon-united")("generalReference")("paste");
+var chat = use("kaeon-united")("generalReference")("chat");
+var io = use("kaeon-united")("io");
+var paste = use("kaeon-united")("generalReference")("paste");
 
 function get(language, prompt, callback) {
 

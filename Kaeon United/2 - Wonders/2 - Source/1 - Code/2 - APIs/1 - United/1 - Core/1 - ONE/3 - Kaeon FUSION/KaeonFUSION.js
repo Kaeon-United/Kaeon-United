@@ -1,7 +1,7 @@
-var philosophersStone = require("kaeon-united")("philosophersStone");
-var fusion = require("kaeon-united")("fusion");
+var philosophersStone = use("kaeon-united")("philosophersStone");
+var fusion = use("kaeon-united")("fusion");
 
-var io = require("kaeon-united")("io");
+var io = use("kaeon-united")("io");
 
 var platform = "Browser";
 
@@ -62,14 +62,14 @@ function Use() {
 							path += ".js";
 					}
 
-					require(path)(reference.fusion);
+					use(path)(reference.fusion);
 				}
 
 				else {
 
 					io.save(io.open(path), "./OnlineInterface.js")
 
-					require("./OnlineInterface.js")(reference.fusion);
+					use("./OnlineInterface.js")(reference.fusion);
 				}
 
 				reference.fusion.update();

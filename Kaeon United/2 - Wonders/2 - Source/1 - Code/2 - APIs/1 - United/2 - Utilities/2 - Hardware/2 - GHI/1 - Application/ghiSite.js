@@ -1,6 +1,6 @@
-var httpUtils = require("kaeon-united")("httpUtils");
-var vision = require("kaeon-united")("vision");
-var widgets = require("kaeon-united")("widgets");
+var httpUtils = use("kaeon-united")("httpUtils");
+var vision = use("kaeon-united")("vision");
+var widgets = use("kaeon-united")("widgets");
 
 function getData(input) {
 

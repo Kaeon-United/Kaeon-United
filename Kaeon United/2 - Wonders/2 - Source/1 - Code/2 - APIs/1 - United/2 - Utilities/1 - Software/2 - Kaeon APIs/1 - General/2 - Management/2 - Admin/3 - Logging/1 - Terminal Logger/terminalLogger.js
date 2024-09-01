@@ -1,5 +1,5 @@
-var childProcess = require("child_process");
-var fs = require("fs");
+var childProcess = use("child_process");
+var fs = use("fs");
 
 function log(map, path, command) {
 
@@ -53,7 +53,7 @@ if(module.parent == null) {
 	let map = null;
 
 	try {
-		map = require(process.argv[3]);
+		map = use(process.argv[3]);
 	}
 
 	catch(error) {

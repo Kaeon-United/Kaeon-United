@@ -71,7 +71,7 @@ var moduleDependencies = {
 	}
 };
 
-var platform = require("kaeon-united")("platform");
+var platform = use("kaeon-united")("platform");
 
 function getURLArguments(url) {
 
@@ -210,7 +210,7 @@ function sendRequest(request, callback, cors) {
 
 			if(sendRequest.cache == null) {
 
-				let fs = require("fs");
+				let fs = use("fs");
 	
 				if(fs.existsSync("./localCache.json")) {
 	
@@ -264,7 +264,7 @@ function sendRequest(request, callback, cors) {
 			
 		}
 
-		call = new (require("xmlhttprequest").XMLHttpRequest)();
+		call = new (use("xmlhttprequest").XMLHttpRequest)();
 	}
 		
 	else {
@@ -332,7 +332,7 @@ function sendRequest(request, callback, cors) {
 
 				try {
 
-					require("fs").writeFileSync(
+					use("fs").writeFileSync(
 						"./localCache.json",
 						JSON.stringify(sendRequest.cache)
 					);

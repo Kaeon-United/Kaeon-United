@@ -1,4 +1,4 @@
-var io = require("kaeon-united")("io");
+var io = use("kaeon-united")("io");
 
 function deleteItemGithub(path, credentials) {
 	// STUB

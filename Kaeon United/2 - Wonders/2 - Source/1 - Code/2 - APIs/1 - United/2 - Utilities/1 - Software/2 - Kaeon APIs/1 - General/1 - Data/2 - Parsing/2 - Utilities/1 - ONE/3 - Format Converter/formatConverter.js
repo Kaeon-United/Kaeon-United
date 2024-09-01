@@ -1,5 +1,5 @@
-var one = require("kaeon-united")("one");
-var onePlus = require("kaeon-united")("onePlus");
+var one = use("kaeon-united")("one");
+var onePlus = use("kaeon-united")("onePlus");
 
 function dynamicListToJSON(data, child) {
 

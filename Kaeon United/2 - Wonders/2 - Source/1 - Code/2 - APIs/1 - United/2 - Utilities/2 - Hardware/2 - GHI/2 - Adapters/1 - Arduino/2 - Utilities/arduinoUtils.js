@@ -1,4 +1,4 @@
-var Avrgirl = require("avrgirl-arduino");
+var Avrgirl = use("avrgirl-arduino");
 
 if(module.parent == null) {
 

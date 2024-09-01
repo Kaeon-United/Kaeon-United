@@ -15,10 +15,10 @@ clean veryclean:
 
 try {
 
-	var cmd = require("node-cmd");
-	var io = require("kaeon-united")("io");
-	var oneSuite = require("kaeon-united")("oneSuite");
-	var uc = require("kaeon-united")("uc");
+	var cmd = use("node-cmd");
+	var io = use("kaeon-united")("io");
+	var oneSuite = use("kaeon-united")("oneSuite");
+	var uc = use("kaeon-united")("uc");
 
 	let path = process.argv[5];
 

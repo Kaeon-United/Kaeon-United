@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-var child = require("child_process");
-var fs = require("fs");
+var child = use("child_process");
+var fs = use("fs");
 
 let defaultPort = 80;
 
@@ -87,7 +87,7 @@ if(process.argv.length == 2 ||
 
 else {
 
-	require(__dirname + "/ghiUtilities.js").processCommand(
+	use(__dirname + "/ghiUtilities.js").processCommand(
 		port,
 		process.argv.slice(2)
 	);

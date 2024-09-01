@@ -21,9 +21,9 @@ module.exports = (args, callback) => {
 		return;
 	}
 
-	let fs = require("fs");
-	let io = require("kaeon-united")("io");
-	let ONESuite = require("kaeon-united")("ONESuite");
+	let fs = use("fs");
+	let io = use("kaeon-united")("io");
+	let ONESuite = use("kaeon-united")("ONESuite");
 
 	(async () => {
 
@@ -39,7 +39,7 @@ module.exports = (args, callback) => {
 		}
 
 		io.save(
-			require("kaeon-united")("csb").disassemble(
+			use("kaeon-united")("csb").disassemble(
 				fs.readFileSync(data)
 			),
 			args[3]

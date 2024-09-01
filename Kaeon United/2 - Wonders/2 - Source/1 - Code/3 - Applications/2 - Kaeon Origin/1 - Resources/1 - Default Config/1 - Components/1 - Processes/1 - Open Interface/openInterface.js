@@ -1,5 +1,5 @@
-var vision = require("kaeon-united")("vision");
-var widgets = require("kaeon-united")("widgets");
+var vision = use("kaeon-united")("vision");
+var widgets = use("kaeon-united")("widgets");
 
 let terminal = widgets.getVSTerminal([
 	"Storage://",

@@ -1,4 +1,4 @@
-var vision = require("kaeon-united")("vision");
+var vision = use("kaeon-united")("vision");
 
 function createConsole(options) {
 

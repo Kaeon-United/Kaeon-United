@@ -11,10 +11,10 @@ if(typeof process === 'object') {
 }
 
 if(platform == "browser")
-	require("kaeon-united")("vision").load("//unpkg.com/brain.js");
+	use("kaeon-united")("vision").load("//unpkg.com/brain.js");
 
 else
-	var brain = require("brain.js");
+	var brain = use("brain.js");
 
 function binaryToNumber(binary) {
 

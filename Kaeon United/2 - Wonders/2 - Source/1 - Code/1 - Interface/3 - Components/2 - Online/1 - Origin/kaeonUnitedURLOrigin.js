@@ -6,7 +6,7 @@ function executeJS(code) {
 	
 	eval(
 		"(async () => {" +
-		require.ONESuite.preprocess(code) +
+		use.ONESuite.preprocess(code) +
 		"})()"
 	);
 }

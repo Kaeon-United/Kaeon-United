@@ -1,7 +1,7 @@
-var io = require("kaeon-united")("io");
-var one = require("kaeon-united")("one");
-var vision = require("kaeon-united")("vision");
-var wrapONE = require("kaeon-united")("wrapONE");
+var io = use("kaeon-united")("io");
+var one = use("kaeon-united")("one");
+var vision = use("kaeon-united")("vision");
+var wrapONE = use("kaeon-united")("wrapONE");
 
 function getDocument(query) {
 

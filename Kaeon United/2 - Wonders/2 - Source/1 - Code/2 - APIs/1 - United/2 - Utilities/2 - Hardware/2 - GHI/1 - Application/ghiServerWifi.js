@@ -1,6 +1,6 @@
-var childProcess = require("child_process");
-var http = require("http");
-var wifi = require(__dirname + "/wifi.js");
+var childProcess = use("child_process");
+var http = use("http");
+var wifi = use(__dirname + "/wifi.js");
 
 var network = null;
 var queue = [];

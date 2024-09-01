@@ -1,7 +1,7 @@
-var io = require("kaeon-united")("io");
-var one = require("kaeon-united")("one");
-var oneSuite = require("kaeon-united")("onePlus");
-var philosophersStone = require("kaeon-united")("philosophersStone");
+var io = use("kaeon-united")("io");
+var one = use("kaeon-united")("one");
+var oneSuite = use("kaeon-united")("onePlus");
+var philosophersStone = use("kaeon-united")("philosophersStone");
 
 function buildDialect() {
 

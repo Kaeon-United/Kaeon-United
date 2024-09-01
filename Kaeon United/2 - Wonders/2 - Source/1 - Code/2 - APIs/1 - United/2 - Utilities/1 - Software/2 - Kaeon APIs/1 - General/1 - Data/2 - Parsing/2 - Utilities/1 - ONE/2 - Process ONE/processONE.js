@@ -2,9 +2,9 @@ var moduleDependencies = {
 	drawdown: "https://raw.githubusercontent.com/adamvleggett/drawdown/master/drawdown.js"
 };
 
-var io = require("kaeon-united")("io");
-var onePlus = require("kaeon-united")("onePlus");
-var wrapONE = require("kaeon-united")("wrapONE");
+var io = use("kaeon-united")("io");
+var onePlus = use("kaeon-united")("onePlus");
+var wrapONE = use("kaeon-united")("wrapONE");
 
 function escapeMark(element) {
 

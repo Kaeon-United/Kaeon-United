@@ -1,8 +1,8 @@
-var io = require("kaeon-united")("io");
-var kaeonACE = require("kaeon-united")("kaeonACECore");
-var oneSuite = require("kaeon-united")("oneSuite");
-var standardKaeonACE = require("kaeon-united")("standardKaeonACE");
-var widgets = require("kaeon-united")("widgets");
+var io = use("kaeon-united")("io");
+var kaeonACE = use("kaeon-united")("kaeonACECore");
+var oneSuite = use("kaeon-united")("oneSuite");
+var standardKaeonACE = use("kaeon-united")("standardKaeonACE");
+var widgets = use("kaeon-united")("widgets");
 
 function getEnvironment() {
 
@@ -24,7 +24,7 @@ function getPlatform(environment) {
 
 	if(environment == "browser") {
 
-		if(typeof require == "function" && typeof module == "object") {
+		if(typeof use == "function" && typeof module == "object") {
 
 			if(module.parent != null)
 				return "module";

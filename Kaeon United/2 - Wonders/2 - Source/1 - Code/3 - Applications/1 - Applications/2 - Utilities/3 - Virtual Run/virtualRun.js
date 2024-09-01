@@ -2,12 +2,12 @@ var moduleDependencies = {
 	cors: "https://corsproxy.io/?"
 };
 
-var consoleWidget = require("kaeon-united")("consoleWidget");
-var http = require("kaeon-united")("httpUtils");
-var io = require("kaeon-united")("io");
-var oneSuite = require("kaeon-united")("ONESuite");
-var override = require("kaeon-united")("override");
-var virtualSystem = require("kaeon-united")("virtualSystem");
+var consoleWidget = use("kaeon-united")("consoleWidget");
+var http = use("kaeon-united")("httpUtils");
+var io = use("kaeon-united")("io");
+var oneSuite = use("kaeon-united")("ONESuite");
+var override = use("kaeon-united")("override");
+var virtualSystem = use("kaeon-united")("virtualSystem");
 
 virtualSystem.initiateVirtualSystemDefault();
 

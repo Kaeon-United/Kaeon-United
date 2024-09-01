@@ -5,7 +5,7 @@ var moduleDependencies = {
 
 function clearIntervals() {
 
-	let utils = require(true);
+	let utils = use(true);
 
 	utils.intervals.forEach((interval) => {
 		clearInterval(interval);
@@ -16,7 +16,7 @@ function executeSingularity() {
 
 	try {
 
-		require(true);
+		use(true);
 
 		return;
 	}
@@ -56,7 +56,6 @@ function executeSingularity() {
 	}
 		
 	var installedModules = [].concat(moduleUtils.builtinModules);
-	var requireDefault = require;
 
 	installedModules.push("xmlhttprequest");
 	module.paths.push(process.cwd() + path.sep + "node_modules");
@@ -78,10 +77,10 @@ function executeSingularity() {
 		
 	}
 
-	require = function(path, options) {
+	use = function(path, options) {
 
 		if(path == true)
-			return require;
+			return use;
 
 		if(typeof options != "object")
 			options = { };
@@ -93,7 +92,7 @@ function executeSingularity() {
 				try {
 
 					resolve(
-						require(
+						use(
 							path,
 							{
 								dynamic: options.dynamic,
@@ -128,14 +127,14 @@ function executeSingularity() {
 
 			if(options.reload) {
 
-				if(require.cache[path] != null)
-					delete require.cache[path];
+				if(use.cache[path] != null)
+					delete use.cache[path];
 			}
 
-			else if(require.cache[path] != null)
-				return require.cache[path];
+			else if(use.cache[path] != null)
+				return use.cache[path];
 
-			require.cache[path] = { };
+			use.cache[path] = { };
 
 			if(!path.startsWith("http://") &&
 				!path.startsWith("https://") &&
@@ -145,7 +144,7 @@ function executeSingularity() {
 			
 					try {
 
-						require.execSync("npm install \"" + path + "\"");
+						use.execSync("npm install \"" + path + "\"");
 
 						installedModules.push(path);
 					}
@@ -162,20 +161,20 @@ function executeSingularity() {
 					if(installedModules.includes(path)) {
 
 						try {
-							item = require.requireDefault(path);
+							item = use(path);
 						}
 
 						catch(error) {
 
 							try {
 
-								item = require.requireDefault(
+								item = use(
 									process.cwd() + "/node_modules/" + path
 								);
 							}
 	
 							catch(error) {
-								item = requireDefault(path);
+								item = use(path);
 							}
 						}
 					}
@@ -191,22 +190,22 @@ function executeSingularity() {
 						catch(error) {
 
 							item = (new Function(
-								"require = arguments[0];" +
+								"use = arguments[0];" +
 									"var module={exports:{}};" +
 									text +
 									";return module.exports;"
-							))(require);
+							))(use);
 						}
 					}
 
-					require.cache[path] = item;
+					use.cache[path] = item;
 		
 					return item;
 				}
 
 				catch(error) {
 
-					delete require.cache[path];
+					delete use.cache[path];
 
 					return { };
 				}
@@ -215,8 +214,8 @@ function executeSingularity() {
 
 		let data = options.dynamic ? path : openResource(path);
 
-		if(require.oneSuite != null)
-			data = require.oneSuite.preprocess(data);
+		if(use.oneSuite != null)
+			data = use.oneSuite.preprocess(data);
 		
 		let result = null;
 
@@ -229,11 +228,11 @@ function executeSingularity() {
 			if(!options.global) {
 	
 				data =
-					"require = arguments[0];var module={exports:{}};" +
+					"use = arguments[0];var module={exports:{}};" +
 					data +
 					";return module.exports;";
 	
-				result = (new Function(data))(require);
+				result = (new Function(data))(use);
 			}
 	
 			else {
@@ -247,35 +246,33 @@ function executeSingularity() {
 		}
 		
 		if(!options.dynamic)
-			require.cache[path] = result;
+			use.cache[path] = result;
 
 		return result;
 	}
 
-	require.requireDefault = moduleUtils.prototype.require;
+	global.use = use;
 
-	require.connected = 0;
+	use.connected = 0;
 	
-	require.cache = { };
-	require.intervals = [];
+	use.cache = { };
+	use.intervals = [];
 
-	require.appendInterface = appendInterface;
+	use.appendInterface = appendInterface;
 
-	require.clearIntervals = clearIntervals;
-	require.startIntervals = startIntervals;
+	use.clearIntervals = clearIntervals;
+	use.startIntervals = startIntervals;
 
-	require.execSync = child_process.execSync;
-	require.fs = fs;
+	use.execSync = child_process.execSync;
+	use.fs = fs;
 
 	try {
-		require.oneSuite = require(moduleDependencies.ONESuite);
+		use.oneSuite = use(moduleDependencies.ONESuite);
 	}
 
 	catch(error) {
 
 	}
-
-	moduleUtils.prototype.require = require;
 
 	try {
 
@@ -340,7 +337,7 @@ function executeSingularity() {
 function fileExists(file) {
 
 	try {
-		return require(true).fs.existsSync(file);
+		return use(true).fs.existsSync(file);
 	}
 	
 	catch(error) {
@@ -490,7 +487,7 @@ function openResource(path) {
 	};
 
 	try {
-		utils = require(true);
+		utils = use(true);
 	}
 
 	catch(error) {
@@ -617,7 +614,7 @@ function openResource(path) {
 
 function startIntervals() {
 
-	let utils = require(true);
+	let utils = use(true);
 
 	utils.intervals = [
 		setInterval(() => {

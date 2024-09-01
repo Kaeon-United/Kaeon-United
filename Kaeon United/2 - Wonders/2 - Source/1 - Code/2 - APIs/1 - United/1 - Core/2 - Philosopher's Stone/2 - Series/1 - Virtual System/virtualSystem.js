@@ -16,8 +16,8 @@ startup = path in fileSystem to JSON file: [command 1, ...]
 
 */
 
-var io = require("kaeon-united")("io");
-var tokenizer = require("kaeon-united")("tokenizer");
+var io = use("kaeon-united")("io");
+var tokenizer = use("kaeon-united")("tokenizer");
 
 function cookieDisk(cookie) {
 

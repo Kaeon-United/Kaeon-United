@@ -1,4 +1,4 @@
-var dgram = require('dgram');
+var dgram = use('dgram');
 
 let queue = [];
 

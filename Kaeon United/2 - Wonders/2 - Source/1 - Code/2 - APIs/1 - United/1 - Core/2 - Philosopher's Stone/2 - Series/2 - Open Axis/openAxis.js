@@ -2,12 +2,12 @@ var moduleDependencies = {
 	kaeonUnitedScript: "https://cdn.jsdelivr.net/gh/kaeon-united/kaeon-united/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/1%20-%20Modules/2%20-%20Library/1%20-%20Frontend/kaeonUnitedSingularityScript.js"
 };
 
-var fs = require("fs");
-var http = require("http");
-var https = require("https");
-var ONESuite = require("kaeon-united")("ONESuite");
-var path = require("path");
-var philosophersStone = require("kaeon-united")("philosophersStone");
+var fs = use("fs");
+var http = use("http");
+var https = use("https");
+var ONESuite = use("kaeon-united")("ONESuite");
+var path = use("path");
+var philosophersStone = use("kaeon-united")("philosophersStone");
 
 function axisClock() {
 	
@@ -82,7 +82,7 @@ function axisRouter(options) {
 
 						try {
 
-							let response = require(file.file)(packet);
+							let response = use(file.file)(packet);
 
 							return response != null ? response : { };
 						}
@@ -141,7 +141,7 @@ function axisRouter(options) {
 
 								<script>
 
-									var vision = require("kaeon-united")("vision");
+									var vision = use("kaeon-united")("vision");
 
 									vision.extend(JSON.parse("${
 										JSON.stringify(

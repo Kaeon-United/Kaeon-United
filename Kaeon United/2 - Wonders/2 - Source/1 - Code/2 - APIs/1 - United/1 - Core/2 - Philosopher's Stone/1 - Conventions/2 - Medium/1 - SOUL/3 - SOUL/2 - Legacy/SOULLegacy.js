@@ -1,4 +1,4 @@
-var philosophersStone = require("kaeon-united")("philosophersStone");
+var philosophersStone = use("kaeon-united")("philosophersStone");
 
 class SOULCoreModel {
 

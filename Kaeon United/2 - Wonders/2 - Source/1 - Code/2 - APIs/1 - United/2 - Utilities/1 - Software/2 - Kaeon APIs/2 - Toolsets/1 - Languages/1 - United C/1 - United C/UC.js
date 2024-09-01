@@ -1,4 +1,4 @@
-var tokenizer = require("kaeon-united")("tokenizer");
+var tokenizer = use("kaeon-united")("tokenizer");
 
 var cTokens = [
 	"auto",

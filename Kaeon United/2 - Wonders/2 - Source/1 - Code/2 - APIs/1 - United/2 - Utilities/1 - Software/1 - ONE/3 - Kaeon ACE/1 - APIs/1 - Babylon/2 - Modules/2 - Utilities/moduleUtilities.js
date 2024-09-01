@@ -1,4 +1,4 @@
-var one = require("kaeon-united")("one");
+var one = use("kaeon-united")("one");
 
 function getItem(element, item, defaultOption) {
 

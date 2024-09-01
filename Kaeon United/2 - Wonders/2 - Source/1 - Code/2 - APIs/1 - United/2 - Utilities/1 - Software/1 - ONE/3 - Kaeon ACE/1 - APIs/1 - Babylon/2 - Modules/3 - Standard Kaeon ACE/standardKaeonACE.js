@@ -17,14 +17,14 @@ var moduleDependencies = {
 	}
 };
 
-var philosophersStone = require("kaeon-united")("philosophersStone");
+var philosophersStone = use("kaeon-united")("philosophersStone");
 
 module.exports = function(core) {
 
 	let modules = [];
 	
 	Object.values(moduleDependencies.modules).forEach((unit) => {
-		modules = modules.concat(require("kaeon-united")(unit));
+		modules = modules.concat(use("kaeon-united")(unit));
 	});
 
 	for(let i = 0; i < modules.length; i++) {

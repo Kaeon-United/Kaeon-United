@@ -4,7 +4,7 @@ function executeCommand(args) {
 
 	require("./kaeonUnitedSingularityNode.js");
 
-	let utils = require(true);
+	let utils = use(true);
 
 	let callback = () => {
 
@@ -16,8 +16,8 @@ function executeCommand(args) {
 
 	utils.startIntervals();
 
-	let components = require("kaeon-united")("aceUtils").traceKaeonACE(
-		require("kaeon-united")(),
+	let components = use("kaeon-united")("aceUtils").traceKaeonACE(
+		use("kaeon-united")(),
 		[
 			{
 				components: {
@@ -34,10 +34,10 @@ function executeCommand(args) {
 	).map(item => {
 
 		if(item.components.source == null)
-			return require(Object.keys(item.components.locations)[0]);
+			return use(Object.keys(item.components.locations)[0]);
 
 		else
-			return require(item.components.source,  { dynamic: true });
+			return use(item.components.source,  { dynamic: true });
 	});
 
 	let open = components.length;

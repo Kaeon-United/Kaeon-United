@@ -1,5 +1,5 @@
-var virtualSystem = require("kaeon-united")("virtualSystem");
-var vision = require("kaeon-united")("vision");
+var virtualSystem = use("kaeon-united")("virtualSystem");
+var vision = use("kaeon-united")("vision");
 
 function createStartScreen(callback, element, text) {
 
@@ -362,10 +362,10 @@ function vsTerminalOnSubmit(command, terminal, paths) {
 
 	console.log = tempLog;
 
-	Object.keys(require.cache).forEach((key) => {
+	Object.keys(use.cache).forEach((key) => {
 
 		if(!(key.startsWith("http://") || key.startsWith("https://")))
-			delete require.cache[key];
+			delete use.cache[key];
 	});
 }
 

@@ -1,7 +1,7 @@
-var formatConverter = require("kaeon-united")("formatConverter");
-var io = require("kaeon-united")("io");
-var one = require("kaeon-united")("one");
-var onePlus = require("kaeon-united")("onePlus");
+var formatConverter = use("kaeon-united")("formatConverter");
+var io = use("kaeon-united")("io");
+var one = use("kaeon-united")("one");
+var onePlus = use("kaeon-united")("onePlus");
 
 function clearComponents(target, source, clone) {
 

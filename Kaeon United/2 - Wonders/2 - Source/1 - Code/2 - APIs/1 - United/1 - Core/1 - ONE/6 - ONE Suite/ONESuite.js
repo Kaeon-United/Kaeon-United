@@ -1,9 +1,9 @@
-var one = require("kaeon-united")("one");
-var onePlus = require("kaeon-united")("onePlus");
+var one = use("kaeon-united")("one");
+var onePlus = use("kaeon-united")("onePlus");
 
-var kaeonFUSION = require("kaeon-united")("kaeonFUSION");
+var kaeonFUSION = use("kaeon-united")("kaeonFUSION");
 
-var universalPreprocessor = require("kaeon-united")("universalPreprocessor");
+var universalPreprocessor = use("kaeon-united")("universalPreprocessor");
 
 function preprocess(string, args) {
 	return universalPreprocessor.preprocess(string, args);

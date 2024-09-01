@@ -2,10 +2,10 @@ var moduleDependencies = {
 	kaeonUnited: "https://cdn.jsdelivr.net/gh/kaeon-united/kaeon-united/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/1%20-%20Modules/2%20-%20Library/1%20-%20Frontend/kaeonUnitedSingularityScript.js"
 };
 
-var fs = require("fs");
-var http = require("http");
-var ghiReference = require(__dirname + "/ghiReference.js");
-var httpUtils = require(__dirname + "/httpUtils.js");
+var fs = use("fs");
+var http = use("http");
+var ghiReference = use(__dirname + "/ghiReference.js");
+var httpUtils = use(__dirname + "/httpUtils.js");
 
 function getPluginData() {
 
@@ -82,7 +82,7 @@ function init() {
 
 					try {
 
-						plugins[item] = require(item);
+						plugins[item] = use(item);
 
 						if(!plugins[item].initialized &&
 							plugins[item].initialize != null) {

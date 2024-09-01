@@ -1,4 +1,4 @@
-var virtualSystem = require("kaeon-united")("virtualSystem");
+var virtualSystem = use("kaeon-united")("virtualSystem");
 
 if(window.fileSystem == null)
 	virtualSystem.initiateVirtualSystemDefault();
@@ -60,10 +60,10 @@ if(window.fileSystem == null)
 			let configPath = arguments[0];
 			let config = JSON.parse(fileSystem.getResource(configPath));
 
-			let speech = require("kaeon-united")("speech");
-			let vision = require("kaeon-united")("vision");
-			let widgets = require("kaeon-united")("widgets");
-			let media = require("kaeon-united")("generalReference")("media");
+			let speech = use("kaeon-united")("speech");
+			let vision = use("kaeon-united")("vision");
+			let widgets = use("kaeon-united")("widgets");
+			let media = use("kaeon-united")("generalReference")("media");
 
 			let tick = 1 / 60;
 			let listening = 0;
@@ -217,7 +217,7 @@ if(window.fileSystem == null)
 	[
 		"Storage://User/Applications/Processes/kaeonMeta/Apps/playMediaSong.js",
 		`
-			let media = require("kaeon-united")("generalReference")("media");
+			let media = use("kaeon-united")("generalReference")("media");
 
 			fileSystem.executeCommand("Storage://User/Applications/Processes/kaeonMeta/Apps/stopMediaSong.js");
 
@@ -227,7 +227,7 @@ if(window.fileSystem == null)
 	[
 		"Storage://User/Applications/Processes/kaeonMeta/Apps/stopMediaSong.js",
 		`
-			let media = require("kaeon-united")("generalReference")("media");
+			let media = use("kaeon-united")("generalReference")("media");
 
 			Object.keys(media.getPlaying()).forEach((item) => {
 				media.stop(item);
@@ -237,9 +237,9 @@ if(window.fileSystem == null)
 	[
 		"Storage://User/Applications/Processes/kaeonMeta/Apps/chatSpeak.js",
 		`
-			let chat = require("kaeon-united")("generalReference")("chat");
+			let chat = use("kaeon-united")("generalReference")("chat");
 
-			require("kaeon-united")("speech").speak(
+			use("kaeon-united")("speech").speak(
 				chat.clean(chat.chat(arguments[0]).text).clean
 			);
 		`
@@ -247,7 +247,7 @@ if(window.fileSystem == null)
 	[
 		"Storage://User/Applications/Processes/kaeonMeta/Apps/chatRelay.js",
 		`
-			let chat = require("kaeon-united")("generalReference")("chat");
+			let chat = use("kaeon-united")("generalReference")("chat");
 
 			return chat.clean(chat.chat(arguments[0]).text).clean;
 		`
@@ -261,7 +261,7 @@ if(window.fileSystem == null)
 
 				data = data.split("to");
 
-				let media = require("kaeon-united")("generalReference")("media");
+				let media = use("kaeon-united")("generalReference")("media");
 				let results = media.search(data[0].trim());
 
 				fileSystem.executeCommand("Storage://User/Applications/Apps/cast.js \\"" + data[1].trim() + "\\" " + results[0]);

@@ -2,9 +2,9 @@ var moduleDependencies = {
 	marked: "https://cdn.jsdelivr.net/npm/marked/marked.min.js"
 };
 
-var io = require("kaeon-united")("io");
-var tokenizer = require("kaeon-united")("tokenizer");
-var vision = require("kaeon-united")("vision");
+var io = use("kaeon-united")("io");
+var tokenizer = use("kaeon-united")("tokenizer");
+var vision = use("kaeon-united")("vision");
 
 vision.load(moduleDependencies.marked);
 

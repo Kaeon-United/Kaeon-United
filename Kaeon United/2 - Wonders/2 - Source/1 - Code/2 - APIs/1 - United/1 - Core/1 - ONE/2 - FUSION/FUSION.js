@@ -1,5 +1,5 @@
-var one = require("kaeon-united")("one");
-var philosophersStone = require("kaeon-united")("philosophersStone");
+var one = use("kaeon-united")("one");
+var philosophersStone = use("kaeon-united")("philosophersStone");
 
 function FUSION() {
 

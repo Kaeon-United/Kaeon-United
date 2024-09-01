@@ -13,7 +13,7 @@
 
 // [ BEGIN: DEPENDENCIES ]
 
-var dimensions = require("kaeon-united")("dimensions");
+var dimensions = use("kaeon-united")("dimensions");
 
 // [ END: DEPENDENCIES ]
 

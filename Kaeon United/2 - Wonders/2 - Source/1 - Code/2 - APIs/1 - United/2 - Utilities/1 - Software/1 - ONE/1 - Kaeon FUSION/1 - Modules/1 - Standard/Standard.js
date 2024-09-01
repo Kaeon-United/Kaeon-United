@@ -1,21 +1,21 @@
 // DEPENDENCIES
 
-var fusion = require("kaeon-united")("fusion");
-var io = require("kaeon-united")("io");
-var kaeonMETA = require("kaeon-united")("kaeonMETA");
-var one = require("kaeon-united")("one");
-var oneSuite = require("kaeon-united")("oneSuite");
-var philosophersStone = require("kaeon-united")("philosophersStone");
-var tokenizer = require("kaeon-united")("tokenizer");
+var fusion = use("kaeon-united")("fusion");
+var io = use("kaeon-united")("io");
+var kaeonMETA = use("kaeon-united")("kaeonMETA");
+var one = use("kaeon-united")("one");
+var oneSuite = use("kaeon-united")("oneSuite");
+var philosophersStone = use("kaeon-united")("philosophersStone");
+var tokenizer = use("kaeon-united")("tokenizer");
 
 var fs = {};
 var path = {};
 var cmd = {};
 
 try {
-	fs = require("fs");
-	path = require("path");
-	cmd = require("node-cmd");
+	fs = use("fs");
+	path = use("path");
+	cmd = use("node-cmd");
 }
 
 catch(error) {
@@ -83,14 +83,14 @@ function useCommand() {
 							path += ".js";
 					}
 
-					require(path)(reference.fusion);
+					use(path)(reference.fusion);
 				}
 
 				else {
 
 					io.save(io.open(path), "./OnlineInterface.js")
 
-					require("./OnlineInterface.js")(reference.fusion);
+					use("./OnlineInterface.js")(reference.fusion);
 				}
 
 				reference.fusion.update();

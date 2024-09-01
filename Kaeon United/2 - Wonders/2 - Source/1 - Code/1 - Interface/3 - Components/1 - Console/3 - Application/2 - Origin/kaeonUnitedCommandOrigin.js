@@ -19,9 +19,9 @@ module.exports = (args, callback) => {
 
 	(async () => {
 
-		require("kaeon-united")("kaeonOriginDefaultAxis")();
+		use("kaeon-united")("kaeonOriginDefaultAxis")();
 
-		require("kaeon-united")("openAxis").openAxis({
+		use("kaeon-united")("openAxis").openAxis({
 			axis: {
 				default: {
 					index: "https://kaeon-united.github.io/"
@@ -32,8 +32,8 @@ module.exports = (args, callback) => {
 
 		if(args.length > 0) {
 
-			let components = require("kaeon-united")("aceUtils").traceKaeonACE(
-				require("kaeon-united")(),
+			let components = use("kaeon-united")("aceUtils").traceKaeonACE(
+				use("kaeon-united")(),
 				[
 					{
 						components: {
@@ -50,10 +50,10 @@ module.exports = (args, callback) => {
 			).map(item => {
 
 				if(item.components.source == null)
-					return require(Object.keys(item.components.locations)[0]);
+					return use(Object.keys(item.components.locations)[0]);
 	
 				else
-					return require(item.components.source, { dynamic: true });
+					return use(item.components.source, { dynamic: true });
 			});
 			
 			components.forEach((item) => {

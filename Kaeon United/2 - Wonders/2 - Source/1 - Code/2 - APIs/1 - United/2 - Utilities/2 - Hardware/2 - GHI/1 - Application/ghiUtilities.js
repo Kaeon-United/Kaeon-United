@@ -1,6 +1,6 @@
-var child_process = require("child_process");
-var fs = require("fs");
-var httpUtils = require(__dirname + "/httpUtils.js");
+var child_process = use("child_process");
+var fs = use("fs");
+var httpUtils = use(__dirname + "/httpUtils.js");
 
 function getPluginData() {
 
@@ -188,7 +188,7 @@ function processPlugin(command, port, args) {
 
 		try {
 		
-			let plugin = require(item);
+			let plugin = use(item);
 
 			if(plugin.verifyCommand(command, port, args))
 				plugin.onCommand(command, port, args);

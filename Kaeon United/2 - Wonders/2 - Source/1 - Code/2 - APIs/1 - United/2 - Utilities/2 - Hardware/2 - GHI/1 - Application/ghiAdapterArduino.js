@@ -1,4 +1,4 @@
-var child_process = require("child_process");
+var child_process = use("child_process");
 
 module.exports = {
 	adapt: (port) => {

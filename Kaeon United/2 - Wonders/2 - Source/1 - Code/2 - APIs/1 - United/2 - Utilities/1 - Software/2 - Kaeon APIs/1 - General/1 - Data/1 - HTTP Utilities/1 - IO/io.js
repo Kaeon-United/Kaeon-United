@@ -1,12 +1,12 @@
-var httpUtils = require("kaeon-united")("httpUtils");
-var platform = require("kaeon-united")("platform").getPlatform();
+var httpUtils = use("kaeon-united")("httpUtils");
+var platform = use("kaeon-united")("platform").getPlatform();
 
 module.exports = {
 	cors: httpUtils.cors,
 	getInput: platform == "node" ?
 		(query) => {
 
-			return require('readline-sync').question(
+			return use('readline-sync').question(
 				query != null ? query : ""
 			);
 		} :
@@ -78,11 +78,11 @@ module.exports = {
 		}
 
 		else if(callback == null)
-			return require("fs").readFileSync(file, "utf-8");
+			return use("fs").readFileSync(file, "utf-8");
 
 		else {
 
-			require("fs").readFile(file, null, (error, data) => {
+			use("fs").readFile(file, null, (error, data) => {
 
 				if(error != null)
 					callback("");
@@ -93,7 +93,7 @@ module.exports = {
 	},
 	save: platform == "node" ?
 		(content, file) => {
-			require('fs').writeFileSync(file, content);
+			use('fs').writeFileSync(file, content);
 		} :
 		(content, file) => {
 

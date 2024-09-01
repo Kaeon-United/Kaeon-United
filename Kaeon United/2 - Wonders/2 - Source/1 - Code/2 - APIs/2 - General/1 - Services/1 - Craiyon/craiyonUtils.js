@@ -1,4 +1,4 @@
-var httpUtils = require("kaeon-united")("httpUtils");
+var httpUtils = use("kaeon-united")("httpUtils");
 
 var models = [
 	"art",

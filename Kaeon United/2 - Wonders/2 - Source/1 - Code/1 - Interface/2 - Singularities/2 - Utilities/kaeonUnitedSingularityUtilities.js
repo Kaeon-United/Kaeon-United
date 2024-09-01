@@ -106,7 +106,7 @@ function executeModule(utility) {
 			}
 		]
 	).map(item => {
-		return require(Object.keys(item.components.locations)[0]);
+		return use(Object.keys(item.components.locations)[0]);
 	});
 	
 	if(typeof utility != "string") {

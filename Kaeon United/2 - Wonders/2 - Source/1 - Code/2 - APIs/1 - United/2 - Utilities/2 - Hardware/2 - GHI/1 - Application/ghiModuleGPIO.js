@@ -6,7 +6,7 @@ var gpio = {
 }
 
 try {
-	gpio = require("rpio");
+	gpio = use("rpio");
 }
 
 catch(error) {

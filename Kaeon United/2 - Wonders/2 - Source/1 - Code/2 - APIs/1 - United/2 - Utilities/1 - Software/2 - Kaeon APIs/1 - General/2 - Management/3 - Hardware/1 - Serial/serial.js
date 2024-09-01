@@ -1,5 +1,5 @@
-var SerialPort = require('serialport');
-var Readline = require('@serialport/parser-readline');
+var SerialPort = use('serialport');
+var Readline = use('@serialport/parser-readline');
 
 function connect(path, onMessage, options) {
 

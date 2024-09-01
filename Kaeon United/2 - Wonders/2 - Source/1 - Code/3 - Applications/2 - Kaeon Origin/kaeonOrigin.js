@@ -4,10 +4,10 @@ var moduleDependencies = {
 	icon: "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/2%20-%20Assets/1%20-%20Visual/1%20-%20Images/1%20-%20Iconography/2%20-%20Kaeon%20United/2%20-%20Kaeon%20United/Kaeon%20United%20Logo.png"
 };
 
-var httpUtils = require("kaeon-united")("httpUtils");
-var override = require("kaeon-united")("override");
-var vision = require("kaeon-united")("vision");
-var virtualSystem = require("kaeon-united")("virtualSystem");
+var httpUtils = use("kaeon-united")("httpUtils");
+var override = use("kaeon-united")("override");
+var vision = use("kaeon-united")("vision");
+var virtualSystem = use("kaeon-united")("virtualSystem");
 
 vision.setFavicon(moduleDependencies.icon);
 

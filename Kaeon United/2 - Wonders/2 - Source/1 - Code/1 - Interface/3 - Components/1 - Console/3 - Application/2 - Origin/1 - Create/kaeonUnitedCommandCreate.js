@@ -31,21 +31,21 @@ module.exports = (args, callback) => {
 
 	(async () => {
 
-		var fs = require("fs");
+		var fs = use("fs");
 
 		let path = (args[2] != null ? args[2] : process.cwd());
 
 		if(!fs.existsSync(path))
 			fs.mkdirSync(path);
 
-		path += require("path").sep;
+		path += use("path").sep;
 
 		if(!fs.existsSync(path + "axis"))
 			fs.mkdirSync(path + "axis");
 
 		if(args[1].toLowerCase() == "axis") {
 
-			let io = require("kaeon-united")("io");
+			let io = use("kaeon-united")("io");
 
 			let swap = ["package.json", "vercel.json"];
 

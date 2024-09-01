@@ -1,7 +1,7 @@
-var kaeonFUSION = require("kaeon-united")("kaeonFUSION");
-var onePlus = require("kaeon-united")("onePlus");
+var kaeonFUSION = use("kaeon-united")("kaeonFUSION");
+var onePlus = use("kaeon-united")("onePlus");
 
-var tokenizer = require("kaeon-united")("tokenizer");
+var tokenizer = use("kaeon-united")("tokenizer");
 
 function getLangauge(language) {
 

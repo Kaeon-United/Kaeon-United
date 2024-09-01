@@ -1,6 +1,6 @@
 // item = { item: "...", action: { type: "...", ... (url: "...") } }
 
-var vision = require("kaeon-united")("vision");
+var vision = use("kaeon-united")("vision");
 
 function getDropItem(input, dropdown, value, onSelect) {
 	

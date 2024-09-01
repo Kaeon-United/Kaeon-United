@@ -1,6 +1,6 @@
-var child_process = require("child_process");
-var http = require("http");
-var fs = require("fs");
+var child_process = use("child_process");
+var http = use("http");
+var fs = use("fs");
 
 var password = null;
 

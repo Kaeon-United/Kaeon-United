@@ -1,5 +1,5 @@
-var philosophersStone = require("kaeon-united")("philosophersStone");
-var binaryMap = require("kaeon-united")("binaryMap");
+var philosophersStone = use("kaeon-united")("philosophersStone");
+var binaryMap = use("kaeon-united")("binaryMap");
 
 function SOULEntity() {
 

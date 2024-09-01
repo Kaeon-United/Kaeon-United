@@ -1,5 +1,5 @@
-var commonCache = require("kaeon-united")("commonCache");
-var philosophersStone = require("kaeon-united")("philosophersStone");
+var commonCache = use("kaeon-united")("commonCache");
+var philosophersStone = use("kaeon-united")("philosophersStone");
 
 module.exports = (options) => {
 

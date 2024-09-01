@@ -1,8 +1,8 @@
-var inputUtils = require("kaeon-united")("inputUtils");
-var one = require("kaeon-united")("one");
-var oneSuite = require("kaeon-united")("oneSuite");
-var philosophersStone = require("kaeon-united")("philosophersStone");
-var media = require("kaeon-united")("generalReference")("media");
+var inputUtils = use("kaeon-united")("inputUtils");
+var one = use("kaeon-united")("one");
+var oneSuite = use("kaeon-united")("oneSuite");
+var philosophersStone = use("kaeon-united")("philosophersStone");
+var media = use("kaeon-united")("generalReference")("media");
 
 var audio = {
 

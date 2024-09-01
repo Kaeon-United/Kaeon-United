@@ -16,7 +16,7 @@ function monitorConnection(onConnect, onDisconnect) {
 	intervals.push(
 		setInterval(() => {
 				
-			require('dns').resolve('www.google.com', function(error) {
+			use('dns').resolve('www.google.com', function(error) {
 		
 				if(error) {
 

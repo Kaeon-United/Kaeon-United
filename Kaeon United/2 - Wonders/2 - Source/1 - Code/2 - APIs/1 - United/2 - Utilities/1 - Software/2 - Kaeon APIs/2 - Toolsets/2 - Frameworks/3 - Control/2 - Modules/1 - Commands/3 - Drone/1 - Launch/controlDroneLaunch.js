@@ -1,4 +1,4 @@
-var droneIdentifier = require("kaeon-united")("droneIdentifier");
+var droneIdentifier = use("kaeon-united")("droneIdentifier");
 
 module.exports = (devices, operation, message, state) => {
 

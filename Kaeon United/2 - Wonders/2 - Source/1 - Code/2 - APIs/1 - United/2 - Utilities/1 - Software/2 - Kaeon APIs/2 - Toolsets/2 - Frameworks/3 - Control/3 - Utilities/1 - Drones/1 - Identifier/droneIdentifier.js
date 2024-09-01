@@ -9,7 +9,7 @@ function generateUtilities(utilities) {
 	var result = JSON.parse(JSON.stringify(utilities));
 	
 	Object.keys(result).forEach((key) => {
-		result[key] = require(result[key]);
+		result[key] = use(result[key]);
 	});
 
 	return result;

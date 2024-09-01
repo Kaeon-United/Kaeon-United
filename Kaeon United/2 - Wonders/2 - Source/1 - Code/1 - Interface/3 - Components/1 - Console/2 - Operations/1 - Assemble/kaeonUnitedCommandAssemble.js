@@ -21,9 +21,9 @@ module.exports = (args, callback) => {
 		return;
 	}
 
-	let fs = require("fs");
-	let io = require("kaeon-united")("io");
-	let ONESuite = require("kaeon-united")("ONESuite");
+	let fs = use("fs");
+	let io = use("kaeon-united")("io");
+	let ONESuite = use("kaeon-united")("ONESuite");
 
 	(async () => {
 
@@ -39,7 +39,7 @@ module.exports = (args, callback) => {
 		}
 
 		if(!Array.isArray(data))
-			data = require("kaeon-united")("csb")(data);
+			data = use("kaeon-united")("csb")(data);
 		
 		fs.writeFileSync(args[3], new Uint8Array(Buffer.from(data)));
 

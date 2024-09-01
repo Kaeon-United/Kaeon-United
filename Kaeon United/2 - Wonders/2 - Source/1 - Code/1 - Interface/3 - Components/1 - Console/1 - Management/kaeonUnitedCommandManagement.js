@@ -81,10 +81,10 @@ module.exports = (args, callback) => {
 		return;
 	}
 	
-	aceUtils = require("kaeon-united")("aceUtils");
-	execSync = require('child_process').execSync;
-	fs = require("fs");
-	sep = require("path").sep;
+	aceUtils = use("kaeon-united")("aceUtils");
+	execSync = use('child_process').execSync;
+	fs = use("fs");
+	sep = use("path").sep;
 	
 	let useFile = getUseFile();
 

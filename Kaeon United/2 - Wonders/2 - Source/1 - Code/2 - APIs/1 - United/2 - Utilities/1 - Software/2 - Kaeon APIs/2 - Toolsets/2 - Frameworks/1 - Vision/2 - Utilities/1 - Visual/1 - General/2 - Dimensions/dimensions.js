@@ -15,7 +15,7 @@
 
 */
 
-var vision = require("kaeon-united")("vision");
+var vision = use("kaeon-united")("vision");
 
 function isHTMLNode(element) {
 	return element.ENTITY_NODE != null;

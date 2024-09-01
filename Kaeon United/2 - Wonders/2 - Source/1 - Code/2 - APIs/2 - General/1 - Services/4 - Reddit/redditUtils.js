@@ -1,5 +1,5 @@
-var io = require("kaeon-united")("io");
-var vision = require("kaeon-united")("vision");
+var io = use("kaeon-united")("io");
+var vision = use("kaeon-united")("vision");
 
 function getData(item) {
 

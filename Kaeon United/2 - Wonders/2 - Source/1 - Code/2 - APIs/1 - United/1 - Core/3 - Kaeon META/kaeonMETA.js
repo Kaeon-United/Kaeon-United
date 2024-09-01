@@ -2,8 +2,8 @@ var moduleDependencies = {
 	defaultConfig: "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/3%20-%20Applications/2%20-%20Kaeon%20Origin/1%20-%20Resources/1%20-%20Default%20Config/kaeonOriginDefaultConfig.json",
 };
 
-var io = require("kaeon-united")("io");
-var virtualSystem = require("kaeon-united")("virtualSystem");
+var io = use("kaeon-united")("io");
+var virtualSystem = use("kaeon-united")("virtualSystem");
 
 function kaeonMETA(command) {
 

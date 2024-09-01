@@ -16,8 +16,8 @@ module.exports = (args, callback) => {
 
 	(async () => {
 
-		let application = require("kaeon-united")("aceUtils").traceKaeonACE(
-			require("kaeon-united")(),
+		let application = use("kaeon-united")("aceUtils").traceKaeonACE(
+			use("kaeon-united")(),
 			[
 				...(
 					(args[1].includes(".") ?
@@ -65,24 +65,24 @@ module.exports = (args, callback) => {
 		if(application.environment == "javascript") {
 
 			if(application.source == null)
-				require(application.location);
+				use(application.location);
 
 			else
-				require(application.source, { dynamic: true });
+				use(application.source, { dynamic: true });
 		}
 
 		else if(application.environment == "kaeon fusion") {
 
 			if(application.source == null) {
 
-				require("kaeon-united")("ONESuite").process(
-					require("kaeon-united")("io").open(application.location)
+				use("kaeon-united")("ONESuite").process(
+					use("kaeon-united")("io").open(application.location)
 				);
 			}
 
 			else {
 
-				require("kaeon-united")("ONESuite").process(
+				use("kaeon-united")("ONESuite").process(
 					application.source
 				);
 			}

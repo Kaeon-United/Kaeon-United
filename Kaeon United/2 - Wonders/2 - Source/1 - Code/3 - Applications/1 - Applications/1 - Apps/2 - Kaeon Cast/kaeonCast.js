@@ -3,12 +3,12 @@ var moduleDependencies = {
 	icon: "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/2%20-%20Assets/1%20-%20Visual/1%20-%20Images/1%20-%20Iconography/2%20-%20Kaeon%20United/2%20-%20Kaeon%20United/Kaeon%20United%20Logo.png"
 };
 
-var dimensions = require("kaeon-united")("dimensions");
-var http = require("kaeon-united")("httpUtils");
-var io = require("kaeon-united")("io");
-var media = require("kaeon-united")("generalReference")("media");
-var vision = require("kaeon-united")("vision");
-var widgets = require("kaeon-united")("widgets");
+var dimensions = use("kaeon-united")("dimensions");
+var http = use("kaeon-united")("httpUtils");
+var io = use("kaeon-united")("io");
+var media = use("kaeon-united")("generalReference")("media");
+var vision = use("kaeon-united")("vision");
+var widgets = use("kaeon-united")("widgets");
 
 vision.setFavicon(moduleDependencies.icon);
 

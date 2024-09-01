@@ -77,9 +77,9 @@ function executeSingularity() {
 
 	localStorage.setItem("localCache", openResource(moduleDependencies.cache));
 
-	if(typeof require != typeof undefined) {
+	if(typeof use != typeof undefined) {
 
-		if(require.kaeonUnited)
+		if(use.kaeonUnited)
 			return;
 	}
 
@@ -93,7 +93,7 @@ function executeSingularity() {
 		paths: []
 	};
 	
-	function unitedRequire(path, options) {
+	function use(path, options) {
 
 		if(typeof options != "object")
 			options = { };
@@ -105,7 +105,7 @@ function executeSingularity() {
 				try {
 
 					resolve(
-						require(
+						use(
 							path,
 							{
 								dynamic: options.dynamic,
@@ -136,7 +136,7 @@ function executeSingularity() {
 			return executeModule;
 		}
 	
-		require.cache = require.cache ? require.cache : { };
+		use.cache = use.cache ? use.cache : { };
 	
 		if(module.parent != null) {
 	
@@ -154,7 +154,7 @@ function executeSingularity() {
 		while(lowerPath.startsWith("././"))
 			lowerPath = lowerPath.substring(2);
 	
-		let cacheItem = require.cache[lowerPath];
+		let cacheItem = use.cache[lowerPath];
 	
 		let newModule = {
 			id: path,
@@ -174,11 +174,11 @@ function executeSingularity() {
 				
 				allText = openResource(path);
 
-				require.cache[lowerPath] = newModule;
+				use.cache[lowerPath] = newModule;
 			}
 	
-			if(require.ONESuite != null)
-				allText = require.ONESuite.preprocess(allText);
+			if(use.ONESuite != null)
+				allText = use.ONESuite.preprocess(allText);
 
 			let isJSON = false;
 
@@ -200,15 +200,15 @@ function executeSingularity() {
 		
 				let moduleFunction = new Function(
 					"var module = arguments[0];" +
-					require.toString() +
-					"require.cache = arguments[1];" +
+					use.toString() +
+					"use.cache = arguments[1];" +
 					allText +
 					";return module;"
 				);
 				
 				let newModuleContents = moduleFunction(
 					newModule,
-					require.cache
+					use.cache
 				);
 		
 				for(key in newModuleContents.exports)
@@ -235,12 +235,12 @@ function executeSingularity() {
 			return cacheItem.exports;
 	}
 
-	require = unitedRequire;
+	require = use;
 
-	require.kaeonUnited = true;
+	use.kaeonUnited = true;
 	
 	try {
-		require.ONESuite = require(moduleDependencies.ONESuite);
+		use.ONESuite = use(moduleDependencies.ONESuite);
 	}
 	
 	catch(error) {

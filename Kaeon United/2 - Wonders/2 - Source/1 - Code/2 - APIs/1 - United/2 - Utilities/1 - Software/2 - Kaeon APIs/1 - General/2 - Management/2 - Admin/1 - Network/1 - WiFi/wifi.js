@@ -1,6 +1,6 @@
-var childProcess = require("child_process");
-var fs = require("fs");
-var wifi = process.platform == "win32" ? require("node-wifi") : { };
+var childProcess = use("child_process");
+var fs = use("fs");
+var wifi = process.platform == "win32" ? use("node-wifi") : { };
 
 var open = false;
 

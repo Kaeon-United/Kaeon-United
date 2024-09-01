@@ -1,5 +1,5 @@
 function executeOP(code) {
-	require.ONESuite.process(code);
+	use.ONESuite.process(code);
 }
 
 module.exports = (args, callback) => {

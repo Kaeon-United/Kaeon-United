@@ -1,7 +1,7 @@
-var fusion = require("kaeon-united")("fusion");
-var kaeonACE = require("kaeon-united")("kaeonACECore");
-var philosophersStone = require("kaeon-united")("philosophersStone");
-var widgets = require("kaeon-united")("widgets");
+var fusion = use("kaeon-united")("fusion");
+var kaeonACE = use("kaeon-united")("kaeonACECore");
+var philosophersStone = use("kaeon-united")("philosophersStone");
+var widgets = use("kaeon-united")("widgets");
 
 function getACECallback(fusion, ace) {
 

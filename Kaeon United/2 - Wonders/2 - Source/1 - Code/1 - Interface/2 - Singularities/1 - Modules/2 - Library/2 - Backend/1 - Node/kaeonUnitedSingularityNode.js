@@ -161,20 +161,20 @@ function executeSingularity() {
 					if(installedModules.includes(path)) {
 
 						try {
-							item = use(path);
+							item = require(path);
 						}
 
 						catch(error) {
 
 							try {
 
-								item = use(
+								item = require(
 									process.cwd() + "/node_modules/" + path
 								);
 							}
 	
 							catch(error) {
-								item = use(path);
+								item = require(path);
 							}
 						}
 					}

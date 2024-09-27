@@ -9129,14 +9129,11 @@ Soft Programming
 				referred to as request prompts. In a soft programming algorithm with a single
 				initial prompt, said prompt is referred to as the master prompt.
 
-				Prompt protocols for deriving structured data from unstructured text, and for
-				converting structured data to unstructured text, are referred to as a structure
+				Prompt protocols for deriving structured data from unstructured data, and for
+				converting structured data to unstructured data, are referred to as a structure
 				protocol, which themselves may be considered a type of prompt protocol.
 
 				Codified collections of prompt protocols are referred to as prompt libraries.
-
-				A prompt protocol for initiating the automation of tasks of indefinite scope is
-				referred to as an omni-protocol.
 			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 2 - Theory: 1 - Utilities: 1 - Software: 2 - Algorithms: 5 - Fields: 2 - AI: 1 - Conventions: 3 - Soft Programming: 1 - Soft Rules'
@@ -9162,6 +9159,30 @@ Soft Rules
 
 			-
 				A soft enforcer is a system that acts to enforce soft rules upon another.
+			-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 2 - Theory: 1 - Utilities: 1 - Software: 2 - Algorithms: 5 - Fields: 2 - AI: 1 - Conventions: 3 - Soft Programming: 2 - Persistent'
+
+Persistent Protocol
+
+	Philosophy
+
+		-
+			A prompt protocol for initiating a continuous, real-time process in which an AI system
+			responds to a constant input stream is referred to as a persistent protocol.
+
+			A persistent protocol may utilize multiple models and model contexts, may initiate
+			interactions with its environment, and may take into account cycle counts and real time
+			passage.
+		-
+
+	Principles
+
+		Omni-Protocol
+
+			-
+				A persistent protocol for the automation of tasks of indefinite scope is referred
+				to as an omni-protocol.
 			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 2 - Theory: 1 - Utilities: 1 - Software: 2 - Algorithms: 5 - Fields: 2 - AI: 1 - Conventions: 4 - Bioequivalent AI'

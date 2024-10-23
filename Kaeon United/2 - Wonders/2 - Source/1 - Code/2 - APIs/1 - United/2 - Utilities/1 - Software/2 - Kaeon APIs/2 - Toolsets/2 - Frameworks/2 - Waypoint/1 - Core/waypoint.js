@@ -1,77 +1,332 @@
-var state = { };
+var aceUtils = use("kaeon-united")("aceUtils");
+var httpUtils = use("kaeon-united")("httpUtils");
+var philosophersStone = use("kaeon-united")("philosophersStone");
 
-var subscriptions = { };
-var subscriptionCount = 0;
+let adapters = [
+	Object.assign(
+		Object.assign({ }, philosophersStone.standard),
+		{
+			tags: ["waypoint", "mongo"],
+			standard: (packet) => {
 
-function create(path) {
+				if(packet.data.context.versions.newContext.actions == null) {
 
-	let object = get(path);
-	let key = "c_";
+					if(packet.callback != null)
+						packet.callback(null);
 
-	while(object[key] != null)
-		key = ("c_" + Math.random()).split(".").join("");
+					return;
+				}
 
-	return key;
+				let { MongoClient } = use('mongodb');
+
+				let keys = JSON.parse(packet.data.key);
+				let context = packet.data.context.current;
+				
+				let uri = Object.keys(context.target.locations)[0] +
+					"?retryWrites=true&w=majority";
+
+				let dbName = keys[1];
+				let collectionName = keys[2];
+
+				(async () => {
+					
+					let client = new MongoClient(
+						uri,
+						{ }
+					);
+
+					try {
+
+						let variables = aceUtils.getValue(context.module, "Variables");
+
+						let create = aceUtils.getValue(context.actions, "Create");
+
+						let createItems = [];
+
+						if(create != null) {
+
+							Object.values(create).forEach((item) => {
+
+								Object.keys(item).forEach((key) => {
+
+									item[key] = Object.keys(item[key])[0];
+
+									if(variables[key] != null) {
+
+										if(Object.keys(
+											variables[key]
+										)[0].toLowerCase() == "number") {
+
+											item[key] = Number(item[key]);
+										}
+
+										else if(Object.keys(
+											variables[key]
+										)[0].toLowerCase() == "boolean") {
+
+											item[key] =
+												item[key].
+													toLowerCase().
+													trim() ==
+												"true";
+										}
+									}
+								});
+
+								createItems.push(item);
+							});
+						}
+
+						await client.connect();
+
+						let db = client.db(dbName);
+						let collection = await db.createCollection(collectionName);
+
+						await collection.insertMany(createItems);
+						
+						// STUB !!!
+						if(packet.callback != null)
+							packet.callback(null);
+					}
+					
+					catch(err) {
+
+						console.error(err);
+						
+						if(packet.callback != null)
+							packet.callback(null);
+					}
+					
+					finally {
+						await client.close();
+					}
+				})();
+			}
+		}
+	),
+	Object.assign(
+		Object.assign({ }, philosophersStone.standard),
+		{
+			tags: ["waypoint", "postgres"],
+			standard: (packet) => {
+				
+			}
+		}
+	),
+	Object.assign(
+		Object.assign({ }, philosophersStone.standard),
+		{
+			tags: ["waypoint", "local"],
+			standard: (packet) => {
+				
+			}
+		}
+	),
+	Object.assign(
+		Object.assign({ }, philosophersStone.standard),
+		{
+			tags: ["waypoint", "remote"], // Server - Axis
+			standard: (packet) => {
+				
+			}
+		}
+	)
+];
+
+let context = { }; // Record of module properties
+let local = { }; // Internal module ACE DB
+
+function entangle(source, target, mutual) {
+	// STUB
 }
 
-function get(path, object) {
+function query(data, callback) {
 
-	if(path.length == 0)
-		return state;
+	data = aceUtils.formatKaeonACE(data);
 
-	object = object != null ? object : state;
+	let newContext = queryGet(data);
+	let callbackCount = 0;
 
-	if(object[path[0]] == undefined)
-		object[path[0]] = { };
+	Object.keys(newContext).forEach(key => {
 
-	if(path.length == 1)
-		return object[path[0]];
+		let response = philosophersStone.traverse(philosophersStone.axis).filter(
+			tag => philosophersStone.isTagged(tag, ["waypoint"])
+		).map(
+			stone => {
 
-	return get(path.slice(1), object[path[0]]);
+				callbackCount++;
+			
+				try {
+
+					return stone.standard({
+						data: {
+							key: key,
+							context: {
+								current: Object.assign(
+									context[key] != null ?
+										JSON.parse(
+											JSON.stringify(context[key])
+										) :
+										{ },
+									newContext[key]
+								),
+								versions: {
+									newContext: newContext[key],
+									oldContext: context[key]
+								}
+							}
+						},
+						callback: callback != null ? (response) => {
+
+							if(response != null)
+								querySet(data, key, response);
+		
+							callbackCount--;
+
+							if(callbackCount == 0) {
+
+								// STUB - ENFORCE RESTRICTIONS !!!
+								Object.assign(context, newContext);
+
+								callback(data);
+							}
+						} : null
+					});
+				}
+	
+				catch(error) {
+		
+					callbackCount--;
+
+					return null;
+				}
+			}
+		).filter(item => item != null)[0];
+
+		if(response != null)
+			querySet(data, key, response);
+	})
+	
+	// STUB - ENFORCE RESTRICTIONS !!!
+	Object.assign(context, newContext);
+
+	return callback != null ? data : null;
 }
 
-function set(path, value) {
+function queryGet(data, path, key, target) {
 
-	let pathString = JSON.stringify(path);
-	pathString = pathString.substring(0, pathString.length - 1);
+	path = path != null ? path : [];
 
-	let subscribed = Object.values(subscriptions).filter((item) => {
-		return JSON.stringify(item.path).startsWith(pathString);
-	});
+	if(target != null)
+		path.push(key);
 
-	let previous = subscribed.map((item) => {
-		return JSON.parse(JSON.stringify(get(item.path)));
-	});
+	else
+		path = [key];
 
-	get(path.slice(0, path.length - 1))[path[path.length - 1]] = value;
+	let components = aceUtils.getValue(data, "components", { });
+	let entities = aceUtils.getValue(data, "entities", { });
 
-	subscribed.forEach((item, index) => {
-		item.operation(previous[index], get(item.path));
-	});
+	let item = Object.assign({ }, context[JSON.stringify(path)]);
+	item = item != null ? item : { };
+
+	let module = aceUtils.getValue(components, "module");
+	let locations = aceUtils.getValue(components, "locations");
+	let access = aceUtils.getValue(components, "access");
+	let actions = aceUtils.getValue(components, "actions");
+
+	if(module != null)
+		item.module = module;
+
+	if(actions != null)
+		item.actions = actions;
+
+	let modules = { };
+
+	if(module != null) {
+
+		target = JSON.parse(JSON.stringify(target != null ? target : { }));
+
+		if(access != null)
+			target.access = access;
+
+		if(locations != null)
+			target.locations = locations;
+
+		item.target = target;
+
+		modules[JSON.stringify(path)] = item;
+	}
+
+	Object.keys(entities).forEach(
+		key => {
+
+			Object.assign(
+				modules,
+				queryGet(
+					entities[key],
+					JSON.parse(JSON.stringify(path)),
+					key,
+					target
+				)
+			);
+		}
+	);
+
+	return modules;
 }
 
-function subscribe(path, operation) {
+function querySet(data, id, item, path, key, target) {
 
-	subscriptions["" + subscriptionCount] = {
-		path: path,
-		operation: operation
-	};
+	path = path != null ? path : [];
 
-	subscriptionCount++;
+	if(target)
+		path.push(key);
 
-	return subscriptionCount - 1;
+	else
+		path = [key];
+
+	if(JSON.stringify(path) == id) {
+
+		Object.keys(data).forEach(i => delete data[i]);
+		Object.assign(data, item);
+
+		return;
+	}
+
+	let components = aceUtils.getValue(data, "components", { });
+	let entities = aceUtils.getValue(data, "entities", { });
+
+	if(aceUtils.getValue(components, "module") != null)
+		target = true;
+
+	Object.keys(entities).forEach(
+		key => {
+
+			querySet(
+				entities[key],
+				id,
+				item,
+				JSON.parse(JSON.stringify(path)),
+				key,
+				target
+			)
+		}
+	);
 }
 
-function unsubscribe(id) {
-
-	if(subscriptions["" + id] != null)
-		delete subscriptions["" + id];
+function subscribe(path, callback) {
+	// STUB
 }
+
+philosophersStone.connect(philosophersStone.axis, adapters, [], true);
 
 module.exports = {
-	create,
-	get,
-	set,
+	adapters,
+	context,
+	entangle,
+	query,
+	queryGet,
+	querySet,
 	subscribe,
-	unsubscribe
+	local
 };

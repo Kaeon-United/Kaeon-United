@@ -1,4 +1,5 @@
 var aceUtils = use("kaeon-united")("aceUtils");
+var formatConverter = use("kaeon-united")("formatConverter");
 var httpUtils = use("kaeon-united")("httpUtils");
 var philosophersStone = use("kaeon-united")("philosophersStone");
 
@@ -37,9 +38,17 @@ let adapters = [
 
 					try {
 
-						let variables = aceUtils.getValue(context.module, "Variables");
+						let variables = aceUtils.getValue(
+							context.module, "Variables"
+						);
 
-						let create = aceUtils.getValue(context.actions, "Create");
+						let create = aceUtils.getValue(
+							context.actions, "Create"
+						);
+
+						let read = aceUtils.getValue(
+							context.actions, "Read"
+						);
 
 						let createItems = [];
 
@@ -77,21 +86,58 @@ let adapters = [
 							});
 						}
 
+						let query = null;
+						let response = [];
+
+						if(read != null) {
+
+							query = { };
+
+							let filter = aceUtils.getValue(read, "Filter");
+
+							if(filter != null) {
+								
+								Object.keys(filter).forEach(key => {
+									query[key] = getMongoQuery(filter[key]);
+								});
+							}
+						}
+
 						await client.connect();
 
 						let db = client.db(dbName);
-						let collection = await db.createCollection(collectionName);
+						let collection = await db.createCollection(
+							collectionName
+						);
 
-						await collection.insertMany(createItems);
+						if(createItems.length > 0)
+							await collection.insertMany(createItems);
+
+						if(query != null)
+							response = await collection.find(query).toArray();
+
+						let data = { };
+
+						response.forEach((item, index) => {
+
+							if(item["_id"] != null)
+								delete item["_id"];
+
+							data["" + (index + 1)] = (
+								formatConverter.oneToJSON(
+									formatConverter.jsonToONE(item)
+								)
+							);
+						});
 						
 						// STUB !!!
 						if(packet.callback != null)
-							packet.callback(null);
+							packet.callback(data);
 					}
 					
-					catch(err) {
+					catch(error) {
 
-						console.error(err);
+						console.log(error);
 						
 						if(packet.callback != null)
 							packet.callback(null);
@@ -140,6 +186,57 @@ function entangle(source, target, mutual) {
 	// STUB
 }
 
+// STUB
+function getMongoQuery(query) {
+
+	if(Object.keys(query).length == 1) {
+
+		if(Object.keys(query[Object.keys(query)[0]]).length == 0) {
+
+			if(isNaN(Object.keys(query)[0]))
+				return Object.keys(query)[0];
+	
+			return Number(Object.keys(query)[0]);
+		}
+	}
+
+	let result = { };
+
+	Object.keys(query).forEach(key => {
+
+		if(key.toLowerCase() == "greater")
+			result["$gt"] = getMongoQuery(query[key]);
+
+		if(key.toLowerCase() == "less")
+			result["$lt"] = getMongoQuery(query[key]);
+	});
+
+	return result;
+}
+
+function getEntity(data, key) {
+
+	if(typeof key == "string")
+		key = JSON.parse(key);
+
+	if(key.length == 0)
+		return data;
+
+	let entity = null;
+	let entities = aceUtils.getValue(data, "entities");
+
+	if(entities != null)
+		entity = aceUtils.getValue(entities, key[0]);
+
+	if(entity == null)
+		entity = aceUtils.getValue(data, key[0]);
+
+	if(entity == null)
+		return null;
+
+	return getEntity(entity, key.slice(1));
+}
+
 function query(data, callback) {
 
 	data = aceUtils.formatKaeonACE(data);
@@ -149,12 +246,12 @@ function query(data, callback) {
 
 	Object.keys(newContext).forEach(key => {
 
-		let response = philosophersStone.traverse(philosophersStone.axis).filter(
+		let response = philosophersStone.traverse(
+			philosophersStone.axis
+		).filter(
 			tag => philosophersStone.isTagged(tag, ["waypoint"])
 		).map(
 			stone => {
-
-				callbackCount++;
 			
 				try {
 
@@ -178,12 +275,31 @@ function query(data, callback) {
 						},
 						callback: callback != null ? (response) => {
 
-							if(response != null)
-								querySet(data, key, response);
-		
-							callbackCount--;
+							if(response != null) {
 
-							if(callbackCount == 0) {
+								let entity = getEntity(data, key);
+
+								if(entity != null) {
+
+									let components = aceUtils.getValue(
+										entity, "components"
+									);
+
+									if(components == null) {
+
+										entity.Components = { };
+
+										components = entity.Components;
+									}
+
+									components["Content"] = response;
+								}
+							}
+		
+							callbackCount++;
+
+							if(callbackCount ==
+								Object.keys(newContext).length) {
 
 								// STUB - ENFORCE RESTRICTIONS !!!
 								Object.assign(context, newContext);
@@ -195,17 +311,38 @@ function query(data, callback) {
 				}
 	
 				catch(error) {
+
+					console.log(error);
 		
-					callbackCount--;
+					callbackCount++;
 
 					return null;
 				}
 			}
 		).filter(item => item != null)[0];
 
-		if(response != null)
-			querySet(data, key, response);
-	})
+		// if(response != null)
+		// 	querySet(data, key, response);
+
+		if(response != null) {
+
+			let entity = getEntity(data, key);
+
+			let components = aceUtils.getValue(
+				entity, "components"
+			);
+
+			if(components == null) {
+
+				entity.Components = { };
+				
+				components = entity.Components;
+			}
+
+			if(components != null)
+				components["Content"] = response;
+		}
+	});
 	
 	// STUB - ENFORCE RESTRICTIONS !!!
 	Object.assign(context, newContext);
@@ -251,11 +388,12 @@ function queryGet(data, path, key, target) {
 
 		if(locations != null)
 			target.locations = locations;
-
-		item.target = target;
-
-		modules[JSON.stringify(path)] = item;
 	}
+
+	item.target = target;
+
+	if(module != null || actions != null)
+		modules[JSON.stringify(path)] = item;
 
 	Object.keys(entities).forEach(
 		key => {
@@ -324,6 +462,8 @@ module.exports = {
 	adapters,
 	context,
 	entangle,
+	getEntity,
+	getMongoQuery,
 	query,
 	queryGet,
 	querySet,

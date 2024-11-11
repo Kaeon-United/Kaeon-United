@@ -6195,6 +6195,23 @@ Standard Kaeon ACE Engine
 				Philosopher's stone must be private.
 			-
 
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 1 - Utilities: 3 - Conversions: 1 - XML'
+
+Kaeon ACE to XML
+
+	Philosophy
+
+		-
+			An XML element may be represented by a Kaeon ACE entity, with the alias of the entity
+			representing the XML tag, and with each component having exactly one child. Each
+			component shall represent an attribute, the alias being the attribute name and the
+			content of the child being the attribute content, except for a content component, which
+			shall represent the content of the XML element. Each child of an entity representing an
+			XML element shall also represent an XML element. Such a child entity with an empty
+			string as its alias, no children, and only a content component, may be used to
+			represent a text node among its siblings.
+		-
+
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 1 - Language: 2 - ONE: 3 - ACE Conventions: 2 - Kaeon ACE: 2 - Formats: 1 - Module ACE'
 
 Module ACE
@@ -11804,10 +11821,36 @@ Value Monitor
 			A value monitor is an event listener that is assigned the alias or address of a
 			specific value, called the target, and triggers an event any time said value is
 			changed.
-
-			The metadata for said event should include both the previous value and the current
-			value of said target.
 		-
+
+	Principles
+
+		Subscriptions
+
+			-
+				An external listener for value monitor events may be referred to as a subscriber of
+				the value to which said events correspond, the relationship thus being a value
+				subscription.
+
+				A standardized use case for subscriptions is called a subscription convention.
+			-
+
+		Conventions
+
+			Entanglement
+
+				-
+					The use of value subscriptions to ensure that multiple separate values remain
+					equivalent whenever one of them is changed, taking on the value of the one most
+					recently changed, may be referred to as value entanglement.
+				-
+
+			Metadata
+
+				-
+					The metadata for value monitor events should include both the previous value
+					and the current value of said target. 
+				-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 1 - Software: 2 - Algorithms: 1 - Conventions: 1 - Methods: 2 - Fields: 1 - AI: 1 - Data: 1 - Multifaceted Data'
 
@@ -12172,8 +12215,9 @@ Correlation Training
 	Philosophy
 
 		-
-			Correlation training is where an AI model is trained using a process that assigns
-			quality scores to output without specifying the intended output.
+			Correlation training is a type of reinforcement training where an AI model is trained
+			using a process that assigns quality scores to output without specifying the intended
+			output.
 		-
 
 	Principles
@@ -12207,6 +12251,13 @@ Correlation Training
 				improve the model increase.
 
 				More advanced methods of SSP may utilize partial or complete state graphs.
+			-
+
+		Judge Model
+
+			-
+				A judge model (JM) is an AI model that can evaluate the quality of the output of a
+				generative model and assign it a quality score.
 			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 1 - Software: 2 - Algorithms: 1 - Conventions: 1 - Methods: 2 - Fields: 1 - AI: 2 - Process: 1 - Train: 6 - Reverse'
@@ -24201,6 +24252,13 @@ Kaeon Waypoint
 					Kaeon Waypoint shall primarily be designed around action ACE.
 				-
 
+			Value Monitors
+
+				-
+					Kaeon Waypoint shall make use of value monitors to allow subscriptions and
+					entanglement with and across databases.
+				-
+
 		APIs
 
 			Waypoint Core
@@ -24747,22 +24805,28 @@ Suite Corruption
 
 		2 - The Sins of Bondage
 
-			2.1 - The Sin of Commitment
+			2.1 - Commitment
 
 				-
-					The sin of commitment is when the usage of certain tools render others
-					unusable.
+					Commitment is when the usage of certain tools render others unusable.
 					
 					Thus, it forces commitment to one stack at the expense of others and renders
 					migration itself impossible without restarting from scratch.
 				-
 
-			2.2 - The Sin of Baggage
+			2.2 - Baggage
 
 				-
-					The sin of baggage is when a tool cannot be used independently of a specific
-					environment.
+					Baggage is when a tool cannot be used independently of a specific environment.
 				-
+
+		3 - The Wage of Deadlock
+
+			-
+				Technical deadlock is when technical debt creates limits which restrict an existing
+				project to such a degree that the goals of the project can no longer be reached,
+				forcing a complete development reset.
+			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 2 - Ideals: 3 - The Great Art'
 

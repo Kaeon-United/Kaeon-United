@@ -38,6 +38,59 @@ let adapters = [
 
 					try {
 
+						let formatItem = (variables, item) => {
+
+							if(variables == null)
+								return item;
+
+							Object.keys(item).forEach((key) => {
+
+								item[key] = Object.keys(item[key])[0];
+
+								if(variables[key] != null) {
+
+									if(Object.keys(
+										variables[key]
+									)[0].toLowerCase() == "number") {
+
+										item[key] = Number(item[key]);
+									}
+
+									else if(Object.keys(
+										variables[key]
+									)[0].toLowerCase() == "boolean") {
+
+										item[key] =
+											item[key].
+												toLowerCase().
+												trim() ==
+											"true";
+									}
+								}
+							});
+
+							return item;
+						};
+
+						let getQuery = (action) => {
+
+							if(action == null)
+								return null;
+
+							query = { };
+
+							let filter = aceUtils.getValue(action, "Filter");
+
+							if(filter != null) {
+								
+								Object.keys(filter).forEach(key => {
+									query[key] = getMongoQuery(filter[key]);
+								});
+							}
+
+							return query;
+						};
+
 						let variables = aceUtils.getValue(
 							context.module, "Variables"
 						);
@@ -46,66 +99,48 @@ let adapters = [
 							context.actions, "Create"
 						);
 
-						let read = aceUtils.getValue(
-							context.actions, "Read"
-						);
-
 						let createItems = [];
 
 						if(create != null) {
 
 							Object.values(create).forEach((item) => {
-
-								Object.keys(item).forEach((key) => {
-
-									item[key] = Object.keys(item[key])[0];
-
-									if(variables[key] != null) {
-
-										if(Object.keys(
-											variables[key]
-										)[0].toLowerCase() == "number") {
-
-											item[key] = Number(item[key]);
-										}
-
-										else if(Object.keys(
-											variables[key]
-										)[0].toLowerCase() == "boolean") {
-
-											item[key] =
-												item[key].
-													toLowerCase().
-													trim() ==
-												"true";
-										}
-									}
-								});
-
-								createItems.push(item);
-							});
+								createItems.push(formatItem(variables, item));
+							})
 						}
 
-						let query = null;
+						let readQuery = getQuery(
+							aceUtils.getValue(
+								context.actions, "Read"
+							)
+						);
+
+						let update = aceUtils.getValue(
+							context.actions, "Update"
+						);
+
+						let updateQuery = getQuery(update);
+						let updateItem = null;
+
+						if(update != null) {
+
+							updateItem = aceUtils.getValue(update, "Fields");
+
+							if(updateItem != null)
+								updateItem = formatItem(variables, updateItem);
+						}
+
+						let deleteQuery = getQuery(
+							aceUtils.getValue(
+								context.actions, "Delete"
+							)
+						);
+
 						let response = [];
-
-						if(read != null) {
-
-							query = { };
-
-							let filter = aceUtils.getValue(read, "Filter");
-
-							if(filter != null) {
-								
-								Object.keys(filter).forEach(key => {
-									query[key] = getMongoQuery(filter[key]);
-								});
-							}
-						}
 
 						await client.connect();
 
 						let db = client.db(dbName);
+						
 						let collection = await db.createCollection(
 							collectionName
 						);
@@ -113,8 +148,29 @@ let adapters = [
 						if(createItems.length > 0)
 							await collection.insertMany(createItems);
 
-						if(query != null)
-							response = await collection.find(query).toArray();
+						if(readQuery != null) {
+
+							response = await collection.find(
+								readQuery
+							).toArray();
+						}
+
+						if(updateQuery != null) {
+
+							await collection.updateMany(
+								updateQuery,
+								{
+									$set: updateItem
+								}
+							);
+						}
+
+						if(deleteQuery != null) {
+
+							response = await collection.deleteMany(
+								deleteQuery
+							);
+						}
 
 						let data = { };
 
@@ -203,6 +259,9 @@ function getMongoQuery(query) {
 	let result = { };
 
 	Object.keys(query).forEach(key => {
+
+		if(key.toLowerCase() == "equal")
+			result["$eq"] = getMongoQuery(query[key]);
 
 		if(key.toLowerCase() == "greater")
 			result["$gt"] = getMongoQuery(query[key]);
@@ -321,8 +380,12 @@ function query(data, callback) {
 			}
 		).filter(item => item != null)[0];
 
-		// if(response != null)
-		// 	querySet(data, key, response);
+		/* // STUB
+		
+		if(response != null)
+		 	querySet(data, key, response);
+
+		*/
 
 		if(response != null) {
 

@@ -376,7 +376,7 @@ function getInterface() {
 
 			return name.toLowerCase() == "use";
 		}).map(item => item.path + sep + item.name).forEach(item => {
-			interfaces.push(parseInterface(item));
+			interfaces.push(parseInterface(fs.readFileSync(item, "utf-8")));
 		});
 
 		let index = process.argv.indexOf("-use");

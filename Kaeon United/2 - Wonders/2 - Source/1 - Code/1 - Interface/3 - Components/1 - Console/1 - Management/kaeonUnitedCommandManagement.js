@@ -18,7 +18,7 @@ function executeCommands(interface, operation) {
 		]
 	).forEach(item => {
 
-		item.components.protocol[operation].forEach(command => {
+		Object.keys(item.components.protocol[operation]).forEach(command => {
 			execSync(command);
 		});
 	})
@@ -45,7 +45,11 @@ function getUseFile() {
 
 			return name.toLowerCase() == "use";
 		}).map(item => item.path + sep + item.name).forEach(item => {
-			aceUtils.overlayEntity(useFile, aceUtils.formatKaeonACE(item));
+
+			aceUtils.overlayEntity(
+				useFile,
+				aceUtils.formatKaeonACE(fs.readFileSync(item, "utf-8"))
+			);
 		});
 	}
 

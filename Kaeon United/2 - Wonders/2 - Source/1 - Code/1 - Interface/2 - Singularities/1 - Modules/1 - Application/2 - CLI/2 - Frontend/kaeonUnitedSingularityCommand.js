@@ -21,7 +21,7 @@ function executeCommand(args) {
 			return use(Object.keys(item.components.locations)[0]);
 
 		else
-			return use(item.components.source,  { dynamic: true });
+			return use(item.components.source, { dynamic: true });
 	}).forEach((item) => {
 
 		try {

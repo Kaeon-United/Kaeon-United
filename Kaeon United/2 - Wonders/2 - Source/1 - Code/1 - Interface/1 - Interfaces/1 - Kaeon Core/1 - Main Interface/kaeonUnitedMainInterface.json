@@ -377,10 +377,57 @@
 													"series": {
 														"entities": {
 															"openAxis": {
-																"components": {
-																	"locations": [
-																		"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/2%20-%20Series/2%20-%20Open%20Axis/openAxis.js"
-																	]
+																"entities": {
+																	"axisUtils": {
+																		"components": {
+																			"locations": [
+																				"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/2%20-%20Series/2%20-%20Open%20Axis/1%20-%20Utils/axisUtils.js"
+																			]
+																		}
+																	},
+																	"axisModules": {
+																		"entities": {
+																			"axisAether": {
+																				"components": {
+																					"locations": [
+																						"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/2%20-%20Series/2%20-%20Open%20Axis/2%20-%20Modules/2%20-%20Aether/axisAether.js"
+																					]
+																				}
+																			},
+																			"general": {
+																				"entities": {
+																					"axisClock": {
+																						"components": {
+																							"locations": [
+																								"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/2%20-%20Series/2%20-%20Open%20Axis/2%20-%20Modules/1%20-%20General/axisClock.js"
+																							]
+																						}
+																					},
+																					"axisRouter": {
+																						"components": {
+																							"locations": [
+																								"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/2%20-%20Series/2%20-%20Open%20Axis/2%20-%20Modules/1%20-%20General/axisRouter.js"
+																							]
+																						}
+																					},
+																					"axisServer": {
+																						"components": {
+																							"locations": [
+																								"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/2%20-%20Series/2%20-%20Open%20Axis/2%20-%20Modules/1%20-%20General/axisServer.js"
+																							]
+																						}
+																					}
+																				}
+																			}
+																		}
+																	},
+																	"openAxis": {
+																		"components": {
+																			"locations": [
+																				"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/2%20-%20Series/2%20-%20Open%20Axis/openAxis.js"
+																			]
+																		}
+																	}
 																}
 															},
 															"virtualSystem": {

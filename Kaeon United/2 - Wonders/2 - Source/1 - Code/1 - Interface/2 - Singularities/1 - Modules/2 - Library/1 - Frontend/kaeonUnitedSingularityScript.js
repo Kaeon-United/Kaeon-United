@@ -337,7 +337,7 @@ function openResource(path) {
 
 		path = moduleDependencies.cors.proxies[
 			moduleDependencies.cors.proxy
-		]({ request: { uri: path  } }).request.uri;
+		]({ request: { uri: path } }).request.uri;
 		
 		let request = new XMLHttpRequest();
 		request.open("GET", path, false);

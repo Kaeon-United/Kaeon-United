@@ -353,6 +353,13 @@
 																						"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/1%20-%20Conventions/2%20-%20Medium/1%20-%20SOUL/1%20-%20Utilities/3%20-%20Vector%20Converter/vectorConverter.js"
 																					]
 																				}
+																			},
+																			"xCatUtils": {
+																				"components": {
+																					"locations": [
+																						"https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/2%20-%20APIs/1%20-%20United/1%20-%20Core/2%20-%20Philosopher's%20Stone/1%20-%20Conventions/2%20-%20Medium/1%20-%20SOUL/1%20-%20Utilities/6%20-%20X-Cat/xCatUtils.js"
+																					]
+																				}
 																			}
 																		}
 																	},

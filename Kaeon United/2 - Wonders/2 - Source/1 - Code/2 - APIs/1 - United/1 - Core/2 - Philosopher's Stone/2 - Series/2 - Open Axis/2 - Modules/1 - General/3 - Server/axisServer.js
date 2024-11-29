@@ -1,4 +1,4 @@
-var axisUtils = use("axisUtils");
+var axisUtils = use("kaeon-united")("axisUtils");
 var fs = use("fs");
 var http = use("http");
 var https = use("https");

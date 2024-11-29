@@ -2,7 +2,7 @@ var moduleDependencies = {
 	kaeonUnitedScript: "https://cdn.jsdelivr.net/gh/kaeon-united/kaeon-united/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/1%20-%20Modules/2%20-%20Library/1%20-%20Frontend/kaeonUnitedSingularityScript.js"
 };
 
-var axisUtils = use("axisUtils");
+var axisUtils = use("kaeon-united")("axisUtils");
 var fs = use("fs");
 var ONESuite = use("kaeon-united")("ONESuite");
 var path = use("path");

@@ -1,5 +1,4 @@
 var aceUtils = null;
-var execSync = null;
 var fs = null;
 var sep = null;
 
@@ -19,7 +18,14 @@ function executeCommands(interface, operation) {
 	).forEach(item => {
 
 		Object.keys(item.components.protocol[operation]).forEach(command => {
-			execSync(command);
+
+			try {
+				(1, eval)(command);
+			}
+
+			catch(error) {
+				console.log(error);
+			}
 		});
 	})
 }
@@ -86,7 +92,6 @@ module.exports = (args, callback) => {
 	}
 	
 	aceUtils = use("kaeon-united")("aceUtils");
-	execSync = use('child_process').execSync;
 	fs = use("fs");
 	sep = use("path").sep;
 	
@@ -102,6 +107,13 @@ module.exports = (args, callback) => {
 			arguments.forEach((item) => {
 
 				try {
+
+					if(!item.startsWith("http://") &&
+						!item.startsWith("https://")) {
+
+						if(!fs.existsSync(item))
+							item = JSON.stringify(use(item));
+					}
 
 					let interface = aceUtils.formatKaeonACE(item);
 

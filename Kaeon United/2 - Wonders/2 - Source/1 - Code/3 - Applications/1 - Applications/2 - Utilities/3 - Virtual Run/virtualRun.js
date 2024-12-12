@@ -1,5 +1,5 @@
 var moduleDependencies = {
-	cors: "https://corsproxy.io/?"
+	cors: "https://corsproxy.io/?url="
 };
 
 var consoleWidget = use("kaeon-united")("consoleWidget");

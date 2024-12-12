@@ -36,7 +36,7 @@ var moduleDependencies = {
 				else {
 				
 					request.request.uri =
-						"https://corsproxy.io/?" +
+						"https://corsproxy.io/?url=" +
 							encodeURIComponent(
 								request.request.uri
 							).split("%20").join("%2520");

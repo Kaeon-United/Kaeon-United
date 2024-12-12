@@ -1,9 +1,9 @@
-var cryptr = use("cryptr");
+var cryptr = require("cryptr");
 
 let encryption =
-	new cryptr(use('readline-sync').question("Enter the password: "));
+	new cryptr(require('readline-sync').question("Enter the password: "));
 
-let data = use('fs').readFileSync(process.argv[2], 'utf8');
+let data = require('fs').readFileSync(process.argv[2], 'utf8');
 
 try {
 
@@ -12,14 +12,14 @@ try {
 	console.log(decrypted);
 
 	if(process.argv[3] != null)
-		use('fs').writeFileSync(process.argv[3], decrypted);
+		require('fs').writeFileSync(process.argv[3], decrypted);
 }
 
 catch(error) {
 
 	if(error.message != "Unsupported state or unable to authenticate data") {
 
-		use('fs').writeFileSync(
+		require('fs').writeFileSync(
 			process.argv[process.argv[3] != null ? 3 : 2],
 			encryption.encrypt(data)
 		);

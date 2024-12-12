@@ -427,6 +427,16 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 1 - Conve
 					There should be a single term at the top of the hierarchy that defines the
 					overall idea of the project called the master term.
 				-
+			-
+				Project Singularities
+			-
+				-
+					Project singularities are codified milestone points for a project to reach.
+
+					A project's prime singularity refers to the point where it can be said to have
+					reached its primary objectives, and a project's climactic singularity refers to
+					the point where it can be said to have reached all of its objectives.
+				-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE'
 
@@ -4200,55 +4210,76 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 1
 		Principles
 	-
 		-
-			Kaeon FUSION
+			Elements
 		-
 			-
-				Included in the Kaeon United FUSION interface shall be the Kaeon META command,
-				which shall work as follows:
-
-				At step three of the FUSION process, an element with the content "Philosophy", or
-				"Kaeon META", when processed as a command, shall send each value returned to it to
-				Kaeon META, and may return any value should Kaeon META send a value back in
-				response.
-
-				Furthermore, once the Kaeon United FUSION interface has been integrated, Kaeon META
-				shall be able to modify the state of the program.
+				Kaeon FUSION
 			-
+				-
+					Included in the Kaeon United FUSION interface shall be the Kaeon META command,
+					which shall work as follows:
+
+					At step three of the FUSION process, an element with the content "Philosophy",
+					or "Kaeon META", when processed as a command, shall send each value returned to
+					it to Kaeon META, and may return any value should Kaeon META send a value back
+					in response.
+
+					Furthermore, once the Kaeon United FUSION interface has been integrated, Kaeon
+					META shall be able to modify the state of the program.
+				-
+			-
+				Kaeon Kor
+			-
+				-
+					Kaeon META shall, according to the following Philosopher's System standard, be
+					implemented upon a Philosopher's System called Kaeon Kor, for which the
+					Philosopher's Suite is Kaeon United, for which the Aether Union is called Kaeon
+					Aether, for which the Philosopher's Corpus called Kaeon Sigma, and for which
+					the Philosopher's Vault is called Kaeon Gaia.
+
+					Kaeon Aether shall have an Aether Interface called Kaeon Oracle, implemented as
+					a dynamic response platform into Kaeon Origin, which can also function as a
+					Genesis Philosopher's Seed to Kaeon Aether.
+
+					The data that a given user stores within Kaeon Kor may be collectively referred
+					to as said user's Kaeon profile.
+				-
+			-
+				The Kaeon Metanet
+			-
+				-
+					Kaeon Kor, in spreading across various networks, and in using various
+					communication and messaging protocols, shall establish itself as an open and
+					boundless platform and environment, in and as a dot net network which overlaps
+					with other global networks.
+					
+					The network itself and its general capabilities, that is, Kaeon META, shall be
+					universally accessible through decentralized, autonomous, and intelligent
+					mechanisms which do not require omniscience of the entirety of the system.
+
+					The mechanisms used to communicate among and with the elements of Kaeon Kor
+					shall be referred to as the Kaeon Metanet protocols, which elements external to
+					Kaeon Kor may utilize, causing said elements, together with Kaeon Kor, to
+					become part of the Kaeon Metanet.
+				-
 		-
-			Kaeon Kor
+			Singularities
 		-
 			-
-				Kaeon META shall, according to the following Philosopher's System standard, be
-				implemented upon a Philosopher's System called Kaeon Kor, for which the
-				Philosopher's Suite is Kaeon United, for which the Aether Union is called Kaeon
-				Aether, for which the Philosopher's Corpus called Kaeon Sigma, and for which the
-				Philosopher's Vault is called Kaeon Gaia.
-
-				Kaeon Aether shall have an Aether Interface called Kaeon Oracle, implemented as a
-				dynamic response platform into Kaeon Origin, which can also function as a Genesis
-				Philosopher's Seed to Kaeon Aether.
-
-				The data that a given user stores within Kaeon Kor may be collectively referred to
-				as said user's Kaeon profile.
+				Prime
 			-
-		-
-			The Kaeon Metanet
-		-
+				-
+					The prime singularity of Kaeon META, and by extension Kaeon United, is the
+					point where it is capable of fully autonomous operation and self-improvement.
+				-
 			-
-				Kaeon Kor, in spreading across various networks, and in using various communication
-				and messaging protocols, shall establish itself as an open and boundless platform
-				and environment, in and as a dot net network which overlaps with other global
-				networks.
-				
-				The network itself and its general capabilities, that is, Kaeon META, shall be
-				universally accessible through decentralized, autonomous, and intelligent
-				mechanisms which do not require omniscience of the entirety of the system.
-
-				The mechanisms used to communicate among and with the elements of Kaeon Kor shall
-				be referred to as the Kaeon Metanet protocols, which elements external to Kaeon Kor
-				may utilize, causing said elements, together with Kaeon Kor, to become part of the
-				Kaeon Metanet.
+				Climactic
 			-
+				-
+					The climactic singularity of Kaeon META is the point where, in having reached
+					all of its objectives, it is capable of taking requests from users in any form,
+					and executing them regardless of what they are.
+				-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 2 - Kaeon United'
 
@@ -25473,17 +25504,6 @@ Kaeon Process Conventions
 					project, and so some level of subjective judgement is acceptable in terms of
 					granting leeway when it comes to following the specification to the letter and
 					in terms of going beyond the requirements of the specification.
-				-
-
-			Release Points
-
-				-
-					The developers of a project may define milestone release points in the
-					documentation where an implementation may be fit for an initial release or
-					version update once a certain set of features have been developed.
-					
-					Between milestone release points and following project completion, patches may
-					also be released.
 				-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 1 - Kaeon Process: 1 - Notes'

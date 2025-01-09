@@ -9240,25 +9240,6 @@ Verification Methods
 							signing up due to the platform raising false alarms.
 						-
 
-		Tools
-
-			Utilities
-
-				Anti-Spam Measures: Captcha, Cloudflare
-
-				Phone Number Lookup: 'https://github.com/google/libphonenumber'
-
-			Third Party Services
-
-				Email: Robinhood, Coinbase, Banks
-				Link: Plaid
-
-				Personhood References
-				
-					Coinbase - Verified Users Only: Type: Authenticator
-					Kleros - Proof of Humanity: Type: Library
-					World ID: Type: Authenticator
-
 		Conventions
 
 			Notes
@@ -11368,6 +11349,17 @@ GMFB
 				locate said node, and where the order of the nested arrays determines their
 				priority, if applicable.
 			-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 1 - Software: 1 - Data: 2 - Formats: 1 - General: 2 - Content: 1 - Data: 3 - Char List'
+
+Char List
+
+	Philosophy
+
+		-
+			A char list is a string in which each character is interpreted as an element in a list,
+			their indices matching their placement in said string.
+		-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 1 - Software: 1 - Data: 2 - Formats: 1 - General: 2 - Content: 2 - DOM: 1 - DOM to Text'
 
@@ -24557,40 +24549,7 @@ Control Core Drone Launch
 
 			-
 				The operation object of a control core drone launch object shall have a field with
-				the alias "drone", containing the W-Fi SSID of the target drone.
-			-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 1 - APIs: 2 - Utilities: 2 - Frameworks: 3 - Control: 1 - Core: 2 - Services: 1 - Hologram'
-
-Control Core Hologram
-
-	Philosophy
-
-		-
-			Control core hologram is a control core service definition for relaying calls sent over
-			the Hologram network.
-
-			A control core service object formatted according to the control core hologram
-			definition is called a control core hologram object.
-		-
-
-	Principles
-
-		Service
-
-			-
-				The value of the service field for a control core hologram object shall be
-				"hologram".
-			-
-
-		Credentials
-
-			-
-				The credentials object of a control core hologram object shall have a field with
-				the alias "deviceID", containing the device ID of the target device, a field with
-				the alias "webhookGUID", containing the webhook GUID of the target device, a field
-				with the alias "apiKey", containing the API key of the user's account, and a field
-				with the alias "orgID", containing the organization ID of the user's account.
+				the alias "drone", containing the Wi-Fi SSID of the target drone.
 			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 2 - Kaeon Series: 2 - Kaeon APIs: 2 - Kaeon Frameworks: 1 - Process Suite'

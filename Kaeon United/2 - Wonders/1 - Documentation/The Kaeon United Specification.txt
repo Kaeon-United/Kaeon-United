@@ -25031,366 +25031,7 @@ Locker Viewer
 				analog, and thus should not require any electricity.
 			-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 1 - Principles: 1 - Convergence'
-
-Convergence
-
-	Philosophy
-
-		-
-			The principle of convergence states that when designing a system, it should first be
-			determined what the central elements of said system have in common. Then, the first
-			components of said system to be created should serve these common needs.
-
-			Next, the remaining elements of the system should be grouped according to common needs
-			and the process should be repeated, ideally until no more commonalities can be
-			identified.
-		-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 1 - Principles: 2 - Separation'
-
-Separation
-
-	Philosophy
-
-		-
-			The principle of separation states that what can be distinguished from its environment
-			ought to be identified as such.
-		-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 1 - Principles: 3 - Clustering'
-
-Clustering
-
-	Philosophy
-
-		-
-			The principle of clustering states that components of a system should be grouped
-			together according to their similarities.
-		-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 2 - Ideals: 1 - The Creative Ideal'
-
-The Creative Ideal
-
-	Philosophy
-
-		-
-			The creative ideal is the notion that creative technology should strive to be
-			sufficiently advanced yet also sufficiently simple to use such that one can create
-			whatever they envision with as little effort as possible, effectively reducing the
-			creative process to saying "be", and having it be.
-		-
-
-	Principles
-
-		The Creative Compromise
-
-			-
-				If one lacks the knowledge or resources to build what they want to build, they
-				should build the closest thing they can to their vision, no matter how big the gap
-				between the fantasy and the reality may be, and they should continue to improve it
-				as they acquire more knowledge and resources, until fantasy and reality begin to
-				align.
-			-
-
-		Access Concentration
-
-			-
-				Access concentration of rendering tools and techniques more accessible to those
-				with fewer resources, primarily by reducing the scale and complexity of the means
-				through which to utilize them.
-
-				Ideally, the result should allow said means to seamlessly scale up or down to an
-				indefinite degree so as to accommodate the resources of its users.
-			-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 2 - Ideals: 2 - Suite Corruption'
-
-Suite Corruption
-
-	Philosophy
-
-		-
-			Suite corruption is where engineers are forced to abandon utilities and techniques they
-			have grown reliant upon.
-		-
-
-	Principles
-
-		1 - The Seven Deadly Sins
-
-			1.1 - Payment
-
-				-
-					Payment is when a tool charges for its use, though a freemium model mitigates
-					the severity of it.
-				-
-
-			1.2 - Signup
-
-				-
-					Signup is when a tool requires the submission of user information for its use.
-				-
-
-			1.3 - Setup
-
-				-
-					Setup is when a tool requires the user to manually register for, or install,
-					specialized dependencies, becoming more severe the more manual effort is
-					required.
-				-
-
-			1.4 - Decay
-
-				-
-					Decay is when a tool loses support or compatibility over time.
-				-
-
-			1.5 - Rigor
-
-				-
-					Rigor is when a tool requires highly specialized knowledge for its use where
-					reasonable abstractions are possible to mitigate said barrier.
-				-
-
-			1.6 - Excess
-
-				-
-					Excess is where the interface of a tool is excessively obtuse, taking its most
-					severe form when the tool is only usable through visual interfaces.
-				-
-
-			1.7 - Limits
-
-				-
-					Limits, the most severe of the seven sins, is when the usage of a tool makes
-					certain types of development impossible to perform.
-				-
-
-		2 - The Sins of Bondage
-
-			2.1 - Commitment
-
-				-
-					Commitment is when the usage of certain tools render others unusable.
-					
-					Thus, it forces commitment to one stack at the expense of others and renders
-					migration itself impossible without restarting from scratch.
-				-
-
-			2.2 - Baggage
-
-				-
-					Baggage is when a tool cannot be used independently of a specific environment.
-				-
-
-		3 - The Wage of Deadlock
-
-			-
-				Technical deadlock is when technical debt creates limits which restrict an existing
-				project to such a degree that the goals of the project can no longer be reached,
-				forcing a complete development reset.
-			-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 2 - Ideals: 3 - The Great Art'
-
-The Great Art
-
-	Philosophy
-
-		-
-			Programming; the art of understanding, deconstructing, and reconstructing reality
-			through abstraction; the physical manifestation of philosophy itself; and the
-			crossroads of all other disciplines; may be referred to as the great art; or the great
-			craft.
-		-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 2 - Ideals: 3 - The Great Art: 1 - Computacy'
-
-Computacy
-
-	Philosophy
-
-		-
-			Computacy is the ability of a given person to understand and make use of computational
-			concepts.
-
-			Thus, to have computacy is to be computate, the lack of computacy is incomputacy, and
-			to lack computacy is to be incomputate.
-		-
-
-	Principles
-
-		Computacy as Enhanced Literacy
-
-			-
-				As oral speech is to transmit information, and written language is to encode
-				information, computer programming is to make information come alive and to give it
-				power.
-			-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 2 - Ideals: 3 - The Great Art: 1 - Computacy: 1 - Model of Computing'
-
-Fundamental Model of Computing
-
-	Philosophy
-
-		-
-			The fundamental model of computing defines computing as the execution of a sequence of
-			steps, where each step is the execution of an operation in one of the three modes of
-			computing, those being the first mode, to transform data internally, the second mode,
-			to receive data from an external source, and the third mode, to transfer data to an
-			external source. 
-
-			The first mode can be called the core mode, and the second and third modes may be
-			referred to as the two channels.
-		-
-
-	Principles
-
-		The Six Definitions
-
-			1 - Program
-
-				-
-					A program is a set of data from which a sequence of steps may be derived.
-				-
-
-			2 - Programming Language
-
-				-
-					A programming language is a method of deriving a set of steps from a set of
-					data.
-				-
-
-			3 - Code
-
-				-
-					Code is the visual or physical representation of a program.
-				-
-
-			4 - Computer
-
-				-
-					A computer is a mechanism that performs computation.
-				-
-
-			5 - Memory
-
-				-
-					Memory is an external mechanism that a computer can connect to through which
-					data can be stored and retrieved.
-					
-					Data within memory may be organized.
-				-
-
-			6 - Programmer
-
-				-
-					A programmer is one who creates programs via constructing code.
-				-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 2 - Ideals: 3 - The Great Art: 1 - Computacy: 1 - Model of Computing: 1 - The Universal Basics'
-
-The Universal Basics of Programming
-
-	Philosophy
-
-		-
-			The universal basics of programming, or the five basics, listed in order in this
-			document, along with related concepts, are the basic concepts one must learn in order
-			to develop the vast majority of programs, as they constitute the key mechanisms through
-			which the first mode of computing operates.
-
-			The five basics, which themselves are spread across three chapters, taken together with
-			the two channels, can be called the seven basics.
-
-			The understanding of, and ability to apply the universal basics of programming
-			constitutes functional computacy.
-		-
-
-	Principles
-
-		The Three Chapters of the Five Basics
-
-			The Two Forms - Data
-
-				Variables { Literals }
-				
-					The Four Types
-					
-						Numbers: Modulus
-						Characters: Strings
-						Booleans: Boolean Logic: Not, And, Or, Xor
-						Null Values
-
-				Lists: Strings, Objects: Classes
-
-			The Two Paths - Flow
-
-				Conditionals
-				Loops
-
-			Functions: Composition { Parameters { Arguments }, Returning }, Recursion
-
-		Related Topics
-
-			Scope: Nesting
-			Computational Complexity
-
-			Code Styles
-
-				-
-					At some point, it is ideal for programmers to be exposed to programming styles
-					that utilize a LISP-like form, such as what Kaeon FUSION uses, in order to help
-					them grasp the underlying structure of programs regardless of their syntax and
-					to give them powerful insights into the nature of code that can be applied
-					beyond programming.
-				-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Conventions: 2 - Ideals: 3 - The Great Art: 1 - Computacy: 2 - The Basic Test'
-
-The Basic Test
-
-	Philosophy
-
-		-
-			A basic test refers to any test designed to confirm functional computacy.
-		-
-
-	Principles
-
-		Preparation
-
-			-
-				In and of themselves, the essential principles of functional computacy can be
-				taught to anyone fairly quickly, in a few hours or less; but mastery sufficient to
-				pass the basic test may take longer.
-			-
-
-		The General Basic Test
-
-			Format
-
-				-
-					The general basic test is a test of functional computacy where the subject is
-					to iterate over a list, apply one of two functions to each element of the list
-					according to whether the index is odd or even, append the return values of said
-					functions to a new list in order, and log the content of the new list at the
-					end.
-				-
-
-			Default
-
-				-
-					The default general test has the original list contain the upper case letters
-					of the alphabet, has the first function return the input string converted to
-					lower case, and has the second function return a boolean indicating whether the
-					input string is included in the string "HELLO, WORLD!".
-				-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 1 - Kaeon Process'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Kaeon Process'
 
 Kaeon Process Conventions
 
@@ -25465,80 +25106,20 @@ Kaeon Process Conventions
 					in terms of going beyond the requirements of the specification.
 				-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 1 - Kaeon Process: 1 - Notes'
-
-Kaeon Process Notes
-
-	Philosophy
-
-		-
-			This document lists notes regarding the Kaeon Process.
-		-
-
-	Principles
-
-		Advantages
-
-			Resilience
+			Reverse Mining
 
 				-
-					The Kaeon process offers resilience through its enforcement of a specification
-					which is itself removed from the fate of a particular implementation or
-					organizational context, which allows the idea of the project to survive a
-					collapse of a given organization or development effort, and to be passed on to
-					others.
+					Reverse mining is implementing features against, or without, the terms of an
+					existing specification, with the intention to create or amend the relevant
+					terms at a later time.
 
-					The use of a specification also helps to preserve order during development even
-					when the development process becomes chaotic.
+					It may be applied to the Kaeon process where some specification is already in
+					place, or started with the intention of integrating the Kaeon process into the
+					project "in labor res" (during development), for exploratory purposes, or as a
+					means to break "coder's block".
 				-
 
-			Scalability
-
-				-
-					The Kaeon process offers a level of organizational complexity which is
-					manageable for small teams and necessary for large teams.
-
-					It also assists small teams in organizing projects much larger than teams of
-					that size normally take on.
-				-
-
-			Adaptability
-
-				-
-					An implementation of a project developed under the Kaeon process may utilize
-					other development methodologies such as agile or waterfall.
-
-					The process may also be applied to projects that lie outside the scope of
-					software.
-				-
-
-		Best Practices
-
-			Plain Text
-
-				-
-					The specification documents used in projects utilizing the Kaeon Process should
-					ideally be written in plain text.
-				-
-
-		Analogies
-
-			Branches of Government
-
-				-
-					The three branches can be thought of as analogous to a government, where the
-					specification is the legislative branch, the documentation is the judicial
-					branch, and the implementations are the executive branch.
-				-
-
-			Platonic Idealism
-
-				-
-					In a platonic sense, the specification can be thought of as the platonic ideal
-					of the project.
-				-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 1 - Kaeon Process: 2 - Documentation: 1 - Triple Log System'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Kaeon Process: 1 - Documentation: 1 - Triple Log System'
 
 Triple Log System
 
@@ -25568,7 +25149,7 @@ Triple Log System
 				A triple log library is an organized collection of triple logs.
 			-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 1 - Kaeon Process: 2 - Documentation: 2 - Formats: 1 - Kaeon Report Format'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Kaeon Process: 1 - Documentation: 2 - Formats: 1 - Kaeon Report Format'
 
 Kaeon Report Format
 
@@ -25689,7 +25270,7 @@ Kaeon Report Format
 						containing content specifying the name of said author.
 					-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 1 - Kaeon Process: 2 - Documentation: 2 - Formats: 1 - Kaeon Report Format: 1 - Kaeon Citation'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Kaeon Process: 1 - Documentation: 2 - Formats: 1 - Kaeon Report Format: 1 - Kaeon Citation'
 
 Kaeon Citation
 
@@ -25707,7 +25288,7 @@ Kaeon Citation
 			location of the cited information within the resource.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 1 - Kaeon Process: 2 - Documentation: 2 - Formats: 2 - Ticket Log Format'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Kaeon Process: 1 - Documentation: 2 - Formats: 2 - Ticket Log Format'
 
 Ticket Log Format
 
@@ -25796,7 +25377,7 @@ Ticket Log Format
 				A ticket log library is an organized collection of ticket log documents.
 			-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 1 - Kaeon Process: 2 - Documentation: 2 - Formats: 3 - Journal Format'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Kaeon Process: 1 - Documentation: 2 - Formats: 3 - Journal Format'
 
 Journal Format
 
@@ -25835,7 +25416,7 @@ Journal Format
 				itself was made.
 			-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Methods: 2 - Kaeon Stack'
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 1 - Kaeon Process: 2 - Kaeon Stack'
 
 Kaeon Stack
 
@@ -25861,7 +25442,7 @@ Kaeon Stack
 
 				Kaeon FUSION
 
-					-	
+					-
 						Under the conventions of the Kaeon stack, the runtime environment for Kaeon
 						FUSION will be powered by JavaScript and may be embedded into HTML and CSS
 						environments.
@@ -25882,6 +25463,450 @@ Kaeon Stack
 						It is also a convention according to the Kaeon stack to use VS Code and
 						Kaeon Origin as one's primary code editors and terminal interfaces.
 					-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 1 - Principles: 1 - Convergence'
+
+Convergence
+
+	Philosophy
+
+		-
+			The principle of convergence states that when designing a system, it should first be
+			determined what the central elements of said system have in common. Then, the first
+			components of said system to be created should serve these common needs.
+
+			Next, the remaining elements of the system should be grouped according to common needs
+			and the process should be repeated, ideally until no more commonalities can be
+			identified.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 1 - Principles: 2 - Separation'
+
+Separation
+
+	Philosophy
+
+		-
+			The principle of separation states that what can be distinguished from its environment
+			ought to be identified as such.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 1 - Principles: 3 - Clustering'
+
+Clustering
+
+	Philosophy
+
+		-
+			The principle of clustering states that components of a system should be grouped
+			together according to their similarities.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 2 - Ideals: 1 - The Creative Ideal'
+
+The Creative Ideal
+
+	Philosophy
+
+		-
+			The creative ideal is the notion that creative technology should strive to be
+			sufficiently advanced yet also sufficiently simple to use such that one can create
+			whatever they envision with as little effort as possible, effectively reducing the
+			creative process to saying "be", and having it be.
+		-
+
+	Principles
+
+		The Creative Compromise
+
+			-
+				If one lacks the knowledge or resources to build what they want to build, they
+				should build the closest thing they can to their vision, no matter how big the gap
+				between the fantasy and the reality may be, and they should continue to improve it
+				as they acquire more knowledge and resources, until fantasy and reality begin to
+				align.
+			-
+
+		Access Concentration
+
+			-
+				Access concentration of rendering tools and techniques more accessible to those
+				with fewer resources, primarily by reducing the scale and complexity of the means
+				through which to utilize them.
+
+				Ideally, the result should allow said means to seamlessly scale up or down to an
+				indefinite degree so as to accommodate the resources of its users.
+			-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 2 - Ideals: 2 - Suite Corruption'
+
+Suite Corruption
+
+	Philosophy
+
+		-
+			Suite corruption is where engineers are forced to abandon utilities and techniques they
+			have grown reliant upon.
+		-
+
+	Principles
+
+		1 - The Seven Deadly Sins
+
+			1.1 - Payment
+
+				-
+					Payment is when a tool charges for its use, though a freemium model mitigates
+					the severity of it.
+				-
+
+			1.2 - Signup
+
+				-
+					Signup is when a tool requires the submission of user information for its use.
+				-
+
+			1.3 - Setup
+
+				-
+					Setup is when a tool requires the user to manually register for, or install,
+					specialized dependencies, becoming more severe the more manual effort is
+					required.
+				-
+
+			1.4 - Decay
+
+				-
+					Decay is when a tool loses support or compatibility over time.
+				-
+
+			1.5 - Rigor
+
+				-
+					Rigor is when a tool requires highly specialized knowledge for its use where
+					reasonable abstractions are possible to mitigate said barrier.
+				-
+
+			1.6 - Excess
+
+				-
+					Excess is where the interface of a tool is excessively obtuse, taking its most
+					severe form when the tool is only usable through visual interfaces.
+				-
+
+			1.7 - Limits
+
+				-
+					Limits, the most severe of the seven sins, is when the usage of a tool makes
+					certain types of development impossible to perform.
+				-
+
+		2 - The Sins of Bondage
+
+			2.1 - Commitment
+
+				-
+					Commitment is when the usage of certain tools render others unusable.
+					
+					Thus, it forces commitment to one stack at the expense of others and renders
+					migration itself impossible without restarting from scratch.
+				-
+
+			2.2 - Baggage
+
+				-
+					Baggage is when a tool cannot be used independently of a specific environment.
+				-
+
+		3 - The Wage of Deadlock
+
+			-
+				Technical deadlock is when technical debt creates limits which restrict an existing
+				project to such a degree that the goals of the project can no longer be reached,
+				forcing a complete development reset.
+			-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 2 - Ideals: 3 - The Great Art'
+
+The Great Art
+
+	Philosophy
+
+		-
+			Programming; the art of understanding, deconstructing, and reconstructing reality
+			through abstraction; the physical manifestation of philosophy itself; and the
+			crossroads of all other disciplines; may be referred to as the great art; or the great
+			craft.
+		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 2 - Ideals: 3 - The Great Art: 1 - Computacy'
+
+Computacy
+
+	Philosophy
+
+		-
+			Computacy is the ability of a given person to understand and make use of computational
+			concepts.
+
+			Thus, to have computacy is to be computate, the lack of computacy is incomputacy, and
+			to lack computacy is to be incomputate.
+		-
+
+	Principles
+
+		Computacy as Enhanced Literacy
+
+			-
+				As oral speech is to transmit information, and written language is to encode
+				information, computer programming is to make information come alive and to give it
+				power.
+			-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 2 - Ideals: 3 - The Great Art: 1 - Computacy: 1 - Model of Computing'
+
+Fundamental Model of Computing
+
+	Philosophy
+
+		-
+			The fundamental model of computing defines computing as the execution of a sequence of
+			steps, where each step is the execution of an operation in one of the three modes of
+			computing, those being the first mode, to transform data internally, the second mode,
+			to receive data from an external source, and the third mode, to transfer data to an
+			external source. 
+
+			The first mode can be called the core mode, and the second and third modes may be
+			referred to as the two channels.
+		-
+
+	Principles
+
+		The Six Definitions
+
+			1 - Program
+
+				-
+					A program is a set of data from which a sequence of steps may be derived.
+				-
+
+			2 - Programming Language
+
+				-
+					A programming language is a method of deriving a set of steps from a set of
+					data.
+				-
+
+			3 - Code
+
+				-
+					Code is the visual or physical representation of a program.
+				-
+
+			4 - Computer
+
+				-
+					A computer is a mechanism that performs computation.
+				-
+
+			5 - Memory
+
+				-
+					Memory is an external mechanism that a computer can connect to through which
+					data can be stored and retrieved.
+					
+					Data within memory may be organized.
+				-
+
+			6 - Programmer
+
+				-
+					A programmer is one who creates programs via constructing code.
+				-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 2 - Ideals: 3 - The Great Art: 1 - Computacy: 1 - Model of Computing: 1 - The Universal Basics'
+
+The Universal Basics of Programming
+
+	Philosophy
+
+		-
+			The universal basics of programming, or the five basics, listed in order in this
+			document, along with related concepts, are the basic concepts one must learn in order
+			to develop the vast majority of programs, as they constitute the key mechanisms through
+			which the first mode of computing operates.
+
+			The five basics, which themselves are spread across three chapters, taken together with
+			the two channels, can be called the seven basics.
+
+			The understanding of, and ability to apply the universal basics of programming
+			constitutes functional computacy.
+		-
+
+	Principles
+
+		The Three Chapters of the Five Basics
+
+			The Two Forms - Data
+
+				Variables { Literals }
+				
+					The Four Types
+					
+						Numbers: Modulus
+						Characters: Strings
+						Booleans: Boolean Logic: Not, And, Or, Xor
+						Null Values
+
+				Lists: Strings, Objects: Classes
+
+			The Two Paths - Flow
+
+				Conditionals
+				Loops
+
+			Functions: Composition { Parameters { Arguments }, Returning }, Recursion
+
+		Related Topics
+
+			Scope: Nesting
+			Computational Complexity
+
+			Code Styles
+
+				-
+					At some point, it is ideal for programmers to be exposed to programming styles
+					that utilize a LISP-like form, such as what Kaeon FUSION uses, in order to help
+					them grasp the underlying structure of programs regardless of their syntax and
+					to give them powerful insights into the nature of code that can be applied
+					beyond programming.
+				-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 2 - Ideals: 3 - The Great Art: 1 - Computacy: 2 - The Basic Test'
+
+The Basic Test
+
+	Philosophy
+
+		-
+			A basic test refers to any test designed to confirm functional computacy.
+		-
+
+	Principles
+
+		Preparation
+
+			-
+				In and of themselves, the essential principles of functional computacy can be
+				taught to anyone fairly quickly, in a few hours or less; but mastery sufficient to
+				pass the basic test may take longer.
+			-
+
+		The General Basic Test
+
+			Format
+
+				-
+					The general basic test is a test of functional computacy where the subject is
+					to iterate over a list, apply one of two functions to each element of the list
+					according to whether the index is odd or even, append the return values of said
+					functions to a new list in order, and log the content of the new list at the
+					end.
+				-
+
+			Default
+
+				-
+					The default general test has the original list contain the upper case letters
+					of the alphabet, has the first function return the input string converted to
+					lower case, and has the second function return a boolean indicating whether the
+					input string is included in the string "HELLO, WORLD!".
+				-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 3 - Statements: 1 - Process'
+
+Kaeon Process Statements
+
+	Philosophy
+
+		-
+			This document lists statements regarding the Kaeon process.
+		-
+
+	Principles
+
+		Advantages
+
+			Resilience
+
+				-
+					The Kaeon process offers resilience through its enforcement of a specification
+					which is itself removed from the fate of a particular implementation or
+					organizational context, which allows the idea of the project to survive a
+					collapse of a given organization or development effort, and to be passed on to
+					others.
+
+					The use of a specification also helps to preserve order during development even
+					when the development process becomes chaotic.
+				-
+
+			Scalability
+
+				-
+					The Kaeon process offers a level of organizational complexity which is
+					manageable for small teams and necessary for large teams.
+
+					It also assists small teams in organizing projects much larger than teams of
+					that size normally take on.
+				-
+
+			Adaptability
+
+				-
+					An implementation of a project developed under the Kaeon process may utilize
+					other development methodologies such as agile or waterfall.
+
+					The process may also be applied to projects that lie outside the scope of
+					software.
+				-
+
+		Best Practices
+
+			Plain Text
+
+				-
+					The specification documents used in projects utilizing the Kaeon Process should
+					ideally be written in plain text.
+				-
+
+		Analogies
+
+			Branches of Government
+
+				-
+					The three branches can be thought of as analogous to a government, where the
+					specification is the legislative branch, the documentation is the judicial
+					branch, and the implementations are the executive branch.
+				-
+
+			Platonic Idealism
+
+				-
+					In a platonic sense, the specification can be thought of as the platonic ideal
+					of the project.
+				-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 3 - Development: 2 - Conventions: 3 - Statements: 2 - Stack'
+
+Kaeon Stack Statements
+
+	Philosophy
+	
+		-
+			This document lists statements regarding the Kaeon stack.
+		-
+
+	Principles
 
 		Conventions
 

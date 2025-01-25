@@ -1006,6 +1006,9 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 				-
 					A codified protocol specifying how a component element is to be interpreted
 					according to its content and children is referred to as a Kaeon ACE convention.
+
+					A codified protocol specifying the composition of Kaeon ACE elements which
+					match certain criteria is referred to as a Kaeon ACE rule.
 				-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 2 - Application: 1 - ACE: 2 - Kaeon ACE: 1 - Conventions: 1 - Elements: 1 - Constructs: 1 - Subcomponents'
@@ -2556,6 +2559,16 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 			A directed graph of modules where said modules may be of any type is referred to as a
 			Philosopher's Atlas.
 		-
+	-
+		Principles
+	-
+		-
+			Conventions
+		-
+			-
+				A codified standard for the content and structure of a Philosopher's Atlas may be
+				referred to as a Philosopher's Atlas convention.
+			-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 1 - Atlas Policy'
 
@@ -2584,63 +2597,90 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 			traversal began at the module that said connection goes out from.
 		-
 
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 2 - Nodes: 1 - Philosopher~'s Core'
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 1 - Atlas Policy: 2 - Atlas Region'
 
 -
-	Philosopher's Core
+	Atlas Region
 -
 	-
 		Philosophy
 	-
 		-
-			A Philosopher's Core is a node on a Philosopher's Atlas designed specifically to
+			An atlas region is a defined subsection of a given Philosopher's Atlas.
+		-
+
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 2 - Nodes: 1 - Philosopher~'s Axis'
+
+-
+	Philosopher's Axis
+-
+	-
+		Philosophy
+	-
+		-
+			A Philosopher's Axis is a node on a Philosopher's Atlas designed specifically to
 			coordinate activity within a Philosopher's Atlas.
 		-
 	-
 		Principles
 	-
 		-
-			Philosopher's Core Commands
+			Philosopher's Axis Commands
 		-
 			-
-				A Philosopher's Core command is an object that may be passed to a philosopher's
-				core through which it may be distributed to the rest of the Philosopher's Atlas,
+				A Philosopher's Axis command is an object that may be passed to a philosopher's
+				Axis through which it may be distributed to the rest of the Philosopher's Atlas,
 				after which another object may be returned.
 			-
+		-
+			Axis Stone
+		-
+			-
+				An Axis Stone is a globally available value within a process to which any node on a
+				Philosopher's Atlas may connect.
 
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 2 - Nodes: 2 - Philosopher~'s Gate'
+				Unless specified otherwise, there should only be one value designated as such,
+				allowing it to serve as the common link between all Philosopher's Atlas nodes in
+				the process to which it belongs. The nodes to which an Axis Stone is directly or
+				indirectly connected constitute an Axis Atlas.
+
+				A codified convention regarding how to make use of said common link is referred to
+				as an Axis Convention.
+			-
+
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 2 - Nodes: 2 - Philosopher~'s Stream'
 
 -
-	Philosopher's Gate
+	Philosopher's Stream
 -
 	-
 		Philosophy
 	-
 		-
-			A Philosopher's Gate is a node on a Philosopher's Atlas which acts as an interface
+			A Philosopher's Stream is a node on a Philosopher's Atlas which acts as an interface
 			between said atlas and external systems.
 		-
 
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 2 - Nodes: 3 - Philosopher~'s Seed'
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 2 - Nodes: 3 - Philosopher~'s Origin'
 
 -
-	Philosopher's Seed
+	Philosopher's Origin
 -
 	-
 		Philosophy
 	-
 		-
-			A Philosopher's Seed is a node on a Philosopher's Atlas capable of creating and
+			A Philosopher's Origin is a node on a Philosopher's Atlas capable of creating and
 			repairing other nodes within said atlas.
 		-
 	-
 		Principles
 	-
 		-
-			Genesis Philosopher's Seed
+			Genesis Philosopher's Origin
 		-
 			-
-				A Genesis Philosopher's Seed is a Philosopher's Seed which is capable of
+				A Genesis Philosopher's Origin is a Philosopher's Origin which is capable of
 				initializing the creation of the entirety of the Philosopher's Atlas to which it
 				belongs by itself.
 			-
@@ -2649,42 +2689,6 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 
 -
 	Aether
--
-	-
-		Philosophy
-	-
-		-
-			Aether is a system that allows the interface of a regulated Philosopher's Stone module
-			to be attached to modules that exist within systems running in entirely different
-			environments.
-		-
-	-
-		Principles
-	-
-		-
-			Alias
-		-
-			-
-				An Aether module may be identified via a unique string alias or path.
-			-
-
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 3 - Aether: 1 - Standard Aether'
-
--
-	Standard Aether
--
-	-
-		Philosophy
-	-
-		-
-			Standard Aether is a variant of the Aether system under which Aether modules shall be
-			standard modules.
-		-
-
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 1 - Philosopher~'s Atlas: 3 - Aether: 2 - Aether Atlas'
-
--
-	Aether Atlas
 -
 	-
 		Philosophy
@@ -2719,12 +2723,21 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 						function as part of an Aether Atlas but which has nonetheless been
 						incorporated into at least one.
 					-
+				-
+					Aether State
+				-
+					-
+						An Aether State is the state of an Aether Atlas at a given time.
+					-
 			-
 				Aether Interface
 			-
 				-
 					An Aether Interface is a device or application that provides a user interface
 					to an Aether Atlas.
+
+					An Aether Call is a request made to an aether atlas to read or update its
+					Aether State.
 				-
 		-
 			Forms
@@ -2761,13 +2774,23 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 			Inner and Outer Operations
 		-
 			-
-				Any function specified by a Philosopher's Medium which is to be called from an
-				object that abides by said medium may also be used as an independent function which
+				Any function specified by a Philosopher's Medium which is to be called from a
+				module that abides by said medium may also be used as an independent function which
 				performs the same operation by taking said object as its first argument, followed
 				by all of the other arguments that would otherwise be passed to it.
 
 				Such functions called from within objects can be referred to as inner operations,
 				and as outer operations if called as independent functions.
+			-
+		-
+			Conventions
+		-
+			-
+				Philosopher's Mediums may contain other Philosopher's Mediums in their definition.
+				Such Philosopher's Mediums may be referred to as Philosopher's Meta-Mediums.
+
+				A node on a Philosopher's Atlas which abides by a given Philosopher's Medium may be
+				referred to as a module of said Philosopher's Medium.
 			-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 2 - Philosopher~'s Medium: 1 - Mediums: 1 - Standard'
@@ -2828,7 +2851,7 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 				The standard function default alias for the standard function within a standard
 				Philosopher's Stone module.
 
-				The standard function default alias is "On Call".
+				The standard function default alias is "Standard".
 			-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 2 - Philosopher~'s Medium: 1 - Mediums: 2 - Regulated'
@@ -3108,17 +3131,17 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 			string output channels according to what it receives through its string input channels.
 		-
 
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 2 - Philosopher~'s Medium: 2 - Standard Module'
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 2 - Philosopher~'s Medium: 2 - General Medium'
 
 -
-	Standard Module
+	General Medium
 -
 	-
 		Philosophy
 	-
 		-
-			A standard module is a module that abides by the standard, regulated, modifiable,
-			serializable, and taggable Philosopher's Mediums.
+			The general medium is a Philosopher's Meta-Medium, consisting of the standard,
+			regulated, modifiable, serializable, and taggable Philosopher's Mediums.
 		-
 	-
 		Principles
@@ -3128,14 +3151,21 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 		-
 			-
 				For identification purposes, the tags specified by the taggable Philosopher's
-				Medium shall ignore letter case and white space for standard modules.
+				Medium shall ignore letter case and white space for general modules.
 			-
 		-
 			Traversals
 		-
 			-
-				Traversals of Philosopher's Atlases initiated by or from standard modules should
+				Traversals of Philosopher's Atlases initiated by or from general modules should
 				acknowledge private and reduced connections.
+
+				Processes operating on a Philosopher's Atlas may traverse over it upon certain
+				triggers, passing a certain type of value to the standard function of all nodes in
+				said Atlas which abide by the standard Philosopher's medium. Such traversals are
+				referred to as open traversals. In open traversals, the values passed to the
+				standard functions are referred to as axis packets, and the values returned by said
+				functions during said traversals are referred to as axis responses.
 			-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 3 - Philosopher~'s Methods: 1 - Modules: 1 - Philosopher~'s Interface'
@@ -3269,12 +3299,29 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 		Principles
 	-
 		-
-			Mirror Vault
+			Layers
 		-
 			-
-				A mirror vault is a section of an external Philosopher's Vault stored within an
-				application and mapped to the same Philosopher's Corpus, such that changes made to
-				it persist to said external Philosopher's Vault.
+				All data operated on by a system can be considered to constitute a Philosopher's
+				Vault. The internal state of said system can be said to constitute the inner layer
+				of the vault, and the databases external to said system can be said to constitute
+				the external layer of the vault.
+
+				Vault entanglement is a where a section of a Philosopher's Vault's is mapped to a
+				section of the same Philosopher's Vault's or of another via a Philosopher's Corpus,
+				such that changes made to each of said sections persist to the other.
+			-
+		-
+			Document
+		-
+			-
+				A Philosopher's Document is a serialization of the contents of a Philosopher's
+				Vault according to a Philosopher's Corpus.
+				
+				A codified protocol for serializing and deserializing the content of Philosopher's
+				Documents is referred to as a Philosopher's Document convention.
+
+				By default, a Philosopher's Document should be serialized in Kaeon ACE.
 			-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 1 - Philosopher~'s Conventions: 3 - Philosopher~'s Methods: 2 - Algorithms: 3 - Philosopher~'s Evolution'
@@ -3437,10 +3484,11 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 			Standard Virtual System
 		-
 			-
-				A standard virtual system provides an interface to a virtual file system through
-				its commands, provides commands for file system navigation, for file system
-				management, and for dynamically changing the available commands, and may execute
-				commands autonomously upon startup.
+				A standard virtual system provides an interface to a virtual file system, which is
+				embedded in the state of the process to which it belongs, through its commands,
+				provides commands for file system navigation, for file system management, and for
+				dynamically changing the available commands, and may execute commands autonomously
+				upon startup.
 
 				In a standard virtual system, if the name of a file is used as a command, it shall
 				run as an executable if said file is an executable file.
@@ -3649,7 +3697,105 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 			referred to as the free web.
 		-
 
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 2 - Philosopher~'s Series: 1 - Software: 1 - Methods: 3 - Services: 1 - Dynamic Response Platform'
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 2 - Philosopher~'s Series: 1 - Software: 1 - Methods: 3 - Services: 1 - Dynamic Task Platform'
+
+-
+	Dynamic Task Platform
+-
+	-
+		Philosophy
+	-
+		-
+			A dynamic task platform, or DTP, is a system which works to execute a dynamic
+			assortment of tasks, said tasks being referred to as dynamic tasks, and said assortment
+			being referred to as a dynamic task archive.
+		-
+
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 2 - Philosopher~'s Series: 1 - Software: 1 - Methods: 3 - Services: 1 - Dynamic Task Platform: 1 - Conventions'
+
+-
+	Dynamic Task Conventions
+-
+	-
+		Philosophy
+	-
+		-
+			This document specifies conventions for dynamic task platforms.
+		-
+	-
+		Principles
+	-
+		-
+			Conventions
+		-
+			-
+				General
+			-
+				-
+					Task Types
+				-
+					-
+						A task specified in an otherwise unstructured manner is referred to as a
+						general task.
+
+						A task which is not a general task is referred to as a discrete task. A
+						codified protocol for how to specify and execute discrete tasks is referred
+						to as a discrete task convention.
+					-
+				-
+					Task Logs
+				-
+					-
+						Task logs are records of events and notes relevant to a given task which
+						are retained by the platforms processing them.
+					-
+			-
+				Kaeon ACE Task
+			-
+				-
+					The Kaeon ACE task component convention is a Kaeon ACE convention regarding
+					Kaeon ACE task components.
+
+					Kaeon ACE task components are used to specify dynamic tasks.
+
+					Task components are Kaeon ACE components with the content "Task", which shall
+					have a child with either the content "Discrete" or "General".
+
+					The children of a discrete element shall constitute a Kaeon ACE document, the
+					contents of which shall specify a discrete task for an Aether atlas to execute.
+					A discrete task convention for how such a document may specify such a task is
+					referred to as a task ACE convention.
+
+					The children of a general element shall specify a general task for an Aether
+					atlas to execute in natural language, the interpretation thereof being subject
+					to the judgement of AI.
+
+					Standard task ACE is a set of Kaeon ACE conventions consisting of the standard
+					interface ACE conventions and the Kaeon ACE task component convention.
+				-
+		-
+			Tasks
+		-
+			-
+				Relay
+			-
+				-
+					A relay task is a discrete task which specifies a packet of data to be
+					transferred across a system to a specified target.
+
+					By default, relay tasks should result in a response being sent back from the
+					target to the source.
+				-
+			-
+				Omnitask
+			-
+				-
+					An omnitask is a general task which instructs the system to perpetually read
+					and analyze its other ongoing tasks and, when appropriate, create, update, or
+					delete them.
+				-
+
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s Stone: 2 - Philosopher~'s Series: 1 - Software: 1 - Methods: 3 - Services: 1 - Dynamic Task Platform: 2 - Response'
 
 -
 	Dynamic Response Platform
@@ -3658,11 +3804,11 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 		Philosophy
 	-
 		-
-			A dynamic response platform, or DRP, is a collection of applications which work
-			together to interpret external prompts, called dynamic response prompts, whether
-			structured or unstructured, in various forms and in real time, and to execute said
-			prompts according to the intentions with which they were given, the results of said
-			execution being called dynamic response actions.
+			A dynamic response platform, or DRP, is a system which acts as an interface to a
+			dynamic task platform, working to interpret external prompts, called dynamic response
+			prompts, whether structured or unstructured, in various forms and in real time, and to
+			execute said prompts according to the intentions with which they were given, the
+			results of said execution being called dynamic response actions.
 		-
 	-
 		Principles
@@ -3833,9 +3979,10 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 		Philosophy
 	-
 		-
-			A Philosopher's System is a system architecture where an Aether Union, for which the
-			applications and utilities that compose it are derived from a Philosopher's Suite,
-			operates on a Philosopher's Vault via a Philosopher's Corpus.
+			A Philosopher's System is an architecture where a Philosopher's Atlas, for a
+			Philosopher's Atlas System, or an Aether Union, for a Philosopher's Aether System, for
+			which the modules that compose it are derived from a Philosopher's Suite, operates on a
+			Philosopher's Vault via a Philosopher's Corpus.
 		-
 	-
 		Principles
@@ -3881,6 +4028,16 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 2 - Philosopher~'s 
 				-
 					Philosopher's Integration is the transition of a system which is not a
 					Philosopher's System to a Philosopher's System.
+				-
+			-
+				Philosopher's Protocol
+			-
+				-
+					A Philosopher's Protocol is a codified standard for how a given Philosopher's
+					System is to alter its default operations given its operating envrionment and
+					initial configurations.
+
+					A set of Philosopher's Protocols is called a Philosopher's Protocol Series.
 				-
 		-
 			Internal Management
@@ -4146,13 +4303,62 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 1
 	-
 		-
 			Kaeon United, via the Kaeon United singularities, may itself be executed as an
-			application, which shall serve as an interface to a standard virtual system, with a
-			manually configurable embedded virtual dot.
-			
-			This application shall be called Kaeon Origin.
+			application, which shall be implemented as a Philosopher's Atlas System, and which,
+			together with the Philosopher's System standard thereof, shall be called Kaeon Origin.
 		-
 
-Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 1 - Conventions: 1 - Operations: 2 - Kaeon Origin: 1 - Kaeon Yggdrasil'
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 1 - Conventions: 1 - Operations: 2 - Kaeon Origin: 1 - Conventions'
+
+-
+	Kaeon Origin Conventions
+-
+	-
+		Philosophy
+	-
+		-
+			This document specifies conventions for Kaeon Origin.
+		-
+	-
+		Principles
+	-
+		-
+			Origin Rule
+		-
+			-
+				The Origin rule is a Kaeon ACE rule which targets any entity with a content
+				component which has a child with the content "Kaeon Origin".
+
+				Modules which match said rule are expected to be Origin modules, which export a
+				function with the alias "Origin", or an approximation of said alias as appropriate
+				for the operating environment, which may take any argument as an options parameter.
+				
+				Kaeon Origin shall run each function for each module in the Philosopher's Suite of
+				the process in which it is embedded which matches the Origin rule, passing in
+				options as appropriate, and shall integrate any non-null value returned by said
+				functions into the Axis Atlas of said process.
+			-
+		-
+			Origin Utilities
+		-
+			-
+				Origin Clock
+			-
+				-
+					The Origin clock is a node on a Philosopher's Atlas which, at regular
+					intervals, performs an open traversal with a number as its atlas packet,
+					specifying the time in seconds since the last open traversal performed by it.
+
+					Kaeon Origin shall integrate an Origin clock by default.
+				-
+			-
+				Origin Systems
+			-
+				-
+					Kaeon Origin shall serve as an interface to a standard virtual system, with a
+					manually configurable embedded virtual dot.
+				-
+
+Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 1 - Conventions: 1 - Operations: 2 - Kaeon Origin: 2 - Kaeon Yggdrasil'
 
 -
 	Kaeon Yggdrasil
@@ -4224,6 +4430,10 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 1
 					it to Kaeon META, and may return any value should Kaeon META send a value back
 					in response.
 
+					The default mechanism by which this process shall function is for an Aether
+					Call to be made with the children of the command embedded into a Kaeon ACE
+					entity as a general task component.
+
 					Furthermore, once the Kaeon United FUSION interface has been integrated, Kaeon
 					META shall be able to modify the state of the program.
 				-
@@ -4232,17 +4442,20 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 1
 			-
 				-
 					Kaeon META shall, according to the following Philosopher's System standard, be
-					implemented upon a Philosopher's System called Kaeon Kor, for which the
+					implemented upon a Philosopher's Aether System called Kaeon Kor, for which the
 					Philosopher's Suite is Kaeon United, for which the Aether Union is called Kaeon
 					Aether, for which the Philosopher's Corpus called Kaeon Sigma, and for which
 					the Philosopher's Vault is called Kaeon Gaia.
 
 					Kaeon Aether shall have an Aether Interface called Kaeon Oracle, implemented as
-					a dynamic response platform into Kaeon Origin, which can also function as a
-					Genesis Philosopher's Seed to Kaeon Aether.
-
-					The data that a given user stores within Kaeon Kor may be collectively referred
-					to as said user's Kaeon profile.
+					a dynamic response platform. The data that a given user stores within Kaeon Kor
+					may be collectively referred to as said user's Kaeon profile.
+					
+					Kaeon Origin, which can also function as a Genesis Philosopher's Origin to
+					Kaeon Aether, and which shall be the primary application which acts as the
+					nodes of Kaeon Aether, shall integrate a dynamic task platform which shall act
+					on tasks embedded in the Aether State of Kaeon Aether, and which shall place an
+					omnitask into said Aether State by default.
 				-
 			-
 				The Kaeon Metanet
@@ -4449,6 +4662,13 @@ Standard Interface Module Conventions
 					-
 						The language or environment of a utility within an interface module may be
 						specified using the Universal Preprocessor's language aliases.
+					-
+
+				Rules
+
+					-
+						An interface rule is a codified rule for identifying interface entities
+						among an interface module which match certain criteria.
 					-
 
 				Utilities
@@ -6673,6 +6893,12 @@ Action ACE
 						element as a child, resolving to true if applied to an item for which the
 						value of the specified field for said item is unique among all items in the
 						collection to which said item belongs, and resolving to false otherwise.
+
+						As an extension to the default filter conventions, a filter element may be
+						a search element, which shall have the content "Search", and shall have
+						children specifying, in an unstructured manner, properties for a module to
+						which it is applied, resolving to true if an AI judges said module to match
+						the specified criteria, and resolving to false otherwise.
 					-
 
 				Transform ONE
@@ -6810,8 +7036,9 @@ Aether ACE
 	Philosophy
 
 		-
-			Aether ACE is a set of Kaeon ACE conventions which extend target ACE, for specifying
-			the Aether states for Philosopher's Systems in terms of the Aether conventions.
+			Aether ACE is a set of Kaeon ACE conventions which extend the Kaeon ACE task component
+			convention and target ACE, for specifying the Aether states for Philosopher's Systems
+			in terms of the Aether conventions.
 		-
 
 	Principles
@@ -6824,22 +7051,6 @@ Aether ACE
 					Aether entities are module entities for specifying Aether elements in terms of
 					the Aether conventions, the aliases of said entities being the aliases for the
 					corresponding elements.
-				-
-
-			Task Components
-
-				-
-					Task components are Kaeon ACE components with the content "Task", which shall
-					have a child with either the content "Discrete" or "General".
-
-					The children of a discrete element shall constitute a Kaeon ACE document, the
-					contents of which shall specify a discrete task for an Aether atlas to execute.
-					A codified protocol for how such a document may specify such a task is referred
-					to as a Task ACE convention.
-
-					The children of a general element shall specify a general task for an Aether
-					atlas to execute in natural language, the interpretation thereof being subject
-					to the judgement of AI.
 				-
 
 		Element Proximity
@@ -7081,25 +7292,26 @@ Persistent Atlas Application
 
 		Architecture
 
-			Persistent Atlas Gate
+			Main Stream
 
 				-
-					A philosopher's gate is a standard module within a persistent atlas to which
-					data, in any format, may be sent from external entities.
+					A persistent atlas may have a main philosopher's stream in the form of a
+					general module to which data, in any format, may be sent from external
+					entities.
 
-					When data is sent to said gate, a traversal shall be initiated from said gate,
-					and said data shall be passed to the standard functions of any standard modules
-					passed through in the course of said traversal, and a list of the values
-					returned by said functions shall be returned to the entity from which the data
-					was sent.
+					When data is sent to said stream, a traversal shall be initiated from said
+					stream, and said data shall be passed to the standard functions of any general
+					modules passed through in the course of said traversal, and a list of the
+					values returned by said functions shall be returned to the entity from which
+					the data was sent.
 				-
 
 			Persistent Atlas Interface
 
 				-
 					A persistent atlas interface is a philosopher's interface designed specifically
-					to incorporate functionality into a the philosopher's atlas of a persistent
-					atlas application.
+					to incorporate functionality into the philosopher's atlas of a persistent atlas
+					application.
 				-
 
 		Applications
@@ -7107,15 +7319,15 @@ Persistent Atlas Application
 			Standard Persistent Atlas
 
 				-
-					A standard persistent atlas is initialized with a philosopher's core in the
-					form of a standard module which acts as the core of a Kaeon FUSION interpreter
+					A standard persistent atlas is initialized with a philosopher's axis in the
+					form of a general module which acts as the core of a Kaeon FUSION interpreter
 					embedded within the atlas.
 
-					If said core receives data through its standard function, and said data is
+					If said axis receives data through its standard function, and said data is
 					valid ONE or ONE+ after being preprocessed by the universal preprocessor, it
 					shall be executed as Kaeon FUSION.
 
-					Aside from the aforementioned core, a standard persistent atlas shall be
+					Aside from the aforementioned axis, a standard persistent atlas shall be
 					initialized with no other functionality.
 				-
 
@@ -7124,7 +7336,7 @@ Persistent Atlas Application
 				-
 					A persistent atlas server is an HTTP server which hosts a persistent atlas.
 
-					Data sent to said server in a request may be passed to the gate of its
+					Data sent to said server in a request may be passed to the main stream of its
 					philosopher's atlas after being validated and preprocessed as necessary by the
 					server, and the list of values generated by the resulting traversal shall be
 					returned in the response.
@@ -7178,24 +7390,6 @@ Atlas Console
 			Philosopher's Atlas, where every line of input is passed to said Atlas as a call.
 		-
 
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 2 - Philosopher~'s Stone: 1 - Atlas: 1 - General: 2 - Application: 2 - Axis Stone'
-
-Axis Stone
-
-	Philosophy
-
-		-
-			An Axis Stone is a globally available value within a process to which any node on a
-			Philosopher's Atlas may connect.
-
-			There should only be one value designated as such, so it may serve as the common link
-			between all Philosopher's Atlas nodes in the process to which it belongs. The nodes to
-			which an Axis Stone is directly or indirectly connected constitute an Axis Atlas.
-
-			A codified convention regarding how to make use of said common link is referred to as
-			an Axis Convention.
-		-
-
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 2 - Philosopher~'s Stone: 1 - Atlas: 2 - SOUL: 1 - Standard'
 
 Standard SOUL
@@ -7203,7 +7397,7 @@ Standard SOUL
 	Philosophy
 		
 		-
-			A standard SOUL is a SOUL implemented using a standard module, along with certain
+			A standard SOUL is a SOUL implemented using a general module, along with certain
 			conventions to ensure cross compatibility.
 		-
 	
@@ -7308,7 +7502,7 @@ Standard SOUL Core
 	Philosophy
 	
 		-
-			A standard SOUL core is a SOUL core implemented using a standard module which may only
+			A standard SOUL core is a SOUL core implemented using a general module which may only
 			be connected to other modules using private connections.
 		-
 
@@ -7981,9 +8175,9 @@ Aether Conventions
 	Philosophy
 
 		-
-			The aether conventions specify the properties which are, by default, applicable to
-			elements of Aether atlases, the collection states of which may be referred to as aether
-			states.
+			The Aether Conventions specify the properties which are, by default, applicable to
+			elements of Aether Atlases, the collection states of which, being derived from the
+			Aether States of said atlases, may be referred to as Aether Collections.
 		-
 
 	Principles
@@ -7995,79 +8189,62 @@ Aether Conventions
 				Nodes
 
 					-
-						Nodes, with regards to Aether atlases, refer to machines, or reserved space
-						therein, in which the applications of a given Aether atlas may operate.
+						Nodes, with regards to Aether Atlases, refer to machines, or reserved space
+						therein, in which the applications of a given Aether Atlas may operate.
 
-						Separate Aether atlases may be treated as nodes in and of themselves, these
+						Separate Aether Atlases may be treated as nodes in and of themselves, these
 						nodes being referred to as cluster nodes.
 					-
 
 				Processes
 
 					-
-						Processes, with regards to Aether atlases, refer to applications which
-						compose a given Aether atlas.
+						Processes, with regards to Aether Atlases, refer to applications which
+						compose a given Aether Atlas.
 					-
 
 				Tasks
 
 					-
-						Tasks, with regards to Aether atlases, refer to actions currently being
-						executed, or which are scheduled to be executed, be it a set number of
-						times, or perpetually, by the processes of a given Aether atlas.
-
-						Tasks which are specified loosely, such as in natural language, where the
-						precise execution thereof is left to the discretion of the system, are
-						referred to as general tasks. Tasks which are not general are referred to
-						as discrete.
+						Tasks, with regards to Aether Atlases, refer to dynamic tasks processed by
+						dynamic task platforms embedded in said atlases.
 					-
 
 			Resources
 
 				-
-					Resources, with regards to Aether atlases, refer to external utilities which
-					the processes of a given Aether atlas may utilize.
+					Resources, with regards to Aether Atlases, refer to external utilities which
+					the processes of a given Aether Atlas may utilize.
 				-
 
 		Conventions
-
-			Aether Call
-
-				-
-					An aether call is a request made to an aether atlas to update or read its
-					aether state.
-				-
-
-			Discrete Tasks
-
-				Relay
-
-					-
-						A relay task is a discrete task which specifies a packet of data to be
-						transferred across the aether atlas from a source Aether element to a
-						specified target Aether element.
-
-						By default, relay tasks should result in a response being sent back from
-						the target element to the source element.
-					-
 
 			Elements
 
 				Aliases
 
 					-
-						Components of Aether atlases, that is nodes, processes, and resources,
-						referred to as Aether elements, may have aliases.
+						Components of Aether Atlases, that is nodes, processes, and resources,
+						referred to as Aether Elements, may have aliases.
 					-
 
 				Proximity
 
 					-
-						Element proximity, with regards to Aether atlases, refers to the priority
+						Element proximity, with regards to Aether Atlases, refers to the priority
 						of relative preference between processes and nodes, between processes and
 						resources, and between tasks and processes, regarding which of the latter
 						in each of the aforementioned cases should serve the needs of the former.
 					-
+
+			Synchronization
+
+				-
+					Generally speaking, Aether Collections, and Aether States in general, should be
+					synchronized across Aether Atlases by way of value entanglement, ideally with
+					data being exchanged through the databases of said atlases rather than directly
+					between processes.
+				-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 2 - Philosopher~'s Stone: 2 - Series: 1 - Systems: 5 - Open Axis'
 
@@ -8078,29 +8255,11 @@ Open Axis
 		-
 			Open Axis is an axis convention for establishing standard sub-processes to operate on
 			the Axis Atlas of a given process.
-
-			Such processes shall, unless otherwise specified, operate on said Atlas by traversing
-			over it upon certain triggers and passing a certain type of value to the standard
-			function of all nodes in said Atlas which abide by the standard Philosopher's medium.
-			Such traversals are referred to as open traversals, the values passed to the standard
-			functions are referred to as axis packets, and the values returned by said functions
-			during said traversals are referred to as axis responses.
 		-
 
 	Principles
 
 		Standard Nodes
-
-			Universal
-
-				Axis Clock
-
-					-
-						The Axis clock is a node on a Philosopher's Atlas which, at regular
-						intervals, performs an open traversal with a number as its atlas packet,
-						specifying the time in seconds since the last open traversal performed by
-						it.
-					-
 
 			Backend
 
@@ -8129,8 +8288,8 @@ Open Axis
 				An axis web server may take aether calls in the form of POST requests made to its
 				root URL with no URL arguments, the bodies thereof containing Kaeon documents with
 				action ACE and aether ACE content, and the bodies of the responses containing an
-				aether ACE document specifying the resulting aether state of the atlas to which
-				said server belongs.
+				aether ACE document specifying the resulting aether collection of the atlas to
+				which said server belongs.
 			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 1 - Core: 2 - Philosopher~'s Stone: 2 - Series: 1 - Systems: 5 - Open Axis: 1 - Axis Directory'
@@ -13668,8 +13827,8 @@ FUSION Interpreter Architecture
 			Philosophy
 			
 				-
-					A FUSION core is a standard module that manages the FUSION process. It will
-					have the tag "FUSION", and will contain a boolean flag called "running" that
+					A FUSION core is a general module that manages the FUSION process. It will have
+					the tag "FUSION", and will contain a boolean flag called "running" that
 					indicates whether the process or internal process functions are currently
 					running.
 				-

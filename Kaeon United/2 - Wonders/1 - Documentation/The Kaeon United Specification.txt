@@ -1006,9 +1006,6 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 
 				-
 					A codified protocol specifying how a component element is to be interpreted
 					according to its content and children is referred to as a Kaeon ACE convention.
-
-					A codified protocol specifying the composition of Kaeon ACE elements which
-					match certain criteria is referred to as a Kaeon ACE rule.
 				-
 
 Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 2 - ONE: 2 - Application: 1 - ACE: 2 - Kaeon ACE: 1 - Conventions: 1 - Elements: 1 - Constructs: 1 - Subcomponents'
@@ -4322,18 +4319,18 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 3 - Kaeon United: 1
 		Principles
 	-
 		-
-			Origin Rule
+			Origin Class
 		-
 			-
-				The Origin rule is a Kaeon ACE rule which targets any entity with a content
-				component which has a child with the content "Kaeon Origin".
+				The Origin class is a trace class for Kaeon ACE that matches any entity with a
+				content component which has a child with the content "Kaeon Origin".
 
-				Modules which match said rule are expected to be Origin modules, which export a
+				Modules which match said class are expected to be Origin modules, which export a
 				function with the alias "Origin", or an approximation of said alias as appropriate
 				for the operating environment, which may take any argument as an options parameter.
 				
 				Kaeon Origin shall run each function for each module in the Philosopher's Suite of
-				the process in which it is embedded which matches the Origin rule, passing in
+				the process in which it is embedded which matches the Origin class, passing in
 				options as appropriate, and shall integrate any non-null value returned by said
 				functions into the Axis Atlas of said process.
 			-
@@ -9184,6 +9181,32 @@ Split Encryption
 			Split encryption may be useful in detecting unauthorized access attempts through
 			unusual network activity.
 		-
+
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 2 - Theory: 1 - Utilities: 1 - Software: 2 - Algorithms: 4 - Security: 1 - Conventions: 5 - Acquisition Sanitation'
+
+Acquisition Sanitation
+
+	Philosophy
+	
+		-
+			Acquisition sanitation is the process of modifying software or hardware acquired from
+			third parties to remove known or potential vulnerabilities.
+
+			Acquiring assets which one knows fosters or may foster vulnerabilities which they
+			intend to sanitize is referred to as volatile acquisition.
+		-
+
+	Principles
+
+		Use Cases
+
+			-
+				Volatile acquisition followed by acquisition sanitation may be used to conserve, or
+				bypass limits to one's resources without risking damage from malicious actors.
+
+				Reverse engineering and vulnerability analysis may also be performed during
+				acquisition sanitation,
+			-
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 2 - Theory: 1 - Utilities: 1 - Software: 2 - Algorithms: 4 - Security: 2 - Verification Methods'
 
@@ -16254,114 +16277,6 @@ GHI Recorder
 				The type of recorder modules shall be specified as "recorder" in the receptor
 				output format.
 			-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 2 - Hardware: 2 - Interfaces: 1 - GHI: 3 - Devices: 1 - Raspberry Pi'
-
-GHI Raspberry Pi
-
-	Philosophy
-
-		-
-			GHI Raspberry Pi is a convention that specifies how Raspberry Pi computers ought to
-			operate under the GHI.
-
-			The convention specifies, among other things, the devices available to Raspberry Pis
-			operating as receptor modules, along with the numerical IDs of said devices.
-		-
-
-	Principles
-
-		Devices
-
-			Common
-
-				0: Receptor
-				1: GPIO
-				2: Serial
-				3: Display: HDMI Out
-				4: Recorder: Audio In
-
-			Circumstantial
-
-				5: Wi-Fi
-				6: Bluetooth
-				7: Cellular
-
-		Conventions
-
-			GPIO Dual Pin Map
-				
-				0: 3
-				1: 5
-				2: 7
-				3: 8
-				4: 10
-				5: 11
-				6: 12
-				7: 13
-				8: 15
-				9: 16
-				10: 18
-				11: 19
-				12: 21
-				13: 22
-				14: 23
-				15: 24
-				16: 26
-				17: 27
-				18: 28
-				19: 29
-
-			Wi-Fi Access Point Server Defaults
-
-				IP Address: 192.168.4.1
-				Port: 80
-
-		Notes
-
-			-
-				A Raspberry Pi must have its Wi-Fi access point disabled in order for calls to its
-				Wi-Fi module to function, unless it is integrated into a setup with more than one
-				Wi-Fi channel.
-			-
-
-Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 2 - Hardware: 2 - Interfaces: 1 - GHI: 3 - Devices: 2 - Arduino Uno'
-
-GHI Arduino Uno
-
-	Philosophy
-
-		-
-			GHI Arduino Uno is a convention that specifies how Arduino Uno microcontrollers ought
-			to operate under the GHI.
-
-			Under the GHI, the Arduino Uno acts as a single GPIO device.
-		-
-
-	Principles
-
-		Conventions
-			
-			GPIO Dual Pin Map
-				
-				0: 2
-				1: 3
-				2: 4
-				3: 5
-				4: 6
-				5: 7
-				6: 8
-				7: 9
-				8: 10
-				9: 11
-				10: 12
-				11: 13
-				12: A0
-				13: A1
-				14: A2
-				15: A3
-				16: A4
-				17: A5
 
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 2 - Hardware: 3 - Devices: 1 - Units: 1 - General Switch'
 

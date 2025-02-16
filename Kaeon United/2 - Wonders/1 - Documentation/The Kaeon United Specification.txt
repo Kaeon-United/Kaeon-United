@@ -10421,6 +10421,53 @@ Notation Conventions
 			readers and digital parsers.
 		-
 
+Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 1 - Software: 1 - Data: 1 - Theory: 1 - Principles: 1 - Encoding: 2 - Syntax: 11 - Path Rules'
+
+Path Rules
+
+	Philosophy
+
+		-
+			Path rules are rules that transform resource paths and URIs according to their content
+			when operating in a given environment. Sets of path rules may have indices determining
+			the order in which they are applied to the paths which they operate on.
+
+			A codified series of path rules, and if applicable their indices, is referred to as a
+			path rule protocol.
+		-
+
+	Principles
+
+		Rules
+
+			Localizing Path Rules
+
+				-
+					Localizing path rules cause global paths to be transformed into local paths.
+					
+					By default, such rules operate by removing certain string sequences at the
+					beginning of the paths they operate on.
+				-
+
+			Globalizing Path Rules
+
+				-
+					Globalizing path rules cause local paths to be transformed into global paths.
+					
+					By default, such rules operate by appending certain string sequences at the
+					beginning of the paths they operate on.
+				-
+
+		Protocols
+
+			Default Path Rule Protocol
+
+				-
+					A default path rule protocol operates by applying several localizing path rules
+					to paths which begin with one of a specified set of starting string sequences,
+					and then apply a single globalizing path rule to any local path.
+				-
+
 Use: Locations: 'Kaeon United Specification: 2 - Principles: 1 - Conventions: 3 - Tools: 1 - APIs: 1 - Software: 1 - Data: 1 - Theory: 1 - Principles: 1 - Encoding: 2 - Syntax: 2 - Esoteric Document Map'
 
 Esoteric Document Map
@@ -17799,7 +17846,7 @@ Kaeon United Standard Singularities
 
 			-
 				The Kaeon United standard singularities shall be hosted online so that users can
-				use it via CDN regardless of the environment they are operating in.
+				use them via CDN regardless of the environment they are operating in.
 			-
 
 		Implementation
@@ -17807,6 +17854,14 @@ Kaeon United Standard Singularities
 			-
 				The Kaeon United standard singularities shall, unless otherwise specified, be
 				implemented in JavaScript.
+			-
+
+		Path Rules
+
+			-
+				The Kaeon United standard singularities shall apply a default path rule protocol to
+				the Kaeon United suite in order to ensure maximum portability between hosting
+				environments with minimal adjustments.
 			-
 
 		United JavaScript

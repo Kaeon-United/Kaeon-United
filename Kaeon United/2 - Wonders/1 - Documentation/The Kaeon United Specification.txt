@@ -223,10 +223,10 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 1 - Conve
 						-
 							Trace traversal is the process of identifying a set of trace
 							descendants of a given node, called the trace set, that meet certain
-							criteria, said criteria being referred to trace classes, and that can
-							be reached from said node without going through another member of said
-							trace set, after which said descendants are sorted in order of trace
-							degree from lowest to highest, and then sorted arbitrarily, their
+							criteria, said criteria being referred to as trace classes, and that
+							can be reached from said node without going through another member of
+							said trace set, after which said descendants are sorted in order of
+							trace degree from lowest to highest, and then sorted arbitrarily, their
 							resulting placement being referred to as their trace index.
 						-
 					-
@@ -239,6 +239,29 @@ Use: Locations: 'Kaeon United Specification: 1 - Philosophy: 1 - Code: 1 - Conve
 							the nodes of the resulting trace set in order of their trace score from
 							highest to lowest, after sorting said nodes by trace degree and before
 							sorting said nodes arbitrarily.
+						-
+					-
+						Trace Transforms
+					-
+						-
+							Trace transforms are transformations applied to the structure and
+							content of a graph.
+							
+							Trace transforms which operate from a specific node as an origin point
+							are called local trace transforms, and those which operate without such
+							a reference point are called trace global transforms.
+							
+							When trace transforms are used only to temporarily alter a graph, they
+							are referred to as transient, and when used to permanently alter a
+							graph, they are referred to as persistent.
+
+							Trace transforms may be integrated into trace classes. When this
+							occurs, said transforms are referred to as trace traversal transforms,
+							and said classes are referred to as trace transform classes. If trace
+							traversal transforms alter the graph prior to the evaluation of the
+							trace sets of the trace transform classes to which they apply, they are
+							referred to as trace traversal pre-transforms, and as trace traversal
+							post-transforms otherwise.
 						-
 					-
 						Trace Path

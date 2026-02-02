@@ -3,7 +3,7 @@ var moduleDependencies = {
 		utils: {
 			checkWhitelist: (uri) => {
 
-				return moduleDependencies.core.utils.whitelist.filter(
+				return moduleDependencies.cors.utils.whitelist.filter(
 					item => item.endsWith("/") ?
 						uri.toLowerCase().startsWith(item.toLowerCase()) :
 						uri.toLowerCase() == item.toLowerCase()
@@ -29,7 +29,7 @@ var moduleDependencies = {
 			proxies: {
 				corsProxy: (request) => {
 
-					if(!moduleDependencies.core.utils.checkWhitelist(
+					if(!moduleDependencies.cors.utils.checkWhitelist(
 						request.request.uri
 					)) {
 
@@ -42,7 +42,7 @@ var moduleDependencies = {
 						"https://raw.githubusercontent.com/")) {
 
 						request.request.uri =
-							moduleDependencies.core.utils.formatGithubURI(
+							moduleDependencies.cors.utils.formatGithubURI(
 								request.request.uri
 							);
 					}

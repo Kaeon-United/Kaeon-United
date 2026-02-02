@@ -2,6 +2,14 @@ var moduleDependencies = {
 	cache: "https://cdn.jsdelivr.net/npm/kaeon-united-utilities/localCache.json",
 	cors: {
 		utils: {
+			checkWhitelist: (uri) => {
+
+				return moduleDependencies.core.utils.whitelist.filter(
+					item => item.endsWith("/") ?
+						uri.toLowerCase().startsWith(item.toLowerCase()) :
+						uri.toLowerCase() == item.toLowerCase()
+				).length == 0;
+			},
 			formatGithubURI: (uri) => {
 
 				uri = uri.substring(34);
@@ -18,57 +26,55 @@ var moduleDependencies = {
 					repo +
 					"/" +
 					uri.substring(uri.indexOf("/") + 1);
-			}
+			},
+			proxies: {
+				corsProxy: (request) => {
+
+					if(!moduleDependencies.core.utils.checkWhitelist(
+						request.request.uri
+					)) {
+
+						return request;
+					}
+
+					request = JSON.parse(JSON.stringify(request));
+
+					if(request.request.uri.startsWith(
+						"https://raw.githubusercontent.com/")) {
+
+						request.request.uri =
+							moduleDependencies.core.utils.formatGithubURI(
+								request.request.uri
+							);
+					}
+
+					else {
+					
+						request.request.uri =
+							"https://api.cors.lol/?url=" + request.request.uri;
+					}
+
+					return request;
+				}
+			},
+			whitelist: [
+				"http://127.0.0.1",
+				"https://127.0.0.1",
+				"http://localhost",
+				"https://localhost",
+				"https://cdn.jsdelivr.net/",
+				"https://api.cors.lol/"
+			]
 		},
 		proxies: {
-			"https://corsproxy.io/": (request) => {
+			"https://api.cors.lol/": (request) => {
 
-				request = JSON.parse(JSON.stringify(request));
-
-				if(request.request.uri.startsWith(
-					"https://raw.githubusercontent.com/")) {
-
-					request.request.uri =
-						moduleDependencies.cors.utils.formatGithubURI(
-							request.request.uri
-						);
-				}
-
-				else {
-				
-					request.request.uri =
-						"https://corsproxy.io/?url=" +
-							encodeURIComponent(
-								request.request.uri
-							).split("%20").join("%2520");
-				}
-
-				return request;
-			},
-			"https://nextjs-cors-anywhere.vercel.app/": (request) => {
-
-				request = JSON.parse(JSON.stringify(request));
-
-				if(request.request.uri.startsWith(
-					"https://raw.githubusercontent.com/")) {
-
-					request.request.uri =
-						moduleDependencies.cors.utils.formatGithubURI(
-							request.request.uri
-						);
-				}
-
-				else {
-					
-					request.request.uri =
-						"https://nextjs-cors-anywhere.vercel.app/api?endpoint=" +
-							request.request.uri;
-				}
-
-				return request;
+				return moduleDependencies.cors.utils.proxies.corsProxy(
+					request
+				);
 			}
 		},
-		proxy: "https://corsproxy.io/"
+		proxy: "https://api.cors.lol/"
 	},
 	utilities: "https://raw.githubusercontent.com/Kaeon-United/Kaeon-United/main/Kaeon%20United/2%20-%20Wonders/2%20-%20Source/1%20-%20Code/1%20-%20Interface/2%20-%20Singularities/2%20-%20Utilities/kaeonUnitedSingularityUtilities.js"
 };

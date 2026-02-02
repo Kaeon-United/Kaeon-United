@@ -1,5 +1,5 @@
 var moduleDependencies = {
-	cors: "https://corsproxy.io/?url="
+	cors: "https://api.cors.lol/?url="
 };
 
 var consoleWidget = use("kaeon-united")("consoleWidget");
@@ -25,20 +25,11 @@ override.onSend((request) => {
 
 	let uri = request.request.uri;
 
-	if(uri.includes(moduleDependencies.cors)) {
-
-		uri = decodeURIComponent(
-			uri.substring(moduleDependencies.cors.length).
-				split("%2520").join("%20")
-		);
-	}
+	if(uri.includes(moduleDependencies.cors))
+		uri = uri.substring(moduleDependencies.cors.length);
 
 	if(uri.startsWith("http") && uri.includes("://"))
 		return null;
-
-	uri = decodeURIComponent(uri)
-		.split("%2520").join(" ")
-		.split("%20").join(" ");
 
 	let mark = "";
 	

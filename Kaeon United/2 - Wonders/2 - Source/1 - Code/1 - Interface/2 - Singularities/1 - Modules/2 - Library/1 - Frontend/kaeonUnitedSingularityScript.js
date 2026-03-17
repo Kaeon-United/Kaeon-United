@@ -54,7 +54,7 @@ var moduleDependencies = {
 						
 							request.request.uri =
 								"https://api.codetabs.com/v1/proxy/?quest=" +
-								request.request.uri;
+								encodeURIComponent(request.request.uri);
 						}
 
 						else {

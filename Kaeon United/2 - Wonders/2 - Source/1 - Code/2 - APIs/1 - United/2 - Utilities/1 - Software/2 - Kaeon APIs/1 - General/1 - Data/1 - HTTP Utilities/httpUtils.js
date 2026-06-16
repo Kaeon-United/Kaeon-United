@@ -73,7 +73,9 @@ var moduleDependencies = {
 				"http://localhost",
 				"https://localhost",
 				"https://cdn.jsdelivr.net/",
-				"https://api.cors.lol/"
+				"https://api.cors.lol/",
+				"https://orca-gate.onrender.com/",
+				"https://orca-gate.onrender.com"
 			]
 		},
 		proxies: {

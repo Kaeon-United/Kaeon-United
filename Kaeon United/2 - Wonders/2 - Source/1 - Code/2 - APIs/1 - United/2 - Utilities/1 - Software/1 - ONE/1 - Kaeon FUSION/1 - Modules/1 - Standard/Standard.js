@@ -1,6 +1,7 @@
 // DEPENDENCIES
 
 var fusion = use("kaeon-united")("fusion");
+var httpUtils = use("kaeon-united")("httpUtils");
 var io = use("kaeon-united")("io");
 var kaeonMETA = use("kaeon-united")("kaeonMETA");
 var one = use("kaeon-united")("one");
@@ -4933,7 +4934,19 @@ function kaeonMETACommand() {
 	}
 
 	this.process = function(element, processed) {
-		kaeonMETA.kaeonMETA(processed[0]);
+
+		// kaeonMETA.kaeonMETA(processed[0]);
+
+		processed.forEach(item => {
+
+			httpUtils.sendRequest({
+				request: {
+					method: "POST",
+					uri: "https://orca-gate.onrender.com"
+				},
+				body: item
+			});
+		});
 	}
 }
 
